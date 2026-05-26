@@ -1,23 +1,27 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import {
   CheckCircle2,
   CircleAlert,
 } from "lucide-react";
 
 export default function Benefits() {
+  const t = useTranslations("benefits");
+
   const barriers = [
-    "Tu tienda recibe visitas pero no genera ventas.",
-    "Tus campañas consumen presupuesto sin retorno.",
-    "Tu ecommerce no logra posicionarse correctamente.",
+    t("barriers.0"),
+    t("barriers.1"),
+    t("barriers.2"),
   ];
 
   const benefits = [
-    "Mayor conversión",
-    "Más tráfico calificado",
-    "Optimización de campañas",
-    "Automatización comercial",
-    "Crecimiento sostenible",
+    t("benefitsList.0"),
+    t("benefitsList.1"),
+    t("benefitsList.2"),
+    t("benefitsList.3"),
+    t("benefitsList.4"),
   ];
 
   return (
@@ -27,11 +31,11 @@ export default function Benefits() {
           {/* LEFT */}
           <div>
             <span className="inline-flex items-center rounded-full bg-green-100 px-5 py-2 text-sm font-semibold text-green-700 mb-6">
-              Soluciones Ecommerce
+              {t("badge")}
             </span>
 
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-900 leading-tight mb-8">
-              Detectamos lo que está frenando tu crecimiento digital.
+              {t("title")}
             </h2>
 
             <div className="space-y-4">
@@ -52,8 +56,7 @@ export default function Benefits() {
             </div>
 
             <p className="mt-8 text-lg leading-8 text-zinc-600">
-              Diseñamos estrategias enfocadas específicamente en
-              ecommerce para ayudarte a vender más y operar mejor.
+              {t("description")}
             </p>
           </div>
 
@@ -61,12 +64,12 @@ export default function Benefits() {
           <div className="rounded-[36px] border border-green-100 bg-gradient-to-br from-white via-green-50 to-emerald-100 p-8 lg:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
             <div className="mb-8">
               <span className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-green-700 shadow-sm">
-                Beneficios
+                {t("benefitsBadge")}
               </span>
             </div>
 
             <h3 className="text-3xl md:text-4xl font-black tracking-tight text-zinc-900 mb-8">
-              Resultados claros y medibles.
+              {t("benefitsTitle")}
             </h3>
 
             <div className="space-y-4">

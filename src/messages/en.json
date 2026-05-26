@@ -1,359 +1,400 @@
 {
-  "Header": {
-    "home": "Home",
-    "about": "About",
-    "services": "Services",
-    "contact": "Contact",
-    "openCart": "Open cart",
-    "openMenu": "Open menu"
-  },
-  "cart": {
-    "couponTitle": "Discount coupon",
-    "couponPlaceholder": "Enter your code",
-    "applyCoupon": "Apply",
-    "couponApplied": "Coupon applied",
-    "couponEmpty": "Enter a coupon code",
-    "invalidCoupon": "The coupon is not valid",
-    "appliedCoupon": "Active coupon:",
-    "discount": "Discount",
-    "vatLabel": "VAT (16%)",
-    "subtotalBeforeVat": "Subtotal",
-    "beforeVat": "before VAT",
-    "badge": "Innova Código Checkout",
-    "title": "Review your order and complete payment.",
-    "stepCart": "Cart",
-    "stepPayment": "Payment",
-    "emptyTitle": "Your cart is empty",
-    "emptyDescription": "Add a service to continue with your purchase.",
-    "viewServices": "View services",
-    "cartItems": "Cart items",
-    "paymentData": "Payment details",
-    "cartDescription": "Confirm the services before continuing to checkout.",
-    "paymentDescription": "Complete your billing and payment information to finish.",
-    "quantity": "Quantity",
-    "subtotal": "Subtotal",
-    "vatIncluded": "+ VAT",
-    "continueCheckout": "Proceed to checkout",
-    "continueShopping": "Continue shopping",
-    "firstName": "First name",
-    "lastName": "Last name",
-    "email": "Email address",
-    "phone": "Phone",
-    "city": "City",
-    "state": "State",
-    "address": "Address",
-    "postalCode": "Postal code",
-    "country": "Country",
-    "cardData": "Card details",
-    "cardholderName": "Cardholder name",
-    "cardNumber": "Card number",
-    "month": "Month",
-    "year": "Year",
-    "cvv": "CVV",
-    "backToCart": "Back to cart",
-    "payNow": "Pay now",
-    "processingPayment": "Processing payment...",
-    "paymentRejected": "Payment rejected",
-    "paymentSuccess": "Payment approved. Your purchase was successfully registered.",
-    "unknownPaymentError": "Unknown payment processing error",
-    "summary": "Summary",
-    "currentOrder": "Current order",
-    "services": "Services",
-    "units": "Units",
-    "yes": "Yes",
-    "total": "Total",
-    "secureDescription": "Secure payment with automated processing. Review your information before confirming."
-  },
-  "contact": {
-    "alerts": {
-      "errorTitle": "Error",
-      "defaultError": "An error occurred while sending the form"
-    },
-    "hero": {
-      "badge": "Contact",
-      "title": "Let's talk about your project.",
-      "description": "We create clear, modern Business Intelligence solutions designed to help you make better decisions."
-    },
-    "info": {
-      "title": "Information",
-      "subtitle": "We're ready to help you.",
-      "phone": "Phone",
-      "email": "Email",
-      "office": "Office",
-      "address": "Avenida Homero #205 Piso 10, Colonia Polanco V Sección, Alcaldía Miguel Hidalgo, C.P. 11560, Entidad Federativa Ciudad de México."
-    },
-    "custom": {
-      "title": "Custom solution",
-      "description": "We design dashboards, automations, and analytics tailored to your business needs.",
-      "button": "Pay custom service"
-    },
-    "form": {
-      "title": "Write to us",
-      "subtitle": "We'll respond as soon as possible.",
-      "sending": "Sending...",
-      "submit": "Send message",
-      "fields": {
-        "name": "Name",
-        "email": "Email address",
-        "phone": "Phone",
-        "subject": "Subject",
-        "message": "Message"
-      },
-      "placeholders": {
-        "name": "Your name",
-        "email": "email@company.com",
-        "phone": "+1 555 000 0000",
-        "subject": "How can we help you?",
-        "message": "Tell us about your project..."
-      }
-    },
-    "success": {
-      "title": "Message sent!",
-      "description": "Thank you for contacting us. Our team will get back to you soon.",
-      "button": "Send another message"
-    }
-  },
-  "about": {
-    "metadata": {
-      "title": "About Us - Innova Código",
-      "description": "Meet the Innova Código team, specialists in Business Intelligence and data analysis."
-    },
-    "hero": {
-      "badge": "About Innova Código",
-      "title": "Driving smarter decisions with clear data.",
-      "description": "We are a team specialized in Business Intelligence, automation, and strategic analysis focused on transforming complex information into useful tools for growth.",
-      "tags": {
-        "bi": "Business Intelligence",
-        "integration": "Data integration"
-      },
-      "imageAlt": "Team working",
-      "cardSubtitle": "Professional solutions",
-      "cardTitle": "BI + Automation"
-    },
-    "approach": {
-      "title": "Our approach",
-      "description": "We design dashboards, automations, and data structures focused on real results. Our goal is to help you visualize important information in a clear, organized, and useful way for strategic decision-making."
-    },
-    "commitment": {
-      "title": "Our commitment",
-      "description": "We work to ensure every client has access to accurate, organized, and actionable information. We aim to create solutions that drive growth, efficiency, and operational clarity.",
-      "highlight": "Precision, strategy, and clarity."
-    },
-    "pillars": {
-      "title": "How we work",
-      "description": "Modern solutions focused on organization, analysis, and strategic data visualization.",
-      "items": {
-        "dashboard": {
-          "title": "Clear dashboards",
-          "description": "We create intuitive visualizations focused on the metrics that truly matter."
-        },
-        "data": {
-          "title": "Organized data",
-          "description": "We integrate and structure information to improve decision-making."
-        },
-        "analysis": {
-          "title": "Strategic analysis",
-          "description": "We transform complex data into actionable opportunities for your business."
-        },
-        "security": {
-          "title": "Accuracy and trust",
-          "description": "We validate and optimize information to maintain consistency in every report."
-        }
-      }
-    }
-  },
-  "customService": {
-    "badge": "Custom service",
-    "title": "Confirm and pay for your custom solution.",
-    "description": "Add the agreed service from your quote and continue the process directly from the cart.",
-    "cartItemTitle": "Custom Innova Código",
-    "features": {
-      "securePayment": "Secure payment",
-      "businessService": "Business service"
-    },
-    "form": {
-      "title": "Quote details",
-      "description": "Complete the information to add the custom service to the cart.",
-      "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email address",
-      "emailPlaceholder": "email@company.com",
-      "quoteId": "Quote ID",
-      "quoteIdPlaceholder": "Ex. BI-2026-001",
-      "amount": "Amount",
-      "estimatedTotal": "Estimated total",
-      "addToCart": "Add to cart"
-    },
-    "sideCard": {
-      "title": "Custom payment",
-      "description": "This section is intended for clients with custom quotes previously agreed with Innova Código.",
-      "identifier": "Identifier",
-      "pending": "Pending",
-      "amount": "Amount",
-      "undefined": "Undefined"
-    },
-    "alerts": {
-      "warningTitle": "Warning",
-      "completeFields": "Please complete all fields"
-    }
-  },
-  "servicesPage": {
-    "taxesIncluded": "+ VAT",
-    "hero": {
-      "badge": "Services",
-      "title": "Modern solutions for data and business.",
-      "description": "Explore specialized Business Intelligence, automation, and strategic analysis services to drive smarter decisions."
-    },
-    "categories": {
-      "available": "services available",
-      "data": {
-        "name": "Data packages",
-        "description": "Dashboards, automation, and advanced analytics for businesses."
-      },
-      "single": {
-        "name": "Individual services",
-        "description": "Specific solutions for particular business needs."
-      }
-    },
-    "catalog": {
-      "badge": "Catalog",
-      "description": "Services designed to connect, organize, and visualize the most important information in your business.",
-      "availableLabel": "Services available",
-      "vatIncluded": "+ VAT",
-      "ready": "Ready to implement",
-      "finalPrice": "Final price",
-      "addToCart": "Add"
+  "header": {
+    "nav": {
+      "home": "Home",
+      "diagnostic": "Request Diagnostic",
+      "store": "Store",
+      "contact": "Contact"
     },
     "cta": {
-      "title": "Need a custom solution?",
-      "description": "We design dashboards, automations, and analysis tailored to your business structure and goals.",
-      "button": "Contact us"
-    }
-  },
-  "homeAbout": {
-    "badge": "About us",
-    "title": "Clear data.<br></br>Smarter decisions.",
-    "description": "At Innova Código, we help companies transform scattered information into modern dashboards, clear metrics, and actionable insights.",
-    "imageAlt": "Dashboard analytics",
-    "features": {
-      "integration": {
-        "title": "Data integration",
-        "description": "We connect multiple data sources into a single place."
-      },
-      "visualization": {
-        "title": "Smart visualization",
-        "description": "We design simple, modern, and easy-to-understand dashboards."
-      }
+      "strategy": "Request personalized strategy",
+      "mobile": "Strategy"
     },
-    "floatingCard": {
-      "label": "Business Intelligence",
-      "title": "Modern & Simple"
+    "buttons": {
+      "sending": "Sending request...",
+      "submit": "Request personalized strategy"
+    },
+    "drawer": {
+      "badge": "Personalized strategy",
+      "title": "Let's talk about your ecommerce",
+      "description": "Tell us what you want to build, optimize or scale. We’ll review your project and help define the best digital strategy for your ecommerce.",
+      "emailSubject": "Request for personalized strategy"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "project": "Describe your project",
+      "placeholder": "Example: I want to improve conversions, automate campaigns, scale Shopify and optimize the shopping experience..."
+    },
+    "messages": {
+      "success": "Your request was sent successfully. We will contact you soon.",
+      "error": "An error occurred while sending your request."
+    },
+    "accessibility": {
+      "logoAlt": "NorexioDigital",
+      "openCart": "Open cart",
+      "toggleMenu": "Toggle menu",
+      "close": "Close"
     }
   },
-  "homeFeatures": {
-    "items": {
-      "custom": {
-        "title": "Tailored solutions",
-        "description": "We adapt every dashboard and report to your company's reality, goals, and key metrics."
-      },
-      "precision": {
-        "title": "Data accuracy",
-        "description": "We standardize, clean, and validate information so you can trust every indicator."
-      }
+  "checkout": {
+    "emptyCart": {
+      "title": "Your cart is empty",
+      "description": "Add products or services to the cart before continuing to payment.",
+      "button": "Go to store"
+    },
+    "hero": {
+      "badge": "Checkout",
+      "title": "Complete your purchase",
+      "description": "Review the summary, confirm the total with VAT included, and fill in the details Octano needs to process the payment.",
+      "backButton": "Back to store"
+    },
+    "summary": {
+      "title": "Products summary",
+      "item": "item",
+      "item_plural": "items"
+    },
+    "totals": {
+      "subtotal": "Subtotal",
+      "iva": "VAT (16%)",
+      "total": "Total to pay",
+      "taxNote": "VAT is automatically added to the total before processing payment."
+    },
+    "actions": {
+      "proceedToPayment": "Proceed to payment",
+      "processing": "Processing payment...",
+      "payNow": "Pay now"
+    },
+    "formSection": {
+      "badge": "Required data by Octano",
+      "lockedTitle": "Review the summary first",
+      "formTitle": "Complete your payment details",
+      "lockedDescription": "Confirm your purchase to display the full form with the fields required by the gateway.",
+      "formDescription": "All fields are separated so Octano receives exactly the required information.",
+      "lockedCardTitle": "Form locked until summary is confirmed",
+      "lockedCardDescription": "Press “Proceed to payment” to continue."
+    },
+    "customer": {
+      "title": "Customer information",
+      "name": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company"
+    },
+    "address": {
+      "title": "Billing address",
+      "address1": "Address",
+      "address2": "Address 2",
+      "city": "City",
+      "state": "State",
+      "postalCode": "Postal code",
+      "country": "Country"
+    },
+    "card": {
+      "title": "Card details",
+      "number": "Card number",
+      "name": "Name on card",
+      "month": "Expiration month",
+      "year": "Expiration year",
+      "cvv": "CVV"
+    },
+    "paymentLogos": {
+      "octanoAlt": "Octano Payments",
+      "secureAlt": "Secure payment"
+    },
+    "alerts": {
+      "emptyCartTitle": "Cart empty",
+      "emptyCartMessage": "Your cart is empty.",
+      "paymentErrorTitle": "Payment error",
+      "paymentErrorMessage": "Payment could not be processed.",
+      "warningTitle": "Warning",
+      "ticketWarningMessage": "The payment was processed correctly, but the ticket email could not be sent.",
+      "successTitle": "Purchase successful",
+      "successMessage": "Payment approved and ticket sent successfully.",
+      "errorTitle": "Error",
+      "checkoutErrorMessage": "An error occurred while processing checkout."
     }
   },
+
   "hero": {
-    "badge": "Business Intelligence + AI",
-    "title": "Turn\nyour data\ninto smarter\nbusiness decisions.",
-    "description": "Modern dashboards, statistical analysis, automation, and business intelligence tools designed for companies that want to grow with clarity.",
-    "primaryButton": "Explore services",
-    "secondaryButton": "Contact us",
-    "dashboardLabel": "Dashboard Overview",
-    "dashboardTitle": "Business Metrics",
-    "stats": {
-      "revenue": "Revenue",
-      "conversion": "Conversion"
-    }
-  },
-  "servicesSection": {
-    "badge": "Services",
-    "title": "Modern solutions<br></br>for data-driven<br></br>businesses.",
-    "description": "Dashboards, automation, analytics and<br></br>intelligent tools to make<br></br>better decisions.",
-    "viewAll": "View all",
-    "taxesIncluded": "+ VAT",
-    "add": "Add"
-  },
-  "home": {
-    "process": {
-      "badge": "Process",
-      "title": "How<br></br>Innova Código works.",
-      "description": "A simple, modern process focused on transforming data into clear decisions.",
-      "connectDataTitle": "We connect your data",
-      "connectDataDescription": "We integrate your sources into one place: sales, marketing, CRM, and operations.",
-      "cleanDataTitle": "We clean and organize information",
-      "cleanDataDescription": "We standardize metrics, validate data, and create the right structure.",
-      "buildDashboardsTitle": "We build your dashboards",
-      "buildDashboardsDescription": "We design clear visual panels with custom KPIs for your business.",
-      "deliverySupportTitle": "Delivery and support",
-      "deliverySupportDescription": "You receive dashboards ready to use plus ongoing support for future improvements."
+    "badge": "Growth Engineering for Ecommerce",
+    "title": "We transform your ecommerce into a",
+    "titleHighlight": "sales machine",
+    "description": "We design strategies focused on growth, conversion, and profitability for online stores that want to sell more and operate better.",
+    "card": {
+      "badge": "Ecommerce Growth",
+      "title": "Digital Strategy"
     },
-    "helpSection": {
-      "badge": "Contact",
-      "title": "Need help<br></br>with your data?",
-      "description": "We are ready to help you build dashboards, automations, and intelligent solutions for your business.",
-      "phoneLabel": "Phone",
-      "emailLabel": "Email",
-      "officeLabel": "Office",
-      "officeAddress": "Avenida Homero #205 Piso 10, Colonia Polanco V Sección, Alcaldía Miguel Hidalgo, C.P. 11560, Entidad Federativa Ciudad de México.",
-      "imageAlt": "Innova Código office",
-      "floatingCardTitle": "Let's talk about your project",
-      "floatingCardDescription": "Tell us what you need and we will design a solution tailored to your company.",
-      "button": "Contact us"
+    "metrics": {
+      "campaigns": {
+        "label": "Campaign performance",
+        "value": "+82%"
+      },
+      "conversion": {
+        "label": "Conversion optimization",
+        "value": "+64%"
+      },
+      "strategy": "Strategies focused on growth, automation, and scalability for ecommerce."
     }
-  },
-  "footer": {
-    "description": "Modern Business Intelligence, dashboard, and automation solutions for data-driven companies.",
-    "address": "Avenida Homero #205 Piso 10, Colonia Polanco V Sección, Alcaldía Miguel Hidalgo, C.P. 11560, Entidad Federativa Ciudad de México.",
-    "navigation": "Navigation",
-    "legal": "Legal",
-    "privacyPolicy": "Privacy Policy",
-    "termsConditions": "Terms and Conditions",
-    "refundPolicy": "Refund and Return Policy",
-    "home": "Home",
-    "about": "About Us",
-    "services": "Services",
-    "contact": "Contact",
-    "securePayments": "Secure payments",
-    "copyright": "© 2025 Innova Código. All rights reserved.",
-    "bottomText": "Business Intelligence & Analytics"
   },
   "cartDrawer": {
-    "closeCart": "Close cart",
-    "title": "Cart",
-    "singleService": "service",
-    "multipleServices": "services",
+    "selectedServices": "Selected services",
+    "cart": "Cart",
+    "close": "Close cart",
     "emptyTitle": "Your cart is empty",
-    "emptyDescription": "Add services to start building your custom solution.",
-    "continueExploring": "Continue exploring",
-    "removeFromCart": "Remove from cart",
-    "decreaseQuantity": "Decrease quantity",
-    "increaseQuantity": "Increase quantity",
-    "vatIncluded": "+ VAT",
-    "estimatedTotal": "Estimated total",
-    "taxesIncluded": "Taxes included",
+    "emptyDescription": "Add ecommerce services to start building your digital strategy.",
+    "exploreServices": "Explore services",
+    "ecommerceService": "Ecommerce service",
+    "plusTax": "+ TAX",
+    "remove": "Remove product",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "tax": "TAX (16%)",
+    "finalTotal": "Total",
     "checkout": "Proceed to checkout",
     "clearCart": "Clear cart"
   },
-  "serviceModal": {
-    "back": "Back",
-    "professionalService": "Professional Service",
-    "taxIncluded": "Tax included",
+  "benefits": {
+    "badge": "Ecommerce Solutions",
+    "title": "We identify what is slowing down your digital growth.",
+    "description": "We design ecommerce-focused strategies to help you sell more and operate better.",
+    "benefitsBadge": "Benefits",
+    "benefitsTitle": "Clear and measurable results.",
+    "barriers": {
+      "0": "Your store gets traffic but does not generate sales.",
+      "1": "Your campaigns consume budget without return.",
+      "2": "Your ecommerce store fails to position itself properly."
+    },
+    "benefitsList": {
+      "0": "Higher conversion",
+      "1": "More qualified traffic",
+      "2": "Campaign optimization",
+      "3": "Commercial automation",
+      "4": "Sustainable growth"
+    }
+  },
+   "services": {
+    "badge": "Services",
+    "title": "Growth-focused solutions for ecommerce.",
+    "items": {
+      "0": "Sales strategy for ecommerce",
+      "1": "Advertising for online stores",
+      "2": "Conversion optimization",
+      "3": "Sales automation",
+      "4": "SEO positioning for stores"
+    }
+  },
+  "process": {
+    "badge": "Our process",
+    "title": "A clear process to grow your ecommerce.",
+    "step1": {
+      "title": "Online store diagnosis",
+      "description": "We analyze your ecommerce and identify improvement opportunities."
+    },
+    "step2": {
+      "title": "Growth strategy",
+      "description": "We define actions focused on sales, traffic, and conversion."
+    },
+    "step3": {
+      "title": "Implementation",
+      "description": "We execute technical improvements, automations, and campaigns."
+    },
+    "step4": {
+      "title": "Scaling",
+      "description": "We optimize results to increase profitability and growth."
+    }
+  },
+  "aboutUs": {
+    "imageAlt": "NorexioDigital Team",
+    "badge": "Who We Are",
+    "title": "The team behind digital growth.",
+    "description1": "We believe an online store should be more than a product catalog: it should become an experience that connects with customers and generates real sales.",
+    "description2": "We focus on analyzing, optimizing, and strengthening ecommerce businesses so every company has a digital structure prepared to grow, improve performance, and offer a more effective shopping experience."
+  },
+  "whyChooseUs": {
+    "badge": "Why choose us?",
+    "title": "We design strategies focused on real growth.",
+    "description": "We help transform online stores into more efficient, scalable digital structures prepared to increase sales.",
+    "features": {
+      "strategy": {
+        "title": "Strategic approach",
+        "description": "Each ecommerce business is analyzed individually to define actions aligned with its real objectives."
+      },
+      "optimization": {
+        "title": "Results-driven optimization",
+        "description": "We improve structure, experience, and conversion to increase your online store’s performance."
+      },
+      "specialization": {
+        "title": "Ecommerce specialization",
+        "description": "We work exclusively with ecommerce businesses to develop more precise and effective solutions."
+      },
+      "growth": {
+        "title": "Digital growth vision",
+        "description": "We build strategies prepared to evolve, scale, and adapt to the digital market."
+      }
+    }
+  },
+  "contactForm": {
+    "badge": "Contact",
+    "title": "We're Here to Help",
+    "description1": "If you're looking to improve your online store's performance or develop a strategy to boost your digital sales, we're ready to help.",
+    "description2": "Complete the form and tell us about your ecommerce business. We'll analyze your situation and guide you through the best opportunities to optimize your store and strengthen its growth in the digital environment.",
+    "emailSubject": "New ecommerce lead - {store}",
+    "info": {
+      "address": {
+        "title": "Address",
+        "line1": "Av. Chapultepec No. 480 Floor 9 Apt. 901,",
+        "line2": "Roma Norte, ZIP Code 06700,",
+        "line3": "Cuauhtémoc, Mexico City"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "phone": {
+        "title": "Phone"
+      }
+    },
+    "form": {
+      "badge": "Form",
+      "title": "Tell us about your project",
+      "description": "We’ll respond to your request as soon as possible.",
+      "submit": "Send inquiry",
+      "sending": "Sending..."
+    },
+    "fields": {
+      "nombre": "Name",
+      "email": "Email",
+      "telefono": "Phone",
+      "tienda": "Store name",
+      "sitio": "Website",
+      "mensaje": "Message"
+    },
+    "alerts": {
+      "successTitle": "Message sent",
+      "successMessage": "Thank you! Your message has been sent successfully.",
+      "errorTitle": "Error",
+      "errorMessage": "An error occurred while sending the form."
+    }
+  },
+   "ctaBanner": {
+    "badge": "Strategic diagnosis",
+    "title": "Want to boost your ecommerce growth?",
+    "description": "We design personalized strategies to help you optimize conversions, increase sales, and build a more profitable online store.",
+    "primaryButton": "Pay Custom strategy",
+    "secondaryButton": "View solutions",
+    "stats": {
+      "label": "Ecommerce Growth",
+      "description": "Potential increase in conversions through optimization and digital strategy."
+    }
+  },
+  "footer": {
+    "badge": "NorexioDigital Mexico",
+    "title": "We create real ecommerce strategies focused on growth.",
+    "description": "We help online stores improve conversions, optimize operations, and increase sales through strategies focused on digital growth.",
+    "cardsAlt": "Payment methods",
+    "contactBadge": "Contact Us",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "addressLine1": "Av. Chapultepec No. 480 Floor 9 Suite 901,",
+    "addressLine2": "Roma Norte, ZIP Code 06700, Cuauhtémoc, Mexico City",
+    "cta": "Request Strategy",
+    "copyright": "© 2026 NorexioDigital. All rights reserved.",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Notice",
+    "refunds": "Returns and Refunds Policy"
+  },
+  "diagnostic": {
+    "badge": "Ecommerce Diagnostic",
+    "title": "Request Your Diagnostic",
+    "description1": "Every online store has different goals, products, and markets. That is why we design fully personalized strategies to drive the growth of your ecommerce business.",
+    "description2": "We analyze your store, identify growth opportunities, and develop a strategic implementation tailored to your business needs.",
+    "includesTitle": "Includes",
+    "includes": [
+      "Strategic diagnostic of your online store",
+      "Identification of growth opportunities",
+      "Personalized sales strategy design",
+      "Optimization proposal to increase conversions"
+    ],
+    "emailSubject": "New ecommerce lead",
+    "successMessage": "Thank you! Your message has been sent successfully.",
+    "errorMessage": "An error occurred while submitting the form.",
+    "form": {
+      "badge": "Form",
+      "title": "Tell us about your project",
+      "description": "We will respond to your request as soon as possible.",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "store": "Your store name",
+      "website": "Website",
+      "message": "Message or project description",
+      "submit": "Send inquiry",
+      "loading": "Sending..."
+    }
+  },
+  "strategyPage": {
+    "badge": "Custom ecommerce strategy",
+    "title1": "Boost the growth",
+    "title2": "of your online store",
+    "description": "We design a personalized strategy based on your ecommerce current state, real growth opportunities, and conversion optimization.",
+    "imageAlt": "Ecommerce Strategy",
+    "consulting": "Strategic Consulting",
+    "includesTitle": "Includes",
+    "includesSubtitle": "Diagnosis and personalized strategy",
+    "features": [
+      "Strategic diagnosis of your online store",
+      "Identification of growth opportunities",
+      "Personalized sales strategy design",
+      "Optimization proposal to increase conversions"
+    ],
+    "form": {
+      "badge": "Hiring form",
+      "title": "Complete your information",
+      "description": "Enter the information previously agreed upon with your advisor to add the personalized strategy to the cart.",
+      "quoteId": "Quote ID",
+      "quotePlaceholder": "Example: EXC-2048",
+      "store": "Online store name",
+      "storePlaceholder": "Example: My Store",
+      "amount": "Amount to pay"
+    },
+    "iva": "VAT will be added to the final amount during checkout.",
+    "summary": "Estimated total",
+    "summaryDescription": "The service will be added directly to the cart to continue the hiring process.",
+    "button": {
+      "default": "Add to cart",
+      "added": "Already added to cart"
+    },
+    "alerts": {
+      "completeFields": "Complete all fields.",
+      "invalidAmount": "Enter a valid amount.",
+      "added": "Service added to cart."
+    },
+    "product": {
+      "title": "Custom Strategy",
+      "category": "Ecommerce Consulting",
+      "quoteId": "Quote ID",
+      "store": "Online store"
+    }
+  },
+  "planModal": {
+    "back": "Back to services",
+    "service": "Ecommerce Service",
+    "badge1": "Ecommerce",
+    "badge2": "Professional Service",
+    "strategicSolution": "Strategic solution",
+    "includes": "Includes",
+    "basePrice": "Base price",
+    "currency": "MXN + VAT",
     "quantity": "Quantity",
-    "estimatedTotal": "Estimated total",
-    "serviceSingular": "service",
-    "servicePlural": "services",
-    "addToCart": "Add to cart",
-    "cancel": "Cancel",
-    "brand": "Innova Código"
+    "quantityDescription": "Adjust service quantity",
+    "subtotal": "Subtotal",
+    "iva": "VAT",
+    "total": "Total",
+    "addToCart": "Add to cart"
   }
 }

@@ -2,6 +2,9 @@
 
 import { useEffect } from "react";
 import { CartProvider } from "@/context/CartContext";
+import { LocaleProvider } from "@/context/LangContext";
+import { AlertProvider } from "@/context/AlertContext";
+import LangSwitcher from "@/components/LangSwitcher";
 
 export default function ClientBody({
   children,
@@ -15,8 +18,13 @@ export default function ClientBody({
   }, []);
 
   return (
-    <CartProvider>
-      <div className="antialiased">{children}</div>
-    </CartProvider>
+    <LocaleProvider>
+      <AlertProvider>
+        <CartProvider>
+          <LangSwitcher />
+          <div className="antialiased">{children}</div>
+        </CartProvider>
+      </AlertProvider>
+    </LocaleProvider>
   );
 }

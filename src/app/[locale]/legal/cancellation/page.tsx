@@ -1,7 +1,8 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { useLocale } from "next-intl";
 
-export default function RefundPolicyPage() {
+function RefundPolicyPageSpanish() {
   return (
     <>
       <Header />
@@ -59,4 +60,133 @@ export default function RefundPolicyPage() {
       <Footer />
     </>
   );
+}
+
+
+function RefundPolicyPageEnglish() {
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen bg-[#fafafa] pt-32 pb-24 text-stone-900">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="bg-white p-10 md:p-16 rounded-[2rem] border border-stone-200 shadow-sm">
+
+            <h1 className="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight mb-8">
+              Returns and Refunds Policy
+            </h1>
+
+            <div className="space-y-6 text-stone-600 leading-relaxed font-medium">
+              <p>
+                This Policy establishes the guidelines under which SEVEN MARKETING DIGITAL, S.A. DE C.V. (hereinafter “Norexio Digital MKT”) will process refund or return requests related to services purchased through the website NorexioDigitalmkt.com. {/* [cite: 228, 229] */}
+              </p>
+
+              <p>
+                The User acknowledges that, by purchasing any of our services, they expressly accept the provisions set forth in this document, which forms an integral part of the Terms and Conditions of Use. {/* [cite: 230] */}
+              </p>
+
+              <h2 className="text-2xl font-bold text-stone-900 mt-8">1. Scope</h2>
+
+              <p>
+                This policy applies exclusively to services purchased through the Website. It shall not apply to transactions carried out through different channels or to services provided by third parties that have a direct contractual relationship with the User. {/* [cite: 232, 233] */}
+              </p>
+
+              <h2 className="text-2xl font-bold text-stone-900 mt-8">
+                2. Grounds for Refund Eligibility
+              </h2>
+
+              <p>
+                Norexio Digital MKT will only proceed with full or partial refunds in the following cases: {/* [cite: 235] */}
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2">
+                <li>
+                  <strong>Verified non-compliance</strong> in the delivery or execution of the contracted service, directly attributable to Norexio Digital MKT. {/* [cite: 236] */}
+                </li>
+
+                <li>
+                  <strong>Technical impossibility</strong> to provide the service due to causes attributable to Norexio Digital MKT. {/* [cite: 237] */}
+                </li>
+
+                <li>
+                  <strong>Billing errors or duplicate charges</strong>, provided they are supported with documentary evidence. {/* [cite: 238] */}
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-stone-900 mt-8">3. Exclusions</h2>
+
+              <p>
+                Refunds or returns shall not apply in the following cases: {/* [cite: 240] */}
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2">
+                <li>
+                  When the service has been fully or partially executed in accordance with the agreed terms. {/* [cite: 241] */}
+                </li>
+
+                <li>
+                  When the User’s dissatisfaction is based on subjective perceptions and not on an objective breach of the service. {/* [cite: 242] */}
+                </li>
+
+                <li>
+                  When the User has failed to comply with the conditions necessary for the proper provision of the service. {/* [cite: 243] */}
+                </li>
+
+                <li>
+                  Due to force majeure or unforeseen circumstances that make the execution of the service impossible and are not attributable to Norexio Digital MKT. {/* [cite: 244] */}
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-stone-900 mt-8">
+                4. Deadline to Request a Refund
+              </h2>
+
+              <p>
+                The User must submit their refund request within a maximum period of five (5) business days from the date of purchase confirmation by sending an email to contacto@NorexioDigitalmkt.com with the following information: {/* [cite: 246] */}
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Full name and contact details. {/* [cite: 247] */}</li>
+
+                <li>Order number or proof of purchase. {/* [cite: 248] */}</li>
+
+                <li>
+                  Detailed description of the reason for the request. {/* [cite: 249] */}
+                </li>
+
+                <li>
+                  Documents and evidence supporting the request. {/* [cite: 250] */}
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-stone-900 mt-8">5. Procedure</h2>
+
+              <p>
+                Once the request is received, Norexio Digital MKT will review the information and may request additional data or documents in order to issue a resolution. Norexio Digital MKT will inform the User of the approval or rejection of the refund within a maximum period of ten (10) business days from the complete receipt of the request. {/* [cite: 252, 253] */}
+              </p>
+
+              <p>
+                In the event of approval, the refund will be processed using the same payment method used by the User, unless otherwise agreed in writing. {/* [cite: 254] */}
+              </p>
+
+              <h2 className="text-2xl font-bold text-stone-900 mt-8">
+                6. Final Provisions
+              </h2>
+
+              <p>
+                Norexio Digital MKT reserves the right to modify this Policy at any time by publishing the updated version on the Website. The modifications shall enter into force as of their publication date and shall apply to all subsequent transactions. {/* [cite: 256, 257] */}
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+
+export default function LegalPage() {
+  const locale = useLocale();
+
+  return locale === "es" ? <RefundPolicyPageSpanish /> : <RefundPolicyPageEnglish />
 }

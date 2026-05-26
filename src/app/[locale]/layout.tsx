@@ -30,14 +30,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
       <ClientBody>
-
-        <LocaleProvider>
-          <CartProvider>
-            <AlertProvider>
-              {children}
-            </AlertProvider>
-          </CartProvider>        
-        </LocaleProvider>
+        {children}
       </ClientBody>
     </NextIntlClientProvider>
   );

@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 
-const STORAGE_KEY = "expertcommerce-cart";
+const STORAGE_KEY = "norexiodigital-cart";
 
 export interface Plan {
   id: string;

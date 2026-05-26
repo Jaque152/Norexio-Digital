@@ -1,6 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+
+import { Link } from "@/i18n/routing";
 
 import {
   ArrowUpRight,
@@ -9,9 +12,10 @@ import {
   Phone,
   ShieldCheck,
 } from "lucide-react";
-import Image from "next/image";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="bg-zinc-950 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
@@ -21,24 +25,26 @@ export default function Footer() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 text-sm font-semibold text-emerald-300 mb-6">
               <ShieldCheck className="w-4 h-4" />
-              ExpertCommerce México
+
+              {t("badge")}
             </div>
 
             <h2 className="text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-              Creamos estrategias reales para ecommerce que quieren crecer.
+              {t("title")}
             </h2>
 
             <p className="mt-6 max-w-2xl text-zinc-400 leading-8 text-lg">
-              Ayudamos a tiendas online a mejorar conversiones,
-              optimizar operaciones y aumentar ventas mediante
-              estrategias enfocadas en crecimiento digital.
+              {t("description")}
             </p>
 
             {/* Payment Methods */}
             <div className="flex items-center gap-4 mt-10">
-              
-
-              <Image src="/cards.png" alt="Etomin" width={150} height={30} className="" />
+              <Image
+                src="/cards.png"
+                alt={t("cardsAlt")}
+                width={150}
+                height={30}
+              />
             </div>
           </div>
 
@@ -47,7 +53,7 @@ export default function Footer() {
             <div className="bg-gradient-to-br from-zinc-900 via-zinc-900 to-emerald-950/40 border border-white/10 rounded-[36px] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
               <div className="mb-8">
                 <span className="inline-flex rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm font-semibold text-emerald-300">
-                  Contáctanos
+                  {t("contactBadge")}
                 </span>
               </div>
 
@@ -60,7 +66,7 @@ export default function Footer() {
 
                   <div>
                     <p className="text-sm font-semibold text-zinc-500 mb-1">
-                      Teléfono
+                      {t("phoneLabel")}
                     </p>
 
                     <a
@@ -80,14 +86,14 @@ export default function Footer() {
 
                   <div>
                     <p className="text-sm font-semibold text-zinc-500 mb-1">
-                      Email
+                      {t("emailLabel")}
                     </p>
 
                     <a
-                      href="mailto:webmaster@expertcommerce.com.mx"
+                      href="mailto:webmaster@norexiodigital.com"
                       className="text-lg font-bold text-white hover:text-emerald-300 transition-colors break-all"
                     >
-                      webmaster@expertcommerce.com.mx
+                      webmaster@norexiodigital.com
                     </a>
                   </div>
                 </div>
@@ -100,13 +106,13 @@ export default function Footer() {
 
                   <div>
                     <p className="text-sm font-semibold text-zinc-500 mb-1">
-                      Dirección
+                      {t("addressLabel")}
                     </p>
 
                     <p className="text-zinc-400 leading-7">
-                      Av. Chapultepec N° 480 Piso 9 Dep. 901,
-                      Col. Roma Norte, C.P 06700,
-                      Alcaldía Cuauhtémoc, CDMX
+                      {t("addressLine1")}
+                      <br />
+                      {t("addressLine2")}
                     </p>
                   </div>
                 </div>
@@ -118,7 +124,8 @@ export default function Footer() {
                   href="#contacto"
                   className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 px-6 py-4 text-white font-semibold shadow-[0_10px_25px_rgba(16,185,129,0.25)] transition-all hover:scale-[1.02]"
                 >
-                  Solicitar estrategia
+                  {t("cta")}
+
                   <ArrowUpRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -130,29 +137,29 @@ export default function Footer() {
         <div className="mt-16 border-t border-white/10 pt-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <p className="text-sm text-zinc-500">
-              © 2026 ExpertCommerce. Todos los derechos reservados.
+              {t("copyright")}
             </p>
 
             <div className="flex flex-wrap gap-6">
               <Link
-                href="#"
+                href="/legal/terms-conditions"
                 className="text-sm font-medium text-zinc-500 hover:text-emerald-300 transition-colors"
               >
-                Términos y Condiciones
+                {t("terms")}
               </Link>
 
               <Link
-                href="#"
+                href="/legal/privacy"
                 className="text-sm font-medium text-zinc-500 hover:text-emerald-300 transition-colors"
               >
-                Aviso de Privacidad
+                {t("privacy")}
               </Link>
 
               <Link
-                href="#"
+                href="/legal/cancellation"
                 className="text-sm font-medium text-zinc-500 hover:text-emerald-300 transition-colors"
               >
-                Política de Rembolsos
+                {t("refunds")}
               </Link>
             </div>
           </div>

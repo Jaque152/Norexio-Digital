@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
+
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/data/products";
 import { Link } from "@/i18n/routing";
@@ -18,6 +20,8 @@ import {
 const IVA_RATE = 0.16;
 
 export default function Cart() {
+  const t = useTranslations("cartDrawer");
+
   const {
     items,
     removeFromCart,
@@ -43,8 +47,6 @@ export default function Cart() {
 
   return (
     <>
-
-
       {/* Drawer */}
       <aside className="fixed right-0 top-0 z-50 h-full w-full max-w-xl bg-white border-l border-emerald-100 shadow-2xl flex flex-col animate-slide-in">
         {/* Header */}
@@ -57,11 +59,11 @@ export default function Cart() {
 
               <div>
                 <p className="text-sm text-gray-500">
-                  Servicios seleccionados
+                  {t("selectedServices")}
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900">
-                  Carrito ({totalItems})
+                  {t("cart")} ({totalItems})
                 </h2>
               </div>
             </div>
@@ -70,6 +72,7 @@ export default function Cart() {
               type="button"
               onClick={() => setIsCartOpen(false)}
               className="w-12 h-12 rounded-2xl bg-white border border-emerald-100 hover:bg-emerald-50 transition-colors flex items-center justify-center"
+              aria-label={t("close")}
             >
               <X className="w-5 h-5 text-gray-700" />
             </button>
@@ -84,12 +87,11 @@ export default function Cart() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              Tu carrito está vacío
+              {t("emptyTitle")}
             </h3>
 
             <p className="text-gray-500 leading-7 max-w-sm mb-8">
-              Agrega servicios ecommerce para comenzar a
-              construir tu estrategia digital.
+              {t("emptyDescription")}
             </p>
 
             <button
@@ -97,7 +99,7 @@ export default function Cart() {
               onClick={() => setIsCartOpen(false)}
               className="h-14 px-8 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors"
             >
-              Explorar servicios
+              {t("exploreServices")}
             </button>
           </div>
         ) : (
@@ -130,7 +132,7 @@ export default function Cart() {
                             </h3>
 
                             <p className="text-sm text-gray-500 mb-3">
-                              Servicio ecommerce
+                              {t("ecommerceService")}
                             </p>
 
                             <div className="flex items-end gap-2">
@@ -139,7 +141,7 @@ export default function Cart() {
                               </span>
 
                               <span className="text-sm text-gray-400 mb-0.5">
-                                + IVA
+                                {t("plusTax")}
                               </span>
                             </div>
                           </div>
@@ -150,6 +152,7 @@ export default function Cart() {
                               removeFromCart(item.id)
                             }
                             className="w-10 h-10 rounded-xl bg-red-50 hover:bg-red-100 transition-colors flex items-center justify-center flex-shrink-0"
+                            aria-label={t("remove")}
                           >
                             <Trash2 className="w-4 h-4 text-red-500" />
                           </button>
@@ -167,6 +170,7 @@ export default function Cart() {
                                 )
                               }
                               className="w-10 h-10 rounded-xl border border-emerald-200 hover:bg-emerald-50 flex items-center justify-center transition-colors"
+                              aria-label={t("decrease")}
                             >
                               <Minus className="w-4 h-4 text-emerald-700" />
                             </button>
@@ -184,6 +188,7 @@ export default function Cart() {
                                 )
                               }
                               className="w-10 h-10 rounded-xl border border-emerald-200 hover:bg-emerald-50 flex items-center justify-center transition-colors"
+                              aria-label={t("increase")}
                             >
                               <Plus className="w-4 h-4 text-emerald-700" />
                             </button>
@@ -191,7 +196,7 @@ export default function Cart() {
 
                           <div className="text-right">
                             <p className="text-sm text-gray-500">
-                              Total
+                              {t("total")}
                             </p>
 
                             <p className="text-lg font-bold text-gray-900">
@@ -214,7 +219,7 @@ export default function Cart() {
               <div className="rounded-[2rem] bg-emerald-50 border border-emerald-100 p-6 mb-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between text-gray-600">
-                    <span>Subtotal</span>
+                    <span>{t("subtotal")}</span>
 
                     <span className="font-semibold">
                       {formatPrice(totalPrice)}
@@ -222,7 +227,7 @@ export default function Cart() {
                   </div>
 
                   <div className="flex items-center justify-between text-gray-600">
-                    <span>IVA (16%)</span>
+                    <span>{t("tax")}</span>
 
                     <span className="font-semibold">
                       {formatPrice(iva)}
@@ -231,7 +236,7 @@ export default function Cart() {
 
                   <div className="pt-4 border-t border-emerald-200 flex items-center justify-between">
                     <span className="text-xl font-bold text-gray-900">
-                      Total
+                      {t("finalTotal")}
                     </span>
 
                     <span className="text-3xl font-bold text-emerald-700">
@@ -248,7 +253,7 @@ export default function Cart() {
                     type="button"
                     className="w-full h-14 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors flex items-center justify-center gap-3 shadow-lg shadow-emerald-100"
                   >
-                    Proceder al pago
+                    {t("checkout")}
 
                     <ArrowRight className="w-5 h-5" />
                   </button>
@@ -259,7 +264,7 @@ export default function Cart() {
                   onClick={clearCart}
                   className="w-full h-14 rounded-2xl border border-emerald-200 bg-white hover:bg-emerald-50 text-gray-700 font-semibold transition-colors"
                 >
-                  Vaciar carrito
+                  {t("clearCart")}
                 </button>
               </div>
             </div>

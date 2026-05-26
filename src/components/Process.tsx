@@ -1,40 +1,44 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 const steps = [
   {
     number: "01",
-    title: "Diagnóstico de tienda online",
-    description: "Analizamos tu ecommerce y detectamos oportunidades de mejora.",
+    titleKey: "step1.title",
+    descriptionKey: "step1.description",
   },
   {
     number: "02",
-    title: "Estrategia de crecimiento",
-    description: "Definimos acciones enfocadas en ventas, tráfico y conversión.",
+    titleKey: "step2.title",
+    descriptionKey: "step2.description",
   },
   {
     number: "03",
-    title: "Implementación",
-    description: "Ejecutamos mejoras técnicas, automatizaciones y campañas.",
+    titleKey: "step3.title",
+    descriptionKey: "step3.description",
   },
   {
     number: "04",
-    title: "Escalamiento",
-    description: "Optimizamos resultados para aumentar rentabilidad y crecimiento.",
+    titleKey: "step4.title",
+    descriptionKey: "step4.description",
   },
 ];
 
 export default function Process() {
+  const t = useTranslations("process");
+
   return (
     <section className="bg-white py-24 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-3xl mb-14">
           <span className="inline-flex rounded-full bg-green-100 px-5 py-2 text-sm font-semibold text-green-700 mb-6">
-            Nuestro proceso
+            {t("badge")}
           </span>
 
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-900 leading-tight">
-            Un proceso claro para hacer crecer tu ecommerce.
+            {t("title")}
           </h2>
         </div>
 
@@ -59,11 +63,11 @@ export default function Process() {
                 </div>
 
                 <h3 className="text-2xl font-black tracking-tight text-zinc-900 leading-tight mb-4">
-                  {step.title}
+                  {t(step.titleKey)}
                 </h3>
 
                 <p className="text-zinc-600 leading-7">
-                  {step.description}
+                  {t(step.descriptionKey)}
                 </p>
               </div>
             </div>

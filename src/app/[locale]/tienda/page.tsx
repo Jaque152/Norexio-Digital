@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 
-import { Plan, plans } from "@/data/products";
+import { Plan, plansEnglish, plansSpanish } from "@/data/products";
+
 import { useCart } from "@/context/CartContext";
 
 import Header from "@/components/Header";
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import PlanModal from "@/components/PlanModal";
+import { useLocale } from "next-intl";
 
 const formatPrice = (price: number) =>
   new Intl.NumberFormat("es-MX", {
@@ -30,6 +32,8 @@ export default function TiendaPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { addToCart } = useCart();
+  const locale = useLocale()
+  const plans = locale == "es" ? plansSpanish : plansEnglish;
 
   const categories = useMemo(() => {
     const uniqueCategories = Array.from(

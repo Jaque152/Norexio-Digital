@@ -2,22 +2,22 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
     ArrowLeft,
     BadgeCheck,
-    CreditCard,
     FileText,
     LockKeyhole,
     ShoppingBag,
     ShieldCheck,
 } from "lucide-react";
+import Image from "next/image";
 
 import { useCart } from "@/context/CartContext";
 import { processOctanoPayment } from "@/lib/payment";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import { useAlert } from "@/context/AlertContext";
 
 type CheckoutStep = "summary" | "form";
 
@@ -55,20 +55,15 @@ function getOrderId() {
 }
 
 export default function CheckoutPage() {
+    const t = useTranslations("checkout");
     const locale = useLocale();
     const apiLocale = locale || "es";
 
+    const { showAlert } = useAlert();
     const { items, totalItems, clearCart } = useCart();
 
     const [step, setStep] = useState<CheckoutStep>("summary");
     const [isProcessing, setIsProcessing] = useState(false);
-    const [status, setStatus] = useState<{
-        type: "success" | "error" | "warning" | null;
-        message: string;
-    }>({
-        type: null,
-        message: "",
-    });
 
     const [formData, setFormData] = useState<CheckoutFormData>({
         nombre: "",
@@ -111,17 +106,13 @@ export default function CheckoutPage() {
 
     const goToForm = () => {
         if (!items.length) {
-            setStatus({
+            showAlert({
+                title: t("alerts.emptyCartTitle"),
                 type: "error",
-                message: "Tu carrito está vacío.",
+                message: t("alerts.emptyCartMessage"),
             });
             return;
         }
-
-        setStatus({
-            type: null,
-            message: "",
-        });
 
         setStep("form");
     };
@@ -130,18 +121,15 @@ export default function CheckoutPage() {
         e.preventDefault();
 
         if (!items.length) {
-            setStatus({
+            showAlert({
+                title: t("alerts.emptyCartTitle"),
                 type: "error",
-                message: "Tu carrito está vacío.",
+                message: t("alerts.emptyCartMessage"),
             });
             return;
         }
 
         setIsProcessing(true);
-        setStatus({
-            type: null,
-            message: "",
-        });
 
         try {
             const paymentResult = await processOctanoPayment({
@@ -173,62 +161,61 @@ export default function CheckoutPage() {
             });
 
             if (!paymentResult.success) {
-                throw new Error(
-                    paymentResult.error || "No se pudo procesar el pago."
-                );
+                showAlert({
+                    title: t("alerts.paymentErrorTitle"),
+                    type: "error",
+                    message:
+                        paymentResult.error || t("alerts.paymentErrorMessage"),
+                });
+                return;
             }
 
-            const ticketResponse = await fetch(
-                `/${apiLocale}/api/checkout`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
+            const ticketResponse = await fetch(`/${apiLocale}/api/checkout`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    orderId,
+                    locale: apiLocale,
+                    items,
+                    totals: {
+                        subtotal,
+                        iva,
+                        total,
                     },
-                    body: JSON.stringify({
-                        orderId,
-                        locale: apiLocale,
-                        items,
-                        totals: {
-                            subtotal,
-                            iva,
-                            total,
-                        },
-                        customer: {
-                            nombre: formData.nombre,
-                            apellido: formData.apellido,
-                            email: formData.email,
-                            telefono: formData.telefono,
-                            direccion: formData.direccion,
-                            direccion2: formData.direccion2,
-                            ciudad: formData.ciudad,
-                            estado: formData.estado,
-                            pais: formData.pais,
-                            cp: formData.cp,
-                            empresa: formData.empresa,
-                        },
-                        payment: {
-                            amount: total,
-                            currency: "484",
-                            gateway: "Octano",
-                            result: paymentResult.data,
-                        },
-                    }),
-                }
-            );
+                    customer: {
+                        nombre: formData.nombre,
+                        apellido: formData.apellido,
+                        email: formData.email,
+                        telefono: formData.telefono,
+                        direccion: formData.direccion,
+                        direccion2: formData.direccion2,
+                        ciudad: formData.ciudad,
+                        estado: formData.estado,
+                        pais: formData.pais,
+                        cp: formData.cp,
+                        empresa: formData.empresa,
+                    },
+                    payment: {
+                        amount: total,
+                        currency: "484",
+                        gateway: "Octano",
+                        result: paymentResult.data,
+                    },
+                }),
+            });
 
             if (!ticketResponse.ok) {
-                const ticketError = await ticketResponse
-                    .json()
-                    .catch(() => null);
+                const ticketError = await ticketResponse.json().catch(() => null);
 
                 clearCart();
 
-                setStatus({
+                showAlert({
+                    title: t("alerts.warningTitle"),
                     type: "warning",
                     message:
-                        ticketError?.error ||
-                        "El pago se procesó correctamente, pero no se pudo enviar el ticket por email.",
+                        ticketError?.error || t("alerts.ticketWarningMessage"),
                 });
 
                 return;
@@ -236,18 +223,19 @@ export default function CheckoutPage() {
 
             clearCart();
 
-            setStatus({
+            showAlert({
+                title: t("alerts.successTitle"),
                 type: "success",
-                message:
-                    "Pago aprobado y ticket enviado correctamente.",
+                message: t("alerts.successMessage"),
             });
         } catch (error) {
             const message =
                 error instanceof Error
                     ? error.message
-                    : "Ocurrió un error al procesar el checkout.";
+                    : t("alerts.checkoutErrorMessage");
 
-            setStatus({
+            showAlert({
+                title: t("alerts.errorTitle"),
                 type: "error",
                 message,
             });
@@ -258,34 +246,37 @@ export default function CheckoutPage() {
 
     if (!items.length) {
         return (
-            <main className="min-h-screen bg-gradient-to-br from-white via-green-50 to-emerald-100 px-6 py-28 lg:px-12">
-                <div className="mx-auto max-w-4xl rounded-[32px] border border-green-100 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.08)] text-center">
-                    <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-100">
-                        <ShoppingBag className="h-8 w-8 text-green-700" />
+            <>
+                <Header />
+                <main className="min-h-screen bg-gradient-to-br from-white via-green-50 to-emerald-100 px-6 py-28 lg:px-12">
+                    <div className="mx-auto max-w-4xl rounded-[32px] border border-green-100 bg-white p-10 text-center shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+                        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-100">
+                            <ShoppingBag className="h-8 w-8 text-green-700" />
+                        </div>
+
+                        <h1 className="mb-4 text-3xl font-bold text-zinc-900">
+                            {t("emptyCart.title")}
+                        </h1>
+
+                        <p className="mx-auto mb-8 max-w-2xl leading-7 text-zinc-600">
+                            {t("emptyCart.description")}
+                        </p>
+
+                        <Link
+                            href="/tienda"
+                            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-[0_10px_25px_rgba(34,197,94,0.25)]"
+                        >
+                            <ArrowLeft className="h-4 w-4" />
+                            {t("emptyCart.button")}
+                        </Link>
                     </div>
-
-                    <h1 className="mb-4 text-3xl font-bold text-zinc-900">
-                        Tu carrito está vacío
-                    </h1>
-
-                    <p className="mx-auto mb-8 max-w-2xl text-zinc-600 leading-7">
-                        Agrega productos o servicios al carrito antes de continuar con el pago.
-                    </p>
-
-                    <Link
-                        href="/tienda"
-                        className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-[0_10px_25px_rgba(34,197,94,0.25)]"
-                    >
-                        <ArrowLeft className="h-4 w-4" />
-                        Ir a la tienda
-                    </Link>
-                </div>
-            </main>
+                </main>
+                <Footer />
+            </>
         );
     }
 
     return (
-
         <>
             <Header />
             <main className="min-h-screen bg-gradient-to-br from-white via-green-50 to-emerald-100 px-6 py-28 lg:px-12">
@@ -294,16 +285,15 @@ export default function CheckoutPage() {
                         <div>
                             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-5 py-2 text-sm font-semibold text-green-700">
                                 <BadgeCheck className="h-4 w-4" />
-                                Checkout
+                                {t("hero.badge")}
                             </span>
 
                             <h1 className="text-4xl font-bold text-zinc-900 lg:text-6xl">
-                                Finaliza tu compra
+                                {t("hero.title")}
                             </h1>
 
                             <p className="mt-4 max-w-3xl text-lg leading-8 text-zinc-600">
-                                Revisa el resumen, confirma el monto con IVA incluido y completa
-                                los datos que Octano necesita para procesar el pago.
+                                {t("hero.description")}
                             </p>
                         </div>
 
@@ -312,12 +302,11 @@ export default function CheckoutPage() {
                             className="inline-flex items-center gap-2 self-start rounded-2xl border border-green-200 bg-white px-5 py-3 font-semibold text-zinc-700 shadow-sm"
                         >
                             <ArrowLeft className="h-4 w-4" />
-                            Volver a la tienda
+                            {t("hero.backButton")}
                         </Link>
                     </div>
 
                     <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-                        {/* SUMMARY */}
                         <section className="rounded-[32px] border border-green-100 bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
                             <div className="mb-6 flex items-center gap-3">
                                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100">
@@ -325,10 +314,10 @@ export default function CheckoutPage() {
                                 </div>
                                 <div>
                                     <h2 className="text-2xl font-bold text-zinc-900">
-                                        Resumen de productos
+                                        {t("summary.title")}
                                     </h2>
                                     <p className="text-zinc-500">
-                                        {totalItems} artículo{totalItems !== 1 ? "s" : ""}
+                                        {totalItems} {t("summary.item", { count: totalItems })}
                                     </p>
                                 </div>
                             </div>
@@ -372,17 +361,21 @@ export default function CheckoutPage() {
 
                             <div className="mt-8 space-y-3 rounded-[28px] bg-zinc-50 p-6">
                                 <div className="flex items-center justify-between text-zinc-700">
-                                    <span>Subtotal</span>
-                                    <span className="font-semibold">{formatCurrency(subtotal)}</span>
+                                    <span>{t("totals.subtotal")}</span>
+                                    <span className="font-semibold">
+                                        {formatCurrency(subtotal)}
+                                    </span>
                                 </div>
 
                                 <div className="flex items-center justify-between text-zinc-700">
-                                    <span>IVA (16%)</span>
-                                    <span className="font-semibold">{formatCurrency(iva)}</span>
+                                    <span>{t("totals.iva")}</span>
+                                    <span className="font-semibold">
+                                        {formatCurrency(iva)}
+                                    </span>
                                 </div>
 
                                 <div className="flex items-center justify-between border-t border-zinc-200 pt-4 text-lg text-zinc-900">
-                                    <span className="font-bold">Total a pagar</span>
+                                    <span className="font-bold">{t("totals.total")}</span>
                                     <span className="font-bold text-green-700">
                                         {formatCurrency(total)}
                                     </span>
@@ -391,7 +384,7 @@ export default function CheckoutPage() {
 
                             <div className="mt-6 rounded-[28px] border border-amber-200 bg-amber-50 p-5">
                                 <p className="text-sm font-medium text-amber-900">
-                                    El IVA se suma automáticamente al total antes de procesar el pago.
+                                    {t("totals.taxNote")}
                                 </p>
                             </div>
 
@@ -401,29 +394,28 @@ export default function CheckoutPage() {
                                     onClick={goToForm}
                                     className="mt-8 w-full rounded-2xl bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-[0_10px_25px_rgba(34,197,94,0.25)]"
                                 >
-                                    Proceder al pago
+                                    {t("actions.proceedToPayment")}
                                 </button>
                             ) : null}
                         </section>
 
-                        {/* FORM */}
                         <section className="rounded-[32px] border border-green-100 bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
                             <div className="mb-8">
                                 <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
                                     <ShieldCheck className="h-4 w-4" />
-                                    Datos requeridos por Octano
+                                    {t("formSection.badge")}
                                 </span>
 
                                 <h2 className="text-3xl font-bold text-zinc-900">
                                     {step === "summary"
-                                        ? "Primero revisa el resumen"
-                                        : "Completa tus datos de pago"}
+                                        ? t("formSection.lockedTitle")
+                                        : t("formSection.formTitle")}
                                 </h2>
 
                                 <p className="mt-3 leading-7 text-zinc-600">
                                     {step === "summary"
-                                        ? "Confirma tu compra para mostrar el formulario completo con los campos que necesita la pasarela."
-                                        : "Todos los campos están separados para que Octano reciba exactamente la información necesaria."}
+                                        ? t("formSection.lockedDescription")
+                                        : t("formSection.formDescription")}
                                 </p>
                             </div>
 
@@ -436,25 +428,24 @@ export default function CheckoutPage() {
 
                                         <div>
                                             <h3 className="text-xl font-semibold text-zinc-900">
-                                                Formulario bloqueado hasta confirmar el resumen
+                                                {t("formSection.lockedCardTitle")}
                                             </h3>
                                             <p className="mt-1 text-zinc-600">
-                                                Presiona “Proceder al pago” para continuar.
+                                                {t("formSection.lockedCardDescription")}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             ) : (
                                 <form onSubmit={handleCheckout} className="space-y-6">
-                                    {/* CUSTOMER */}
                                     <div className="rounded-[28px] border border-green-100 bg-green-50/40 p-6">
                                         <h3 className="mb-5 text-xl font-bold text-zinc-900">
-                                            Información del cliente
+                                            {t("customer.title")}
                                         </h3>
 
                                         <div className="grid gap-5 md:grid-cols-2">
                                             <Field
-                                                label="Nombre"
+                                                label={t("customer.name")}
                                                 name="nombre"
                                                 value={formData.nombre}
                                                 onChange={handleChange}
@@ -462,7 +453,7 @@ export default function CheckoutPage() {
                                                 autoComplete="given-name"
                                             />
                                             <Field
-                                                label="Apellido"
+                                                label={t("customer.lastName")}
                                                 name="apellido"
                                                 value={formData.apellido}
                                                 onChange={handleChange}
@@ -470,7 +461,7 @@ export default function CheckoutPage() {
                                                 autoComplete="family-name"
                                             />
                                             <Field
-                                                label="Email"
+                                                label={t("customer.email")}
                                                 name="email"
                                                 type="email"
                                                 value={formData.email}
@@ -479,7 +470,7 @@ export default function CheckoutPage() {
                                                 autoComplete="email"
                                             />
                                             <Field
-                                                label="Teléfono"
+                                                label={t("customer.phone")}
                                                 name="telefono"
                                                 type="tel"
                                                 value={formData.telefono}
@@ -488,7 +479,7 @@ export default function CheckoutPage() {
                                                 autoComplete="tel"
                                             />
                                             <Field
-                                                label="Empresa"
+                                                label={t("customer.company")}
                                                 name="empresa"
                                                 value={formData.empresa}
                                                 onChange={handleChange}
@@ -497,15 +488,14 @@ export default function CheckoutPage() {
                                         </div>
                                     </div>
 
-                                    {/* ADDRESS */}
                                     <div className="rounded-[28px] border border-green-100 bg-white p-6">
                                         <h3 className="mb-5 text-xl font-bold text-zinc-900">
-                                            Dirección de facturación
+                                            {t("address.title")}
                                         </h3>
 
                                         <div className="grid gap-5 md:grid-cols-2">
                                             <Field
-                                                label="Dirección"
+                                                label={t("address.address1")}
                                                 name="direccion"
                                                 value={formData.direccion}
                                                 onChange={handleChange}
@@ -513,14 +503,14 @@ export default function CheckoutPage() {
                                                 autoComplete="address-line1"
                                             />
                                             <Field
-                                                label="Dirección 2"
+                                                label={t("address.address2")}
                                                 name="direccion2"
                                                 value={formData.direccion2}
                                                 onChange={handleChange}
                                                 autoComplete="address-line2"
                                             />
                                             <Field
-                                                label="Ciudad"
+                                                label={t("address.city")}
                                                 name="ciudad"
                                                 value={formData.ciudad}
                                                 onChange={handleChange}
@@ -528,7 +518,7 @@ export default function CheckoutPage() {
                                                 autoComplete="address-level2"
                                             />
                                             <Field
-                                                label="Estado"
+                                                label={t("address.state")}
                                                 name="estado"
                                                 value={formData.estado}
                                                 onChange={handleChange}
@@ -536,7 +526,7 @@ export default function CheckoutPage() {
                                                 autoComplete="address-level1"
                                             />
                                             <Field
-                                                label="Código postal"
+                                                label={t("address.postalCode")}
                                                 name="cp"
                                                 value={formData.cp}
                                                 onChange={handleChange}
@@ -544,7 +534,7 @@ export default function CheckoutPage() {
                                                 autoComplete="postal-code"
                                             />
                                             <Field
-                                                label="País"
+                                                label={t("address.country")}
                                                 name="pais"
                                                 value={formData.pais}
                                                 onChange={handleChange}
@@ -554,15 +544,14 @@ export default function CheckoutPage() {
                                         </div>
                                     </div>
 
-                                    {/* CARD */}
                                     <div className="rounded-[28px] border border-green-100 bg-green-50/40 p-6">
                                         <h3 className="mb-5 text-xl font-bold text-zinc-900">
-                                            Datos de tarjeta
+                                            {t("card.title")}
                                         </h3>
 
                                         <div className="grid gap-5 md:grid-cols-2">
                                             <Field
-                                                label="Número de tarjeta"
+                                                label={t("card.number")}
                                                 name="cardNumber"
                                                 maxLength={16}
                                                 value={formData.cardNumber}
@@ -572,7 +561,7 @@ export default function CheckoutPage() {
                                                 autoComplete="cc-number"
                                             />
                                             <Field
-                                                label="Nombre en la tarjeta"
+                                                label={t("card.name")}
                                                 name="cardName"
                                                 value={formData.cardName}
                                                 onChange={handleChange}
@@ -580,7 +569,7 @@ export default function CheckoutPage() {
                                                 autoComplete="cc-name"
                                             />
                                             <Field
-                                                label="Mes de expiración"
+                                                label={t("card.month")}
                                                 name="cardMonth"
                                                 value={formData.cardMonth}
                                                 onChange={handleChange}
@@ -590,7 +579,7 @@ export default function CheckoutPage() {
                                                 autoComplete="cc-exp-month"
                                             />
                                             <Field
-                                                label="Año de expiración"
+                                                label={t("card.year")}
                                                 name="cardYear"
                                                 value={formData.cardYear}
                                                 onChange={handleChange}
@@ -600,8 +589,9 @@ export default function CheckoutPage() {
                                                 autoComplete="cc-exp-year"
                                             />
                                             <Field
-                                                label="CVV"
+                                                label={t("card.cvv")}
                                                 name="cardCvv"
+                                                type="password"
                                                 value={formData.cardCvv}
                                                 onChange={handleChange}
                                                 required
@@ -610,31 +600,30 @@ export default function CheckoutPage() {
                                             />
                                         </div>
 
-                                        <div className="flex flex-row justify-between  gap-6 p-6">
-                                            <Image src="/octano.png" alt="Etomin" width={150} height={30} className="" />
-                                            <Image src="/secure-payment.png" alt="Etomin" width={150} height={30} />
+                                        <div className="flex flex-row justify-between gap-6 p-6">
+                                            <Image
+                                                src="/octano.png"
+                                                alt={t("paymentLogos.octanoAlt")}
+                                                width={150}
+                                                height={30}
+                                            />
+                                            <Image
+                                                src="/secure-payment.png"
+                                                alt={t("paymentLogos.secureAlt")}
+                                                width={150}
+                                                height={30}
+                                            />
                                         </div>
                                     </div>
-
-                                    {status.type && (
-                                        <div
-                                            className={`rounded-[24px] px-5 py-4 text-sm font-medium ${status.type === "success"
-                                                ? "border border-green-200 bg-green-50 text-green-700"
-                                                : status.type === "warning"
-                                                    ? "border border-amber-200 bg-amber-50 text-amber-800"
-                                                    : "border border-red-200 bg-red-50 text-red-700"
-                                                }`}
-                                        >
-                                            {status.message}
-                                        </div>
-                                    )}
 
                                     <button
                                         type="submit"
                                         disabled={isProcessing}
                                         className="w-full rounded-2xl bg-zinc-900 px-6 py-4 font-semibold text-white shadow-[0_10px_25px_rgba(0,0,0,0.15)] transition-transform hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-50"
                                     >
-                                        {isProcessing ? "Procesando pago..." : "Pagar ahora"}
+                                        {isProcessing
+                                            ? t("actions.processing")
+                                            : t("actions.payNow")}
                                     </button>
                                 </form>
                             )}
@@ -662,13 +651,13 @@ function Field({
     label: string;
     name: string;
     value: string;
-    onChange: React.ChangeEventHandler<HTMLInputElement | HTMLSelectElement>;
+    onChange: React.ChangeEventHandler<HTMLInputElement>;
     type?: string;
     required?: boolean;
     placeholder?: string;
     inputMode?: React.HTMLAttributes<HTMLInputElement>["inputMode"];
     autoComplete?: string;
-    maxLength?: number
+    maxLength?: number;
 }) {
     return (
         <div>

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import {
   LineChart,
   Megaphone,
@@ -8,30 +10,32 @@ import {
   Zap,
 } from "lucide-react";
 
-const services = [
-  {
-    icon: TrendingUp,
-    title: "Estrategia de ventas para ecommerce",
-  },
-  {
-    icon: Megaphone,
-    title: "Publicidad para tiendas online",
-  },
-  {
-    icon: LineChart,
-    title: "Optimización de conversión",
-  },
-  {
-    icon: Zap,
-    title: "Automatización de ventas",
-  },
-  {
-    icon: Search,
-    title: "Posicionamiento SEO para tiendas",
-  },
-];
-
 export default function Services() {
+  const t = useTranslations("services");
+
+  const services = [
+    {
+      icon: TrendingUp,
+      title: t("items.0"),
+    },
+    {
+      icon: Megaphone,
+      title: t("items.1"),
+    },
+    {
+      icon: LineChart,
+      title: t("items.2"),
+    },
+    {
+      icon: Zap,
+      title: t("items.3"),
+    },
+    {
+      icon: Search,
+      title: t("items.4"),
+    },
+  ];
+
   return (
     <section
       id="servicios"
@@ -41,11 +45,11 @@ export default function Services() {
         {/* Header */}
         <div className="max-w-3xl mb-14">
           <span className="inline-flex rounded-full bg-green-100 px-5 py-2 text-sm font-semibold text-green-700 mb-6">
-            Servicios
+            {t("badge")}
           </span>
 
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-900 leading-tight">
-            Soluciones enfocadas en crecimiento para ecommerce.
+            {t("title")}
           </h2>
         </div>
 

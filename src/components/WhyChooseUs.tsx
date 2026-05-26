@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import {
   LineChart,
   Phone,
@@ -10,47 +12,44 @@ import {
 const features = [
   {
     icon: Phone,
-    title: "Enfoque estratégico",
-    description:
-      "Cada ecommerce se analiza de forma personalizada para definir acciones alineadas a sus objetivos reales.",
+    titleKey: "features.strategy.title",
+    descriptionKey: "features.strategy.description",
   },
   {
     icon: LineChart,
-    title: "Optimización orientada a resultados",
-    description:
-      "Mejoramos estructura, experiencia y conversión para aumentar el rendimiento de tu tienda online.",
+    titleKey: "features.optimization.title",
+    descriptionKey: "features.optimization.description",
   },
   {
     icon: ShoppingCart,
-    title: "Especialización en ecommerce",
-    description:
-      "Trabajamos exclusivamente con comercio electrónico para desarrollar soluciones más precisas y efectivas.",
+    titleKey: "features.specialization.title",
+    descriptionKey: "features.specialization.description",
   },
   {
     icon: RefreshCw,
-    title: "Visión de crecimiento digital",
-    description:
-      "Construimos estrategias preparadas para evolucionar, escalar y adaptarse al mercado digital.",
+    titleKey: "features.growth.title",
+    descriptionKey: "features.growth.description",
   },
 ];
 
 export default function WhyChooseUs() {
+  const t = useTranslations("whyChooseUs");
+
   return (
     <section className="bg-gradient-to-b from-green-50 to-white py-24 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-4xl mb-16">
           <span className="inline-flex rounded-full bg-green-100 px-5 py-2 text-sm font-semibold text-green-700 mb-6">
-            ¿Por qué elegirnos?
+            {t("badge")}
           </span>
 
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-900 leading-tight mb-6">
-            Diseñamos estrategias enfocadas en crecimiento real.
+            {t("title")}
           </h2>
 
           <p className="text-lg leading-8 text-zinc-600">
-            Ayudamos a transformar tiendas online en estructuras digitales más
-            eficientes, escalables y preparadas para aumentar ventas.
+            {t("description")}
           </p>
         </div>
 
@@ -75,11 +74,11 @@ export default function WhyChooseUs() {
               {/* Content */}
               <div className="relative z-10">
                 <h3 className="text-2xl font-black tracking-tight text-zinc-900 mb-4">
-                  {feature.title}
+                  {t(feature.titleKey)}
                 </h3>
 
                 <p className="text-zinc-600 leading-8">
-                  {feature.description}
+                  {t(feature.descriptionKey)}
                 </p>
               </div>
             </div>

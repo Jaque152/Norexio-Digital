@@ -1,6 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export default function AboutUs() {
+  const t = useTranslations("aboutUs");
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-green-50 py-24 px-6 lg:px-12">
       {/* Decorative Background */}
@@ -18,7 +22,7 @@ export default function AboutUs() {
             <div className="relative overflow-hidden rounded-[40px] border border-green-100 bg-white shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
               <img
                 src="https://ext.same-assets.com/3837496165/4224334191.jpeg"
-                alt="Equipo ExpertCommerce"
+                alt={t("imageAlt")}
                 className="h-[520px] w-full object-cover"
               />
             </div>
@@ -27,26 +31,20 @@ export default function AboutUs() {
           {/* Content */}
           <div className="max-w-2xl">
             <span className="inline-flex rounded-full bg-green-100 px-5 py-2 text-sm font-semibold text-green-700 mb-6">
-              ¿Quiénes Somos?
+              {t("badge")}
             </span>
 
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-900 leading-tight mb-8">
-              El equipo detrás del crecimiento digital.
+              {t("title")}
             </h2>
 
             <p className="text-lg leading-8 text-zinc-700 mb-6">
-              Creemos que una tienda online debe ser más que un catálogo de
-              productos: debe convertirse en una experiencia que conecte con los
-              clientes y genere ventas reales.
+              {t("description1")}
             </p>
 
             <p className="text-zinc-600 leading-8">
-              Nos dedicamos a analizar, optimizar y fortalecer ecommerce para
-              que cada negocio tenga una estructura digital preparada para
-              crecer, mejorar su rendimiento y ofrecer una experiencia de compra
-              más efectiva.
+              {t("description2")}
             </p>
-
           </div>
         </div>
       </div>

@@ -39,34 +39,55 @@ const AlertContext = createContext<AlertContextType | undefined>(undefined);
 
 const typeStyles = {
   success: {
-    iconBg: "bg-violet-100",
-    iconColor: "text-violet-700",
-    button: "bg-violet-700 hover:bg-violet-800",
+    accent: "from-emerald-500 to-green-600",
+    glow: "shadow-emerald-200/50",
+    iconBg: "bg-emerald-100",
+    iconColor: "text-emerald-700",
+    border: "border-emerald-100",
+    button:
+      "bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700",
     defaultIcon: <CheckCircle2 className="h-7 w-7" />,
   },
   error: {
+    accent: "from-red-500 to-rose-600",
+    glow: "shadow-red-200/50",
     iconBg: "bg-red-100",
-    iconColor: "text-red-600",
-    button: "bg-red-600 hover:bg-red-700",
+    iconColor: "text-red-700",
+    border: "border-red-100",
+    button:
+      "bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700",
     defaultIcon: <AlertCircle className="h-7 w-7" />,
   },
   warning: {
+    accent: "from-amber-400 to-orange-500",
+    glow: "shadow-amber-200/50",
     iconBg: "bg-amber-100",
-    iconColor: "text-amber-600",
-    button: "bg-amber-500 hover:bg-amber-600",
+    iconColor: "text-amber-700",
+    border: "border-amber-100",
+    button:
+      "bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600",
     defaultIcon: <AlertTriangle className="h-7 w-7" />,
   },
   info: {
-    iconBg: "bg-blue-100",
-    iconColor: "text-blue-600",
-    button: "bg-blue-600 hover:bg-blue-700",
+    accent: "from-sky-500 to-cyan-600",
+    glow: "shadow-sky-200/50",
+    iconBg: "bg-sky-100",
+    iconColor: "text-sky-700",
+    border: "border-sky-100",
+    button:
+      "bg-gradient-to-r from-sky-500 to-cyan-600 hover:from-sky-600 hover:to-cyan-700",
     defaultIcon: <Info className="h-7 w-7" />,
   },
-};
+} as const;
 
-export function AlertProvider({ children }: { children: React.ReactNode }) {
+export function AlertProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [options, setOptions] = useState<AlertOptions | null>(null);
 
   useEffect(() => {
@@ -74,11 +95,17 @@ export function AlertProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (!isOpen) return;
+
+    const timeout = window.setTimeout(() => {
+      setIsVisible(true);
+    }, 10);
+
+    return () => window.clearTimeout(timeout);
+  }, [isOpen]);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
@@ -86,15 +113,16 @@ export function AlertProvider({ children }: { children: React.ReactNode }) {
   }, [isOpen]);
 
   const hideAlert = useCallback(() => {
-    setIsOpen(false);
+    setIsVisible(false);
 
-    setTimeout(() => {
-      setOptions((current) => {
-        current?.onClose?.();
-        return null;
-      });
-    }, 200);
-  }, []);
+    const currentOnClose = options?.onClose;
+
+    window.setTimeout(() => {
+      setIsOpen(false);
+      setOptions(null);
+      currentOnClose?.();
+    }, 250);
+  }, [options]);
 
   const showAlert = useCallback((opts: AlertOptions) => {
     setOptions(opts);
@@ -104,11 +132,11 @@ export function AlertProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!isOpen || !options?.autoClose) return;
 
-    const timeout = setTimeout(() => {
+    const timeout = window.setTimeout(() => {
       hideAlert();
     }, 3500);
 
-    return () => clearTimeout(timeout);
+    return () => window.clearTimeout(timeout);
   }, [isOpen, options, hideAlert]);
 
   useEffect(() => {
@@ -129,64 +157,91 @@ export function AlertProvider({ children }: { children: React.ReactNode }) {
 
       {mounted && isOpen && options
         ? createPortal(
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="fixed inset-0 z-[9999] flex items-center justify-center overflow-y-auto p-4 sm:p-6">
+              {/* BACKDROP */}
               <button
                 type="button"
                 aria-label="Cerrar alerta"
                 onClick={hideAlert}
-                className="absolute inset-0 bg-[#120b24]/70 backdrop-blur-md"
+                className={`absolute inset-0 bg-white/70 backdrop-blur-xl transition-opacity duration-300 ${
+                  isVisible ? "opacity-100" : "opacity-0"
+                }`}
               />
 
+              {/* MODAL */}
               <div
                 role="dialog"
                 aria-modal="true"
-                className="relative w-full max-w-md overflow-hidden rounded-[2.5rem] border border-white/20 bg-white shadow-[0_30px_80px_rgba(91,33,182,.18)]"
+                className={`relative w-8/12 max-w-lg transform overflow-hidden rounded-[2.5rem] border bg-white shadow-[0_30px_100px_rgba(16,185,129,0.18)] transition-all duration-300 ${
+                  styles.border
+                } ${
+                  styles.glow
+                } ${
+                  isVisible
+                    ? "translate-y-0 scale-100 opacity-100"
+                    : "translate-y-6 scale-[0.96] opacity-0"
+                }`}
               >
-                <div className="h-1.5 w-full bg-violet-700" />
+                {/* TOP GRADIENT */}
+                <div
+                  className={`h-2 w-full bg-gradient-to-r ${styles.accent}`}
+                />
 
+                {/* GLOW */}
+                <div className="absolute -top-24 right-0 h-56 w-56 rounded-full bg-green-100 blur-3xl opacity-40" />
+
+                {/* CLOSE */}
                 <button
                   type="button"
                   onClick={hideAlert}
-                  className="absolute right-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-gray-500 transition-all hover:bg-black/10 hover:text-gray-700"
+                  className="absolute right-5 left-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-2xl border border-zinc-100 bg-white/80 text-zinc-500 backdrop-blur transition-all hover:bg-zinc-100 hover:text-zinc-800"
                 >
                   <X className="h-4 w-4" />
                 </button>
 
-                <div className="p-8 sm:p-10">
+                <div className="relative z-10 p-8 sm:p-10">
+                  {/* ICON */}
                   <div className="mb-8 flex justify-center">
                     <div
-                      className={`flex h-20 w-20 items-center justify-center rounded-[2rem] ${styles.iconBg} ${styles.iconColor}`}
+                      className={`relative flex h-24 w-24 items-center justify-center rounded-[2rem] ${styles.iconBg} ${styles.iconColor}`}
                     >
-                      {options.icon || styles.defaultIcon}
+                      <div className="absolute inset-0 rounded-[2rem] bg-white/40" />
+
+                      <div className="relative">
+                        {options.icon || styles.defaultIcon}
+                      </div>
                     </div>
                   </div>
 
+                  {/* IMAGE */}
                   {options.image && (
-                    <div className="relative mb-7 aspect-video overflow-hidden rounded-3xl">
+                    <div className="relative mb-8 aspect-video overflow-hidden rounded-[2rem] border border-green-100">
                       <Image
                         src={options.image}
-                        alt="Alert"
+                        alt={options.title}
                         fill
                         className="object-cover"
                       />
                     </div>
                   )}
 
+                  {/* CONTENT */}
                   <div className="text-center">
-                    <h3 className="text-2xl font-black tracking-tight text-gray-900">
+                    <h3 className="text-3xl font-black tracking-tight text-zinc-900">
                       {options.title}
                     </h3>
 
-                    <p className="mx-auto mt-3 max-w-sm text-sm leading-7 text-gray-500">
+                    <p className="mx-auto mt-4 max-w-md text-base leading-8 text-zinc-600">
                       {options.message}
                     </p>
                   </div>
 
-                  <div className="mt-8">
+                  {/* CTA */}
+                  <div className="mt-10">
                     <button
                       type="button"
                       onClick={hideAlert}
-                      className={`w-full rounded-2xl px-6 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition-all duration-200 ${styles.button}`}
+                      className={`flex h-14 w-full items-center justify-center rounded-2xl px-6 text-sm font-bold text-white transition-all duration-300 hover:scale-[1.01] shadow-xl ${styles.button}`}
                     >
                       {options.confirmText || "Continuar"}
                     </button>

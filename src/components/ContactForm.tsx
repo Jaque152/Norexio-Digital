@@ -2,10 +2,16 @@
 
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+
 import { useContact } from "@/hooks/useContact";
+import { useAlert } from "@/context/AlertContext";
 
 export default function ContactForm() {
+  const t = useTranslations("contactForm");
+
   const { sendContactForm, isLoading } = useContact();
+  const { showAlert } = useAlert();
 
   const [formData, setFormData] = useState({
     nombre: "",
@@ -14,14 +20,6 @@ export default function ContactForm() {
     tienda: "",
     sitio: "",
     mensaje: "",
-  });
-
-  const [status, setStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({
-    type: null,
-    message: "",
   });
 
   const handleChange = (
@@ -47,31 +45,27 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    setStatus({
-      type: null,
-      message: "",
-    });
-
     const response = await sendContactForm({
       ...formData,
-      asunto: `Nuevo lead ecommerce - ${
-        formData.tienda || "Expert Commerce"
-      }`,
+      asunto: t("emailSubject", {
+        store: formData.tienda || "Norexio Digital",
+      }),
     });
 
     if (response.success) {
-      setStatus({
+      showAlert({
         type: "success",
-        message: "¡Gracias! Tu mensaje ha sido enviado correctamente.",
+        title: t("alerts.successTitle"),
+        message: t("alerts.successMessage"),
       });
 
       resetForm();
     } else {
-      setStatus({
+      showAlert({
         type: "error",
+        title: t("alerts.errorTitle"),
         message:
-          response.error ||
-          "Ocurrió un error al enviar el formulario.",
+          response.error || t("alerts.errorMessage"),
       });
     }
   };
@@ -84,29 +78,25 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-start">
           {/* LEFT INFO */}
-          <div className=" lg:top-24">
+          <div className="lg:top-24">
             <span className="inline-flex items-center px-5 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold mb-6">
-              Contacto
+              {t("badge")}
             </span>
 
             <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 leading-tight mb-6 font-syne">
-              Estamos para Ayudarte
+              {t("title")}
             </h2>
 
             <p className="text-zinc-600 text-lg leading-8 mb-6">
-              Si estás buscando mejorar el rendimiento de tu tienda online o
-              desarrollar una estrategia para impulsar tus ventas digitales,
-              estamos listos para ayudarte.
+              {t("description1")}
             </p>
 
             <p className="text-zinc-600 text-lg leading-8 mb-10">
-              Completa el formulario y cuéntanos sobre tu ecommerce.
-              Analizaremos tu situación y te orientaremos sobre las mejores
-              oportunidades para optimizar tu tienda y fortalecer su crecimiento
-              en el entorno digital.
+              {t("description2")}
             </p>
 
             <div className="space-y-5">
+              {/* Address */}
               <div className="flex items-start gap-4 p-5 rounded-2xl border border-green-100 bg-green-50/60">
                 <div className="w-12 h-12 rounded-2xl bg-green-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-green-200">
                   <MapPin size={20} />
@@ -114,36 +104,40 @@ export default function ContactForm() {
 
                 <div>
                   <h4 className="font-semibold text-zinc-900 mb-1">
-                    Dirección
+                    {t("info.address.title")}
                   </h4>
 
                   <p className="text-zinc-600 leading-7">
-                    Av. Chapultepec N° 480 Piso 9 Dep. 901,
+                    {t("info.address.line1")}
                     <br />
-                    Col. Roma Norte, C.P 06700,
+                    {t("info.address.line2")}
                     <br />
-                    Alcaldía Cuauhtémoc, CDMX
+                    {t("info.address.line3")}
                   </p>
                 </div>
               </div>
 
+              {/* Email */}
               <div className="flex items-start gap-4 p-5 rounded-2xl border border-green-100 bg-green-50/60">
                 <div className="w-12 h-12 rounded-2xl bg-green-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-green-200">
                   <Mail size={20} />
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-zinc-900 mb-1">Correo</h4>
+                  <h4 className="font-semibold text-zinc-900 mb-1">
+                    {t("info.email.title")}
+                  </h4>
 
                   <a
-                    href="mailto:webmaster@expertcommerce.com.mx"
+                    href="mailto:webmaster@norexiodigital.com"
                     className="text-zinc-600 hover:text-green-700 transition-colors"
                   >
-                    webmaster@expertcommerce.com.mx
+                    webmaster@norexiodigital.com
                   </a>
                 </div>
               </div>
 
+              {/* Phone */}
               <div className="flex items-start gap-4 p-5 rounded-2xl border border-green-100 bg-green-50/60">
                 <div className="w-12 h-12 rounded-2xl bg-green-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-green-200">
                   <Phone size={20} />
@@ -151,7 +145,7 @@ export default function ContactForm() {
 
                 <div>
                   <h4 className="font-semibold text-zinc-900 mb-1">
-                    Teléfono
+                    {t("info.phone.title")}
                   </h4>
 
                   <a
@@ -172,22 +166,23 @@ export default function ContactForm() {
             <div className="relative bg-white border border-green-100 rounded-[32px] p-8 lg:p-10 shadow-2xl shadow-green-100/40">
               <div className="mb-8">
                 <span className="inline-flex px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold mb-4">
-                  Formulario
+                  {t("form.badge")}
                 </span>
 
                 <h3 className="text-3xl font-bold text-zinc-900 font-syne mb-3">
-                  Cuéntanos sobre tu proyecto
+                  {t("form.title")}
                 </h3>
 
                 <p className="text-zinc-600 leading-7">
-                  Responderemos tu solicitud lo antes posible.
+                  {t("form.description")}
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Nombre */}
                 <div>
                   <label className="block text-zinc-700 mb-2 text-sm font-medium">
-                    Nombre *
+                    {t("fields.nombre")} *
                   </label>
 
                   <input
@@ -200,10 +195,11 @@ export default function ContactForm() {
                   />
                 </div>
 
+                {/* Email / Tel */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-zinc-700 mb-2 text-sm font-medium">
-                      Email *
+                      {t("fields.email")} *
                     </label>
 
                     <input
@@ -218,7 +214,7 @@ export default function ContactForm() {
 
                   <div>
                     <label className="block text-zinc-700 mb-2 text-sm font-medium">
-                      Teléfono *
+                      {t("fields.telefono")} *
                     </label>
 
                     <input
@@ -232,10 +228,11 @@ export default function ContactForm() {
                   </div>
                 </div>
 
+                {/* Tienda / Sitio */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-zinc-700 mb-2 text-sm font-medium">
-                      Nombre de tu tienda *
+                      {t("fields.tienda")} *
                     </label>
 
                     <input
@@ -250,7 +247,7 @@ export default function ContactForm() {
 
                   <div>
                     <label className="block text-zinc-700 mb-2 text-sm font-medium">
-                      Sitio web *
+                      {t("fields.sitio")} *
                     </label>
 
                     <input
@@ -264,9 +261,10 @@ export default function ContactForm() {
                   </div>
                 </div>
 
+                {/* Mensaje */}
                 <div>
                   <label className="block text-zinc-700 mb-2 text-sm font-medium">
-                    Mensaje *
+                    {t("fields.mensaje")} *
                   </label>
 
                   <textarea
@@ -279,24 +277,14 @@ export default function ContactForm() {
                   />
                 </div>
 
-                {status.type && (
-                  <div
-                    className={`rounded-2xl px-5 py-4 text-sm font-medium border ${
-                      status.type === "success"
-                        ? "bg-green-50 text-green-700 border-green-200"
-                        : "bg-red-50 text-red-700 border-red-200"
-                    }`}
-                  >
-                    {status.message}
-                  </div>
-                )}
-
                 <button
                   type="submit"
                   disabled={isLoading}
                   className="w-full md:w-auto px-8 py-4 bg-green-600 hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-2xl transition-all shadow-xl shadow-green-200 hover:scale-[1.01]"
                 >
-                  {isLoading ? "Enviando..." : "Enviar consulta"}
+                  {isLoading
+                    ? t("form.sending")
+                    : t("form.submit")}
                 </button>
               </form>
             </div>
