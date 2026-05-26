@@ -224,7 +224,7 @@ export default function DiagnosticPage() {
                       </label>
 
                       <input
-                        type="url"
+                        type="text"
                         name="sitio"
                         value={formData.sitio}
                         onChange={handleChange}

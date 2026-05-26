@@ -1,204 +1,460 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+"use client";
+
 import { useLocale } from "next-intl";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-function TermsConditionsPageSpanish() {
+function LegalEs() {
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-[#fafafa] pt-32 pb-24 text-stone-900">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="bg-white p-10 md:p-16 rounded-[2rem] border border-stone-200 shadow-sm">
+    <div className="legal-container">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .legal-container {
+          color: #1a1a1a;
+          line-height: 1.6;
+          font-family: sans-serif;
+        }
+        .legal-container h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem; }
+        .legal-container h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #3048ab; }
+        .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
+        .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
+        .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
+        .legal-container li { margin-bottom: 0.5rem; }
+        .legal-container section { margin-bottom: 3rem; }
+      `}} />
 
-            <h1 className="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight mb-8">
-              Términos y Condiciones
-            </h1>
+      <section>
+        <h1>Términos y Condiciones</h1>
 
-            <div className="space-y-6 text-stone-600 leading-relaxed font-medium">
-              <p>Los presentes Términos y Condiciones establecen las normas que regulan el acceso, uso y contratación de servicios a través de Norexio Digitalmkt.com (en lo sucesivo, “Norexio Digital MKT”), propiedad de SEVEN MARKETING DIGITAL, S.A. DE C.V. (en adelante, “la Empresa”), con domicilio en Avenida Insurgentes Sur, N°933, INT 102 Piso 1, Colonia Nápoles, Alcaldía Benito Juárez, C.P. 03810, Ciudad de México. {/* [cite: 259, 260, 261] */}</p>
-              <p>Dichas disposiciones son aplicables a cualquier persona que acceda, navegue y/o contrate los servicios ofrecidos en Norexio Digital MKT (en adelante, “el Usuario”). El acceso, uso y/o adquisición de servicios implica la lectura previa, comprensión y aceptación expresa y sin reservas del contenido íntegro de este documento. {/* [cite: 261, 262] */}</p>
+        <p>
+          <em>
+            Estos términos regulan toda relación entre
+            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            (en adelante la “Empresa”) y cualquier persona que use su sitio,
+            consulte sus servicios o contrate alguno de sus planes. El acceso al
+            sitio, el envío del formulario de contacto y el pago de cualquier
+            servicio implican la aceptación íntegra de lo aquí descrito. Las
+            proposiciones que siguen están ordenadas por su peso en la relación: las
+            primeras son las más fundamentales; las últimas, las más específicas.
+          </em>
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">I. Objeto</h2>
-              <p>El presente documento tiene por finalidad regular las condiciones bajo las cuales la Empresa pone a disposición del Usuario Norexio Digital MKT y los servicios que en él se ofrecen. El acceso al sitio no implica, por sí mismo, la existencia de una relación contractual entre la Empresa y el Usuario, salvo que este último formalice la contratación de un servicio. {/* [cite: 265, 266] */}</p>
+        <h2>1.- Quiénes somos y qué ofrecemos.</h2>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">II. Condiciones de acceso</h2>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>El Usuario declara y garantiza que cuenta con la capacidad legal suficiente para contratar conforme a las leyes mexicanas. {/* [cite: 268] */}</li>
-                <li>El uso del sitio por parte de menores de edad deberá realizarse bajo la supervisión de un tutor legal, quien asumirá la responsabilidad. {/* [cite: 269] */}</li>
-                <li>La Empresa se reserva el derecho de negar, suspender o cancelar el acceso al sitio si detecta actividades fraudulentas o ilícitas. {/* [cite: 270] */}</li>
-              </ul>
+        <p>
+          <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+          es una agencia de marketing especializada en ecommerce, enfocada en
+          diseñar, analizar y optimizar tiendas en línea para mejorar su desempeño
+          comercial.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">III. Contratación de servicios</h2>
-              <p>El proceso de contratación de un servicio se considerará concluido únicamente cuando el Usuario haya completado el formulario de solicitud, realizado el pago correspondiente y recibido una confirmación de compra enviada por la Empresa al correo electrónico registrado. {/* [cite: 272] */}</p>
-              <p>La Empresa se reserva el derecho de modificar, actualizar o eliminar en cualquier momento la información, características, precios y disponibilidad de los servicios ofrecidos. {/* [cite: 273] */}</p>
+        <p><strong>RFC:</strong> SSA190502GK8</p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">IV. Precios y forma de pago</h2>
-              <p>Todos los precios publicados en el sitio se expresan en moneda nacional (MXN) e incluyen los impuestos aplicables, salvo que se indique lo contrario. El pago podrá efectuarse mediante el pago en línea. {/* [cite: 276, 277] */}</p>
-              <p>La Empresa no almacenará datos completos de tarjetas bancarias, ya que el procesamiento se realiza a través de proveedores externos certificados que cumplen con los estándares de seguridad PCI DSS. {/* [cite: 278] */}</p>
+        <p>
+          <strong>Domicilio:</strong>
+          Av. Chapultepec N° 480, Piso 9, Dep. 901, Col. Roma Norte, C.P. 06700,
+          Alcaldía Cuauhtémoc, Ciudad de México.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">V. Uso permitido del sitio</h2>
-              <p>El Usuario se compromete a utilizar Norexio Digital MKT y todo su contenido de forma lícita. Queda estrictamente prohibido: {/* [cite: 281, 282] */}</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Alterar o modificar, total o parcialmente, Norexio Digital MKT sin la autorización de la Empresa. {/* [cite: 283] */}</li>
-                <li>Introducir virus, malware o cualquier código malicioso. {/* [cite: 284] */}</li>
-                <li>Utilizar los contenidos del sitio con fines comerciales no autorizados. {/* [cite: 285] */}</li>
-              </ul>
+        <p><strong>Teléfono:</strong> +52 1 55 2230 1576.</p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">VI. Propiedad intelectual</h2>
-              <p>Todos los elementos de Norexio Digital MKT, incluyendo textos, imágenes, logotipos, código fuente y demás materiales, son propiedad exclusiva de la Empresa o de terceros licenciantes. El Usuario no adquiere derecho alguno sobre dichos elementos. {/* [cite: 287, 288] */}</p>
+        <p>
+          <strong>Correo:</strong>
+          webmaster@norexiodigital.com
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">VII. Limitación de responsabilidad</h2>
-              <p>La Empresa realizará sus mejores esfuerzos para mantener el funcionamiento continuo y seguro del sitio, pero no garantiza la ausencia de interrupciones. El Usuario acepta que el uso del sitio se realiza bajo su propia responsabilidad. {/* [cite: 290, 291] */}</p>
+        <p>
+          El catálogo de servicios y planes está organizado en diferentes secciones
+          (por ejemplo, servicios express, estrategias de escalamiento,
+          implementaciones avanzadas, ingeniería de crecimiento digital y soluciones
+          personalizadas), y se encuentra descrito a detalle en el sitio web oficial
+          de <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong> en el apartado de
+          servicios. Las características, alcances, entregables y precios de cada
+          plan se rigen por lo publicado en dicho apartado al momento de la
+          contratación.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">VIII. Cancelaciones y reembolsos</h2>
-              <p>Las solicitudes de cancelación y/o reembolso se regirán por lo establecido en la Política de Reembolsos y Devoluciones disponible en Norexio Digital MKT. {/* [cite: 293] */}</p>
+        <h2>2. Alcance de los servicios y entregables</h2>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">IX. Jurisdicción y ley aplicable</h2>
-              <p>El presente documento se rige por las leyes de los Estados Unidos Mexicanos. Para la interpretación y cumplimiento de lo aquí dispuesto, las partes se someten expresamente a la jurisdicción de los tribunales competentes de la Ciudad de México. {/* [cite: 295, 296] */}</p>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+        <p>
+          Cada plan incluye únicamente los entregables descritos en su ficha en el
+          sitio web y/o en la propuesta o confirmación enviada al cliente: análisis,
+          diagnósticos, reportes de recomendaciones, optimizaciones de páginas de
+          producto, ajustes de estructura, estrategias documentadas y planes de
+          acción, todos entregados en formato digital.
+        </p>
+
+        <p>
+          La Empresa no garantiza resultados de ventas específicos ni porcentajes
+          concretos de mejora, ya que el desempeño de un ecommerce depende de
+          múltiples factores externos (mercado, competencia, implementación interna,
+          presupuesto publicitario, entre otros). Sí se compromete a la calidad
+          técnica y a la completitud de los entregables comprometidos conforme a la
+          descripción del plan contratado.
+        </p>
+
+        <p>
+          Para la Estrategia Personalizada, el proceso inicia con el formulario de
+          contacto; la Empresa evalúa el ecommerce del cliente y presenta una
+          propuesta a medida con alcances, entregables y precio, la cual debe ser
+          aceptada antes de que exista cualquier obligación de pago.
+        </p>
+
+        <h2>3. Precios, pagos, confirmación y derecho de revocación</h2>
+
+        <p>
+          Todos los precios de los servicios se expresan en pesos mexicanos (MXN).
+          Salvo que en el sitio se indique expresamente que un precio incluye IVA, se
+          entenderá que el IVA se agrega conforme a la tasa vigente al momento de la
+          contratación. La información vigente sobre precios y su tratamiento de
+          impuestos se muestra en la ficha de cada servicio en el sitio web.
+        </p>
+
+        <p>
+          Los pagos se procesan a través de una pasarela de pago segura. Al completar
+          el pago, el cliente recibe una confirmación electrónica al correo
+          registrado con, al menos: servicio adquirido, monto pagado con IVA y folio
+          de transacción.
+        </p>
+
+        <p>
+          La Empresa emitirá el CFDI correspondiente. Para facturar a persona moral o
+          persona física con actividad empresarial, el cliente debe proporcionar sus
+          datos fiscales completos antes de que se emita el comprobante.
+        </p>
+
+        <p>
+          Conforme al artículo 56 de la Ley Federal de Protección al Consumidor, en
+          las contrataciones realizadas en línea el cliente puede revocar su
+          consentimiento dentro de los cinco días hábiles siguientes a la transacción,
+          siempre que el servicio no haya iniciado. Para ejercer este derecho, el
+          cliente debe enviar un aviso escrito a correo indicando su nombre, el
+          servicio contratado y el folio de la transacción dentro del plazo señalado.
+        </p>
+
+        <h2>4. Uso del sitio y propiedad intelectual</h2>
+
+        <p>
+          El sitio de la Empresa y todos los contenidos disponibles en él —textos,
+          metodologías, estructura de los planes, nombre comercial, logotipo,
+          elementos gráficos y software— son propiedad de la Empresa o de sus
+          licenciantes y están protegidos por la Ley Federal del Derecho de Autor y
+          demás legislación aplicable.
+        </p>
+
+        <p>Queda prohibido:</p>
+
+        <ul>
+          <li>
+            Usar el sitio para actividades ilegales o fraudulentas.
+          </li>
+          <li>
+            Reproducir, copiar, distribuir o explotar su contenido sin autorización
+            escrita de la Empresa.
+          </li>
+          <li>
+            Usar de forma no autorizada la marca, nombre comercial o logotipos de la
+            Empresa.
+          </li>
+          <li>
+            Intentar acceder sin autorización a sistemas, bases de datos o
+            infraestructura tecnológica interna.
+          </li>
+        </ul>
+
+        <p>
+          Los entregables proporcionados al cliente se conceden para su uso interno
+          exclusivo dentro de su ecommerce o negocio. No pueden ser revendidos,
+          sublicenciados ni redistribuidos a terceros como servicios propios sin
+          autorización expresa y por escrito.
+        </p>
+
+        <h2>5. Suspensión, cancelación y límites de responsabilidad</h2>
+
+        <p>
+          La Empresa puede suspender o cancelar un servicio en curso cuando detecte
+          información falsa proporcionada por el cliente, incumplimiento de pagos,
+          uso indebido del sitio o de los entregables, o cualquier conducta
+          incompatible con la naturaleza del servicio. En tales casos, se aplicará la
+          política de reembolsos y cancelaciones vigente publicada en el sitio de la
+          Empresa, según el estado de avance del proyecto.
+        </p>
+
+        <p>
+          La responsabilidad máxima de la Empresa frente a cualquier reclamación
+          derivada de un servicio específico no excederá, en ningún caso, el monto
+          efectivamente pagado por dicho servicio, en la medida permitida por la
+          legislación mexicana aplicable.
+        </p>
+
+        <h2>6. Modificaciones a estos términos</h2>
+
+        <p>
+          La Empresa se reserva el derecho de modificar estos Términos y
+          Condiciones. Cualquier actualización será publicada en el sitio web con la
+          fecha de entrada en vigor de la nueva versión.
+        </p>
+
+        <p>
+          Las modificaciones aplicarán únicamente hacia el futuro y no afectarán
+          contratos o servicios ya formalizados bajo versiones anteriores; esos se
+          mantendrán regidos por los términos vigentes al momento de su contratación.
+        </p>
+
+        <h2>7. Legislación aplicable y jurisdicción</h2>
+
+        <p>
+          Estos Términos y Condiciones se rigen por la legislación mexicana vigente,
+          incluyendo la Ley Federal de Protección al Consumidor, el Código Civil
+          Federal y el Código de Comercio.
+        </p>
+
+        <p>
+          Cualquier controversia derivada de la interpretación o cumplimiento de
+          estos términos se someterá a la jurisdicción de los tribunales competentes
+          de la Ciudad de México, renunciando expresamente las partes a cualquier
+          otro fuero que pudiera corresponderles por razón de su domicilio presente o
+          futuro.
+        </p>
+
+        <p>
+          <strong>Última actualización:</strong> Mayo de 2026
+        </p>
+      </section>
+    </div>
   );
 }
 
-function TermsConditionsPageEnglish() {
+function LegalEn() {
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-[#fafafa] pt-32 pb-24 text-stone-900">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="bg-white p-10 md:p-16 rounded-[2rem] border border-stone-200 shadow-sm">
+    <div className="legal-container">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .legal-container {
+          color: #1a1a1a;
+          line-height: 1.6;
+          font-family: sans-serif;
+        }
+        .legal-container h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem; }
+        .legal-container h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #3048ab; }
+        .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
+        .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
+        .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
+        .legal-container li { margin-bottom: 0.5rem; }
+      `}} />
 
-            <h1 className="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight mb-8">
-              Terms and Conditions
-            </h1>
+      <section>
+        <h1>Terms and Conditions</h1>
 
-            <div className="space-y-6 text-stone-600 leading-relaxed font-medium">
-              <p>
-                These Terms and Conditions establish the rules governing the access, use, and contracting of services through NorexioDigitalmkt.com (hereinafter “Norexio Digital MKT”), owned by SEVEN MARKETING DIGITAL, S.A. DE C.V. (hereinafter, “the Company”), with address at Avenida Insurgentes Sur, No. 933, INT 102 Floor 1, Colonia Nápoles, Benito Juárez Borough, ZIP Code 03810, Mexico City. {/* [cite: 259, 260, 261] */}
-              </p>
+        <p>
+          <em>
+            These terms govern every relationship between
+            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            (hereinafter the “Company”) and any person who uses its website,
+            consults its services, or purchases any of its plans. Access to the
+            website, submission of the contact form, and payment for any service
+            imply full acceptance of everything described herein. The provisions
+            below are ordered according to their weight in the relationship: the
+            first are the most fundamental; the last, the most specific.
+          </em>
+        </p>
 
-              <p>
-                These provisions apply to any person who accesses, browses, and/or contracts the services offered on Norexio Digital MKT (hereinafter, “the User”). Access, use, and/or acquisition of services implies prior reading, understanding, and express acceptance without reservations of the full content of this document. {/* [cite: 261, 262] */}
-              </p>
+        <h2>1.- Who We Are and What We Offer.</h2>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                I. Purpose
-              </h2>
+        <p>
+          <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+          is a marketing agency specialized in ecommerce, focused on designing,
+          analyzing, and optimizing online stores to improve their commercial
+          performance.
+        </p>
 
-              <p>
-                The purpose of this document is to regulate the conditions under which the Company makes Norexio Digital MKT and the services offered therein available to the User. Access to the site does not, by itself, imply the existence of a contractual relationship between the Company and the User, unless the latter formally contracts a service. {/* [cite: 265, 266] */}
-              </p>
+        <p><strong>Tax ID:</strong> SSA190502GK8</p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                II. Access Conditions
-              </h2>
+        <p>
+          <strong>Address:</strong>
+          Av. Chapultepec No. 480, Floor 9, Unit 901, Col. Roma Norte, ZIP Code
+          06700, Cuauhtémoc Borough, Mexico City.
+        </p>
 
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  The User declares and guarantees that they have sufficient legal capacity to contract in accordance with Mexican laws. {/* [cite: 268] */}
-                </li>
+        <p><strong>Phone:</strong> +52 1 55 2230 1576.</p>
 
-                <li>
-                  The use of the site by minors must be carried out under the supervision of a legal guardian, who shall assume responsibility. {/* [cite: 269] */}
-                </li>
+        <p>
+          <strong>Email:</strong>
+          webmaster@norexiodigital.com
+        </p>
 
-                <li>
-                  The Company reserves the right to deny, suspend, or cancel access to the site if fraudulent or unlawful activities are detected. {/* [cite: 270] */}
-                </li>
-              </ul>
+        <p>
+          The catalog of services and plans is organized into different sections
+          (for example, express services, scaling strategies, advanced
+          implementations, digital growth engineering, and customized solutions),
+          and is described in detail on the official website of
+          <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+          in the services section. The characteristics, scope, deliverables, and
+          prices of each plan are governed by what is published in that section at
+          the time of contracting.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                III. Contracting of Services
-              </h2>
+        <h2>2. Scope of Services and Deliverables</h2>
 
-              <p>
-                The process of contracting a service shall be considered completed only when the User has completed the request form, made the corresponding payment, and received a purchase confirmation sent by the Company to the registered email address. {/* [cite: 272] */}
-              </p>
+        <p>
+          Each plan includes only the deliverables described in its listing on the
+          website and/or in the proposal or confirmation sent to the client:
+          analyses, diagnostics, recommendation reports, product page
+          optimizations, structural adjustments, documented strategies, and action
+          plans, all delivered in digital format.
+        </p>
 
-              <p>
-                The Company reserves the right to modify, update, or remove at any time the information, characteristics, prices, and availability of the services offered. {/* [cite: 273] */}
-              </p>
+        <p>
+          The Company does not guarantee specific sales results or concrete
+          percentages of improvement, since ecommerce performance depends on
+          multiple external factors (market conditions, competition, internal
+          implementation, advertising budget, among others). However, it does
+          commit to the technical quality and completeness of the deliverables
+          agreed upon according to the description of the contracted plan.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                IV. Prices and Payment Method
-              </h2>
+        <p>
+          For the Customized Strategy, the process begins with the contact form;
+          the Company evaluates the client’s ecommerce business and presents a
+          tailored proposal including scope, deliverables, and price, which must
+          be accepted before any payment obligation exists.
+        </p>
 
-              <p>
-                All prices published on the site are expressed in national currency (MXN) and include applicable taxes, unless otherwise indicated. Payment may be made through online payment methods. {/* [cite: 276, 277] */}
-              </p>
+        <h2>3. Prices, Payments, Confirmation, and Right of Revocation</h2>
 
-              <p>
-                The Company will not store complete bank card details, since processing is carried out through certified external providers that comply with PCI DSS security standards. {/* [cite: 278] */}
-              </p>
+        <p>
+          All service prices are expressed in Mexican pesos (MXN). Unless the
+          website expressly states that a price includes VAT, it shall be
+          understood that VAT is added according to the rate in force at the time
+          of contracting. Current information regarding prices and tax treatment
+          is shown in the listing of each service on the website.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                V. Permitted Use of the Site
-              </h2>
+        <p>
+          Payments are processed through a secure payment gateway. Upon completing
+          payment, the client receives an electronic confirmation at the registered
+          email address containing at least: the purchased service, the amount paid
+          including VAT, and the transaction reference number.
+        </p>
 
-              <p>
-                The User agrees to use Norexio Digital MKT and all its content lawfully. It is strictly prohibited to: {/* [cite: 281, 282] */}
-              </p>
+        <p>
+          The Company will issue the corresponding CFDI tax invoice. To invoice a
+          legal entity or an individual with business activity, the client must
+          provide complete tax information before the invoice is issued.
+        </p>
 
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  Alter or modify, totally or partially, Norexio Digital MKT without the authorization of the Company. {/* [cite: 283] */}
-                </li>
+        <p>
+          Pursuant to Article 56 of the Federal Consumer Protection Law, in online
+          transactions the client may revoke their consent within five business
+          days following the transaction, provided that the service has not yet
+          begun. To exercise this right, the client must send written notice by
+          email indicating their name, the contracted service, and the transaction
+          reference number within the indicated period.
+        </p>
 
-                <li>
-                  Introduce viruses, malware, or any malicious code. {/* [cite: 284] */}
-                </li>
+        <h2>4. Website Use and Intellectual Property</h2>
 
-                <li>
-                  Use the site’s content for unauthorized commercial purposes. {/* [cite: 285] */}
-                </li>
-              </ul>
+        <p>
+          The Company’s website and all content available on it — texts,
+          methodologies, plan structures, trade name, logo, graphic elements, and
+          software — are the property of the Company or its licensors and are
+          protected by the Federal Copyright Law and other applicable legislation.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                VI. Intellectual Property
-              </h2>
+        <p>It is prohibited to:</p>
 
-              <p>
-                All elements of Norexio Digital MKT, including texts, images, logos, source code, and other materials, are the exclusive property of the Company or third-party licensors. The User does not acquire any rights over such elements. {/* [cite: 287, 288] */}
-              </p>
+        <ul>
+          <li>
+            Use the website for illegal or fraudulent activities.
+          </li>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                VII. Limitation of Liability
-              </h2>
+          <li>
+            Reproduce, copy, distribute, or exploit its content without written
+            authorization from the Company.
+          </li>
 
-              <p>
-                The Company shall make its best efforts to maintain the continuous and secure operation of the site, but does not guarantee the absence of interruptions. The User accepts that the use of the site is carried out under their own responsibility. {/* [cite: 290, 291] */}
-              </p>
+          <li>
+            Use the Company’s trademark, trade name, or logos without authorization.
+          </li>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                VIII. Cancellations and Refunds
-              </h2>
+          <li>
+            Attempt unauthorized access to systems, databases, or internal
+            technological infrastructure.
+          </li>
+        </ul>
 
-              <p>
-                Requests for cancellations and/or refunds shall be governed by the provisions established in the Refunds and Returns Policy available on Norexio Digital MKT. {/* [cite: 293] */}
-              </p>
+        <p>
+          The deliverables provided to the client are granted for exclusive
+          internal use within their ecommerce business or company. They may not be
+          resold, sublicensed, or redistributed to third parties as proprietary
+          services without express written authorization.
+        </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                IX. Jurisdiction and Applicable Law
-              </h2>
+        <h2>5. Suspension, Cancellation, and Limitation of Liability</h2>
 
-              <p>
-                This document shall be governed by the laws of the United Mexican States. For the interpretation and enforcement of the provisions herein, the parties expressly submit to the jurisdiction of the competent courts of Mexico City. {/* [cite: 295, 296] */}
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+        <p>
+          The Company may suspend or cancel an ongoing service when it detects
+          false information provided by the client, payment defaults, misuse of
+          the website or deliverables, or any conduct incompatible with the nature
+          of the service. In such cases, the refund and cancellation policy
+          published on the Company’s website shall apply according to the progress
+          status of the project.
+        </p>
+
+        <p>
+          The Company’s maximum liability for any claim arising from a specific
+          service shall not exceed, under any circumstances, the amount actually
+          paid for such service, to the extent permitted by applicable Mexican law.
+        </p>
+
+        <h2>6. Modifications to These Terms</h2>
+
+        <p>
+          The Company reserves the right to modify these Terms and Conditions. Any
+          update will be published on the website together with the effective date
+          of the new version.
+        </p>
+
+        <p>
+          Modifications shall apply only prospectively and will not affect
+          contracts or services already formalized under previous versions; such
+          contracts and services shall remain governed by the terms in effect at
+          the time of contracting.
+        </p>
+
+        <h2>7. Applicable Law and Jurisdiction</h2>
+
+        <p>
+          These Terms and Conditions are governed by current Mexican legislation,
+          including the Federal Consumer Protection Law, the Federal Civil Code,
+          and the Commercial Code.
+        </p>
+
+        <p>
+          Any dispute arising from the interpretation or enforcement of these
+          terms shall be submitted to the jurisdiction of the competent courts of
+          Mexico City, with the parties expressly waiving any other jurisdiction
+          that may correspond to them due to their present or future domicile.
+        </p>
+
+        <p>
+          <strong>Last update:</strong> May 2026
+        </p>
+      </section>
+    </div>
   );
 }
 
 export default function LegalPage() {
   const locale = useLocale();
 
-  return locale === "es" ? <TermsConditionsPageSpanish /> : <TermsConditionsPageEnglish />
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <Header />
+      <main className="flex-grow container mx-auto px-6 py-20 max-w-4xl">
+        {locale === "es" ? <LegalEs /> : <LegalEn />}
+      </main>
+      <Footer />
+    </div>
+  );
 }

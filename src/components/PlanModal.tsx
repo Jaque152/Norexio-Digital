@@ -13,7 +13,7 @@ import {
 
 import { useTranslations, useLocale } from "next-intl";
 
-import { Plan } from "@/data/products";
+import { categoriesEn, categoriesSp, Plan } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 
 interface PlanModalProps {
@@ -31,7 +31,18 @@ export default function PlanModal({
 }: PlanModalProps) {
   const t = useTranslations("planModal");
 
-  const locale = useLocale();
+  const locale = useLocale()
+  const categories =
+    locale === "es"
+      ? categoriesSp
+      : categoriesEn;
+
+  const getCategoryImage = (category: string): string => {
+    const cat = categories.find(c => c.id == category);
+    return cat?.image as string;
+  }
+
+  
 
   const { addToCart } = useCart();
 
@@ -118,7 +129,7 @@ export default function PlanModal({
           <div className="space-y-6">
             <div className="relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-emerald-50 aspect-square shadow-sm">
               <Image
-                src={plan.image}
+                src={getCategoryImage(plan.category)}
                 alt={plan.title}
                 fill
                 className="object-cover"

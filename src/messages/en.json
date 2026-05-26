@@ -153,7 +153,7 @@
     "increase": "Increase quantity",
     "total": "Total",
     "subtotal": "Subtotal",
-    "tax": "TAX (16%)",
+    "tax": "VAT (16%)",
     "finalTotal": "Total",
     "checkout": "Proceed to checkout",
     "clearCart": "Clear cart"
@@ -306,7 +306,7 @@
     "copyright": "© 2026 NorexioDigital. All rights reserved.",
     "terms": "Terms and Conditions",
     "privacy": "Privacy Notice",
-    "refunds": "Returns and Refunds Policy"
+    "refunds": "Refund and Cancellation Policy"
   },
   "diagnostic": {
     "badge": "Ecommerce Diagnostic",
@@ -396,5 +396,32 @@
     "iva": "VAT",
     "total": "Total",
     "addToCart": "Add to cart"
+  },
+  "store": {
+    "categories": {
+      "all": "All",
+      "express": "Express Services",
+      "advanced": "Advanced Implementations",
+      "digital": "Digital Growth"
+    },
+    "hero": {
+      "badge": "Ecommerce solutions",
+      "title": "Services designed to grow your online store.",
+      "description": "Strategies, optimization, and specialized ecommerce solutions focused on conversion, automation, and digital growth."
+    },
+    "product": {
+      "tax": "MXN + VAT",
+      "add": "Add"
+    },
+    "empty": {
+      "title": "No services available",
+      "description": "There are currently no solutions available in this category."
+    },
+    "cta": {
+      "badge": "Custom strategy",
+      "title": "Need a custom solution?",
+      "description": "We can analyze your ecommerce business and help you build a strategy focused on growth, automation, and sales.",
+      "button": "Request strategy"
+    }
   }
 }

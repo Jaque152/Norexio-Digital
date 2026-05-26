@@ -1,262 +1,577 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+"use client";
+
 import { useLocale } from "next-intl";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-function PrivacyPageSpanish() {
+function LegalEs() {
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-[#fafafa] pt-32 pb-24 text-stone-900">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="bg-white p-10 md:p-16 rounded-[2rem] border border-stone-200 shadow-sm">
+    <div className="legal-container">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .legal-container {
+          color: #1a1a1a;
+          line-height: 1.6;
+          font-family: sans-serif;
+        }
+        .legal-container h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem; }
+        .legal-container h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #3048ab; }
+        .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
+        .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
+        .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
+        .legal-container li { margin-bottom: 0.5rem; }
+        .legal-container section { margin-bottom: 3rem; }
+      `}} />
 
-            <h1 className="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight mb-8">
-              Aviso de Privacidad
-            </h1>
+      <section>
+        <section>
+          <h1>Aviso de Privacidad - SPOTLIGHT SALES, S.A. DE C.V.</h1>
 
-            <div className="space-y-6 text-stone-600 leading-relaxed font-medium">
-              <div className="bg-slate-50 p-6 rounded-2xl mb-8 border border-stone-200 text-sm">
-                <p className="font-bold text-stone-900 mb-2">SEVEN MARKETING DIGITAL, S.A. DE C.V. • Norexio Digital MKT</p>
-                <p>Portal: Norexio Digitalmkt.com • Línea de Atención: contacto@Norexio Digitalmkt.com</p>
-                <p>Domicilio: Avenida Insurgentes Sur, N°933, INT 102 Piso 1, Colonia Nápoles, Alcaldía Benito Juárez, C.P. 03810, Ciudad de México.</p>
-              </div>
+          <p>
+            Al usar el sitio de la empresa, enviar el formulario de contacto o
+            contratar cualquier servicio, usted consiente el tratamiento de sus datos
+            conforme a lo que describe este aviso.
+          </p>
 
-              <p>En SEVEN MARKETING DIGITAL, S.A. DE C.V. (en adelante “Norexio Digital MKT”), asumimos un compromiso serio y permanente con la protección y el manejo responsable de los datos personales que recabamos de nuestros clientes, usuarios y visitantes del sitio web Norexio Digitalmkt.com. {/* [cite: 186, 187] */}</p>
-              <p>Este Aviso de Privacidad se emite en cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y demás normatividad aplicable, y tiene como objetivo informarle, de forma clara y detallada, sobre la manera en que recabamos, utilizamos, almacenamos, transferimos y protegemos su información personal, así como los derechos que puede ejercer respecto de la misma. {/* [cite: 188] */}</p>
+          <p>
+            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            (en adelante, la “Empresa”) es la responsable del tratamiento de sus datos
+            personales. Somos una agencia especializada exclusivamente en estrategias
+            de marketing y optimización para ecommerce: diagnóstico de tiendas online,
+            mejora de conversión, estrategia de ventas digital, posicionamiento SEO
+            para tiendas y escalamiento comercial.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">1. Datos personales recabados</h2>
-              <p>La información que Norexio Digital MKT solicita es únicamente la necesaria para poder prestar sus servicios, procesar pagos, atender solicitudes y cumplir con las obligaciones contractuales y legales derivadas de la relación con el usuario. {/* [cite: 190] */}</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Nombre completo del titular. {/* [cite: 192] */}</li>
-                <li>Correo electrónico de contacto. {/* [cite: 193] */}</li>
-                <li>Número telefónico. {/* [cite: 194] */}</li>
-                <li>Información derivada de interacciones en línea, como dirección IP, tipo de navegador y sistema operativo, recopilada de forma automática mediante tecnologías de rastreo como cookies. {/* [cite: 195] */}</li>
-              </ul>
+          <p>
+            Operamos en Av. Chapultepec N° 480, Piso 9, Dep. 901, Col. Roma Norte,
+            C.P. 06700, Alcaldía Cuauhtémoc, Ciudad de México.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">2. Finalidades del tratamiento</h2>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Procesar, confirmar y dar seguimiento a solicitudes de servicios adquiridos a través de la página web. {/* [cite: 198] */}</li>
-                <li>Establecer y mantener comunicación para la atención a consultas, quejas, aclaraciones o soporte técnico. {/* [cite: 199] */}</li>
-                <li>Cumplir con obligaciones contractuales, fiscales y legales derivadas de la prestación de servicios. {/* [cite: 200] */}</li>
-                <li>Generar registros internos para control operativo, estadístico y de calidad. {/* [cite: 201] */}</li>
-                <li>Implementar mejoras en el sitio web y en la experiencia del usuario, a partir de análisis de uso y navegación. {/* [cite: 202] */}</li>
-              </ul>
+          <p>
+            Puede contactarnos en
+            <a href="tel:+5215522301576">+52 1 55 2230 1576</a>
+            y al correo
+            <a href="mailto:webmaster@norexiodigital.com">
+              webmaster@norexiodigital.com
+            </a>.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">3. Transferencia de datos personales</h2>
-              <p>Norexio Digital MKT podrá compartir los datos personales del titular únicamente en los siguientes casos: {/* [cite: 204] */}</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Con proveedores de servicios tecnológicos que faciliten el procesamiento de pagos, alojamiento de datos, mensajería y soporte técnico, siempre bajo acuerdos de confidencialidad. {/* [cite: 205] */}</li>
-                <li>Con autoridades administrativas o judiciales que, en el ejercicio de sus funciones, soliciten la información de conformidad con la ley. {/* [cite: 206] */}</li>
-                <li>Con empresas relacionadas o filiales para fines administrativos y operativos vinculados con la prestación de los servicios contratados. {/* [cite: 207] */}</li>
-              </ul>
-              <p>En ningún caso Norexio Digital MKT venderá, alquilará o comercializará los datos personales a terceros ajenos a las finalidades aquí descritas. {/* [cite: 208] */}</p>
+          <p>
+            Mientras lee esto, estos son los datos que pueden existir sobre usted en
+            nuestros sistemas.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">4. Derechos ARCO y medios para ejercerlos</h2>
-              <p>El titular podrá ejercer en cualquier momento sus derechos de Acceso, Rectificación, Cancelación u Oposición (ARCO), así como limitar el uso o revocar el consentimiento previamente otorgado. Para ello, deberá enviar una solicitud a contacto@Norexio Digitalmkt.com, la cual deberá contener: {/* [cite: 210, 211] */}</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Nombre completo del titular y un medio para recibir respuesta. {/* [cite: 212] */}</li>
-                <li>Descripción clara y precisa de los datos sobre los que se pretende ejercer derechos. {/* [cite: 213] */}</li>
-                <li>Copia de identificación oficial vigente o documento que acredite la representación legal. {/* [cite: 214] */}</li>
-              </ul>
-              <p>Norexio Digital MKT responderá a la solicitud en un plazo máximo de 20 días hábiles a partir de su recepción y notificará al solicitante a través del medio indicado en la misma. {/* [cite: 215] */}</p>
+          <h2>Si completó el formulario de contacto:</h2>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">5. Limitación del uso y divulgación</h2>
-              <p>Si el titular desea limitar el uso o divulgación de sus datos personales para fines no esenciales, podrá manifestarlo expresamente en la solicitud de derechos ARCO o enviando un correo electrónico con la indicación correspondiente. {/* [cite: 217] */}</p>
+          <ol>
+            <li>Su correo electrónico.</li>
+            <li>Número telefónico.</li>
+            <li>Nombre de su tienda online.</li>
+            <li>URL de su ecommerce.</li>
+            <li>El mensaje o descripción de su proyecto.</li>
+          </ol>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">6. Uso de cookies y tecnologías similares</h2>
-              <p>El sitio web de Norexio Digital MKT puede utilizar cookies y tecnologías similares para optimizar el funcionamiento del sitio, recordar preferencias del usuario y obtener métricas de navegación. El usuario puede deshabilitar dichas tecnologías desde la configuración de su navegador, aunque esto podría afectar el funcionamiento de ciertas funciones. {/* [cite: 219, 220] */}</p>
+          <h2>Si formalizó un contrato de servicio:</h2>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">7. Medidas de seguridad</h2>
-              <p>Norexio Digital MKT implementa medidas técnicas, administrativas y físicas razonables para proteger los datos personales contra pérdida, uso indebido, acceso no autorizado, alteración o destrucción. No obstante, el titular reconoce que ninguna transmisión de datos por Internet es completamente segura y que Norexio Digital MKT no puede garantizar la invulnerabilidad absoluta de sus sistemas. {/* [cite: 222, 223] */}</p>
+          <ol>
+            <li>Adicionalmente su nombre completo o razón social.</li>
+            <li>RFC.</li>
+            <li>Datos de facturación.</li>
+          </ol>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">8. Cambios al Aviso de Privacidad</h2>
-              <p>Norexio Digital MKT podrá modificar en cualquier momento el presente Aviso de Privacidad para atender cambios legislativos, políticas internas o nuevos requerimientos para la prestación de servicios. Las modificaciones se publicarán en el sitio web y entrarán en vigor a partir de su publicación. {/* [cite: 225, 226] */}</p>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+          <p>
+            Los pagos son procesados por una pasarela de pago certificada externa; la
+            empresa no almacena ni tiene acceso directo a los datos completos de
+            tarjetas bancarias.
+          </p>
+
+          <p>
+            Si en el mensaje o comunicaciones posteriores usted comparte información
+            adicional, también será tratada conforme a este aviso.
+          </p>
+
+          <p>
+            No recopilamos datos personales sensibles en ningún punto del proceso.
+          </p>
+
+          <h2>
+            Ahora mismo, estos datos están siendo usados para una de estas cuatro
+            cosas:
+          </h2>
+
+          <p>
+            <strong>Primera:</strong>
+            responder su consulta y evaluar si alguno de nuestros servicios, tal como
+            se describen en el apartado de servicios de nuestro sitio, corresponde a
+            las necesidades de su tienda.
+          </p>
+
+          <p>
+            <strong>Segunda:</strong>
+            ejecutar el diagnóstico, análisis, optimización o estrategia que contrató
+            y entregar los resultados comprometidos.
+          </p>
+
+          <p>
+            <strong>Tercera:</strong>
+            emitir el comprobante fiscal digital (CFDI) correspondiente a su
+            transacción.
+          </p>
+
+          <p>
+            <strong>Cuarta:</strong>
+            mantener comunicación operativa relacionada con el servicio activo.
+          </p>
+
+          <p>
+            No existe una quinta finalidad. No usamos su información para enviar
+            publicidad no solicitada ni la cedemos a terceros con fines comerciales.
+          </p>
+
+          <h2>En este momento, su información puede estar visible para:</h2>
+
+          <ol>
+            <li>
+              Colaboradores internos de la empresa que trabajan en el servicio que
+              contrató, bajo acuerdos de confidencialidad.
+            </li>
+
+            <li>
+              La pasarela de pago certificada que procesa su transacción. Las
+              plataformas tecnológicas que usamos para operar nuestro negocio, con el
+              acceso mínimo necesario para su función.
+            </li>
+
+            <li>
+              Autoridades fiscales, judiciales o regulatorias si la ley lo exige en
+              términos precisos.
+            </li>
+
+            <li>Nadie más.</li>
+          </ol>
+
+          <p>
+            No vendemos ni arrendamos sus datos personales.
+          </p>
+
+          <h2>
+            En este momento, la empresa protege su información de esta manera:
+          </h2>
+
+          <p>
+            Aplicamos medidas de seguridad administrativas (acceso restringido a
+            personal autorizado, acuerdos de confidencialidad), técnicas (plataformas
+            con cifrado, acceso mediante credenciales seguras) y físicas (control de
+            acceso a los espacios y equipos donde se procesa información). El nivel de
+            protección es proporcional a la sensibilidad de lo que tratamos.
+          </p>
+
+          <h2>
+            El sitio de la empresa usa estas tecnologías de rastreo mientras usted
+            navega:
+          </h2>
+
+          <p>
+            Cookies técnicas necesarias para el funcionamiento del formulario de
+            contacto y la navegación del sitio.
+          </p>
+
+          <p>
+            Cookies analíticas para entender el comportamiento de los visitantes y
+            mejorar la experiencia.
+          </p>
+
+          <p>
+            En su caso, cookies de publicidad para campañas digitales.
+          </p>
+
+          <p>
+            Al ingresar al sitio puede configurar sus preferencias a través del banner
+            de gestión de cookies.
+          </p>
+
+          <p>
+            Las cookies técnicas no se pueden desactivar sin afectar el funcionamiento
+            del sitio; las demás requieren su consentimiento y puede revocarlo en
+            cualquier momento desde el banner o desde la configuración de su navegador.
+          </p>
+
+          <h2>
+            Sus datos tienen este tiempo de vida en nuestros sistemas:
+          </h2>
+
+          <p>
+            Los datos del formulario de contacto que no derivaron en una contratación
+            se eliminan en un plazo máximo de seis meses desde la última interacción.
+          </p>
+
+          <p>
+            Los datos vinculados a un contrato, incluyendo facturación, se conservan
+            cinco años conforme al artículo 30 del Código Fiscal de la Federación.
+          </p>
+
+          <p>
+            Al vencer cada plazo, la información se bloquea y se destruye de manera
+            segura, salvo que exista una obligación legal, un procedimiento de
+            autoridad o una controversia pendiente que obligue a conservarla por más
+            tiempo.
+          </p>
+
+          <h2>
+            Usted tiene derechos sobre estos datos y puede ejercerlos ahora:
+          </h2>
+
+          <ol>
+            <li>
+              <strong>Acceso:</strong>
+              saber exactamente qué datos tenemos sobre usted.
+            </li>
+
+            <li>
+              <strong>Rectificación:</strong>
+              corregir lo que esté inexacto o desactualizado.
+            </li>
+
+            <li>
+              <strong>Cancelación:</strong>
+              pedir que eliminemos sus datos cuando ya no sean necesarios o estén
+              siendo tratados de forma indebida.
+            </li>
+
+            <li>
+              <strong>Oposición:</strong>
+              indicar que dejemos de usarlos para una finalidad específica permitida.
+            </li>
+          </ol>
+
+          <p>
+            Para ejercer cualquiera de estos derechos, escríbanos a correo con su
+            nombre, el derecho que desea ejercer y copia de una identificación
+            oficial.
+          </p>
+
+          <p>
+            Respondemos en un plazo máximo de veinte días hábiles y, cuando proceda,
+            implementamos la acción correspondiente en un plazo máximo de quince días
+            hábiles adicionales.
+          </p>
+
+          <h2>
+            Si este aviso cambia, se lo haremos saber antes de que entre en vigor.
+          </h2>
+
+          <p>
+            Publicaremos cualquier actualización en nuestro sitio con la fecha de
+            entrada en vigor.
+          </p>
+
+          <p>
+            Los cambios no afectan contratos ya formalizados bajo los términos vigentes
+            al momento de la firma.
+          </p>
+
+          <p>
+            La versión en vigor es siempre la más reciente publicada.
+          </p>
+
+          <p>
+            <strong>Última actualización:</strong>
+            Mayo de 2026
+          </p>
+        </section>
+      </section>
+    </div>
   );
 }
 
-function PrivacyPageEnglish() {
+function LegalEn() {
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-[#fafafa] pt-32 pb-24 text-stone-900">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="bg-white p-10 md:p-16 rounded-[2rem] border border-stone-200 shadow-sm">
+    <div className="legal-container">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .legal-container {
+          color: #1a1a1a;
+          line-height: 1.6;
+          font-family: sans-serif;
+        }
+        .legal-container h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem; }
+        .legal-container h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #3048ab; }
+        .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
+        .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
+        .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
+        .legal-container li { margin-bottom: 0.5rem; }
+      `}} />
 
-            <h1 className="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight mb-8">
-              Privacy Notice
-            </h1>
+      <section>
+        <section>
+          <h1>Privacy Notice - SPOTLIGHT SALES, S.A. DE C.V.</h1>
 
-            <div className="space-y-6 text-stone-600 leading-relaxed font-medium">
-              <div className="bg-slate-50 p-6 rounded-2xl mb-8 border border-stone-200 text-sm">
-                <p className="font-bold text-stone-900 mb-2">
-                  SEVEN MARKETING DIGITAL, S.A. DE C.V. • Norexio Digital MKT
-                </p>
+          <p>
+            By using the company’s website, submitting the contact form, or purchasing
+            any service, you consent to the processing of your data in accordance with
+            what is described in this notice.
+          </p>
 
-                <p>
-                  Website: NorexioDigitalmkt.com • Support Line: contacto@NorexioDigitalmkt.com
-                </p>
+          <p>
+            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            (hereinafter, the “Company”) is responsible for the processing of your
+            personal data. We are an agency specialized exclusively in marketing and
+            optimization strategies for ecommerce: online store diagnostics,
+            conversion improvement, digital sales strategy, SEO positioning for
+            online stores, and commercial scaling.
+          </p>
 
-                <p>
-                  Address: Avenida Insurgentes Sur, No. 933, INT 102 Floor 1,
-                  Colonia Nápoles, Benito Juárez Borough, ZIP Code 03810,
-                  Mexico City.
-                </p>
-              </div>
+          <p>
+            We operate at Av. Chapultepec No. 480, Floor 9, Unit 901, Col. Roma Norte,
+            ZIP Code 06700, Cuauhtémoc Borough, Mexico City.
+          </p>
 
-              <p>
-                At SEVEN MARKETING DIGITAL, S.A. DE C.V. (hereinafter “Norexio Digital MKT”), we assume a serious and ongoing commitment to the protection and responsible handling of the personal data we collect from our clients, users, and visitors of the website NorexioDigitalmkt.com. {/* [cite: 186, 187] */}
-              </p>
+          <p>
+            You may contact us at
+            <a href="tel:+5215522301576">+52 1 55 2230 1576</a>
+            or by email at
+            <a href="mailto:webmaster@norexiodigital.com">
+              webmaster@norexiodigital.com
+            </a>.
+          </p>
 
-              <p>
-                This Privacy Notice is issued in compliance with the Federal Law on the Protection of Personal Data Held by Private Parties and other applicable regulations, and aims to inform you, clearly and in detail, about the manner in which we collect, use, store, transfer, and protect your personal information, as well as the rights you may exercise regarding such information. {/* [cite: 188] */}
-              </p>
+          <p>
+            While you are reading this, these are the types of data that may exist
+            about you in our systems.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                1. Personal Data Collected
-              </h2>
+          <h2>If you completed the contact form:</h2>
 
-              <p>
-                The information requested by Norexio Digital MKT is only that which is necessary to provide its services, process payments, respond to requests, and comply with contractual and legal obligations arising from the relationship with the user. {/* [cite: 190] */}
-              </p>
+          <ol>
+            <li>Your email address.</li>
+            <li>Your phone number.</li>
+            <li>The name of your online store.</li>
+            <li>Your ecommerce website URL.</li>
+            <li>Your message or project description.</li>
+          </ol>
 
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Full name of the data subject. {/* [cite: 192] */}</li>
+          <h2>If you entered into a service agreement:</h2>
 
-                <li>Contact email address. {/* [cite: 193] */}</li>
+          <ol>
+            <li>Your full name or business name.</li>
+            <li>Your Tax ID (RFC).</li>
+            <li>Your billing information.</li>
+          </ol>
 
-                <li>Telephone number. {/* [cite: 194] */}</li>
+          <p>
+            Payments are processed by a certified external payment gateway; the
+            Company does not store or have direct access to complete bank card data.
+          </p>
 
-                <li>
-                  Information derived from online interactions, such as IP address, browser type, and operating system, automatically collected through tracking technologies such as cookies. {/* [cite: 195] */}
-                </li>
-              </ul>
+          <p>
+            If you share additional information in your message or subsequent
+            communications, it will also be processed in accordance with this notice.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                2. Purposes of Data Processing
-              </h2>
+          <p>
+            We do not collect sensitive personal data at any stage of the process.
+          </p>
 
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  To process, confirm, and follow up on service requests purchased through the website. {/* [cite: 198] */}
-                </li>
+          <h2>
+            Right now, this data is being used for one of these four purposes:
+          </h2>
 
-                <li>
-                  To establish and maintain communication for responding to inquiries, complaints, clarifications, or technical support. {/* [cite: 199] */}
-                </li>
+          <p>
+            <strong>First:</strong>
+            to respond to your inquiry and evaluate whether any of our services, as
+            described in the services section of our website, matches the needs of
+            your store.
+          </p>
 
-                <li>
-                  To comply with contractual, tax, and legal obligations arising from the provision of services. {/* [cite: 200] */}
-                </li>
+          <p>
+            <strong>Second:</strong>
+            to execute the diagnosis, analysis, optimization, or strategy you
+            contracted and deliver the committed results.
+          </p>
 
-                <li>
-                  To generate internal records for operational, statistical, and quality control purposes. {/* [cite: 201] */}
-                </li>
+          <p>
+            <strong>Third:</strong>
+            to issue the corresponding Digital Tax Receipt (CFDI) for your
+            transaction.
+          </p>
 
-                <li>
-                  To implement improvements to the website and user experience based on usage and navigation analysis. {/* [cite: 202] */}
-                </li>
-              </ul>
+          <p>
+            <strong>Fourth:</strong>
+            to maintain operational communication related to the active service.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                3. Transfer of Personal Data
-              </h2>
+          <p>
+            There is no fifth purpose. We do not use your information to send
+            unsolicited advertising, nor do we share it with third parties for
+            commercial purposes.
+          </p>
 
-              <p>
-                Norexio Digital MKT may share the data subject’s personal data only in the following cases: {/* [cite: 204] */}
-              </p>
+          <h2>Your information may currently be visible to:</h2>
 
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  With technology service providers that facilitate payment processing, data hosting, messaging, and technical support, always under confidentiality agreements. {/* [cite: 205] */}
-                </li>
+          <ol>
+            <li>
+              Internal collaborators of the Company working on the service you
+              contracted, under confidentiality agreements.
+            </li>
 
-                <li>
-                  With administrative or judicial authorities that, in the exercise of their functions, request the information in accordance with the law. {/* [cite: 206] */}
-                </li>
+            <li>
+              The certified payment gateway processing your transaction, as well as
+              the technological platforms we use to operate our business, with the
+              minimum access necessary for their function.
+            </li>
 
-                <li>
-                  With related companies or affiliates for administrative and operational purposes linked to the provision of contracted services. {/* [cite: 207] */}
-                </li>
-              </ul>
+            <li>
+              Tax, judicial, or regulatory authorities if required by law under
+              specific legal terms.
+            </li>
 
-              <p>
-                Under no circumstances will Norexio Digital MKT sell, lease, or commercialize personal data to third parties unrelated to the purposes described herein. {/* [cite: 208] */}
-              </p>
+            <li>No one else.</li>
+          </ol>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                4. ARCO Rights and Means to Exercise Them
-              </h2>
+          <p>
+            We do not sell or lease your personal data.
+          </p>
 
-              <p>
-                The data subject may exercise at any time their rights of Access, Rectification, Cancellation, or Opposition (ARCO), as well as limit the use or revoke the consent previously granted. To do so, they must send a request to contacto@NorexioDigitalmkt.com, which must include: {/* [cite: 210, 211] */}
-              </p>
+          <h2>
+            At this moment, the Company protects your information in the following
+            way:
+          </h2>
 
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  Full name of the data subject and a means to receive a response. {/* [cite: 212] */}
-                </li>
+          <p>
+            We apply administrative security measures (restricted access to authorized
+            personnel, confidentiality agreements), technical measures (encrypted
+            platforms, secure credential-based access), and physical measures (access
+            control to spaces and equipment where information is processed). The level
+            of protection is proportional to the sensitivity of the data we process.
+          </p>
 
-                <li>
-                  Clear and precise description of the data for which rights are intended to be exercised. {/* [cite: 213] */}
-                </li>
+          <h2>
+            The Company’s website uses the following tracking technologies while you
+            browse:
+          </h2>
 
-                <li>
-                  Copy of a valid official identification or document proving legal representation. {/* [cite: 214] */}
-                </li>
-              </ul>
+          <p>
+            Technical cookies necessary for the operation of the contact form and
+            website navigation.
+          </p>
 
-              <p>
-                Norexio Digital MKT will respond to the request within a maximum period of 20 business days from its receipt and will notify the applicant through the means indicated therein. {/* [cite: 215] */}
-              </p>
+          <p>
+            Analytical cookies to understand visitor behavior and improve the user
+            experience.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                5. Limitation on Use and Disclosure
-              </h2>
+          <p>
+            Where applicable, advertising cookies for digital marketing campaigns.
+          </p>
 
-              <p>
-                If the data subject wishes to limit the use or disclosure of their personal data for non-essential purposes, they may expressly state so in the ARCO rights request or by sending an email with the corresponding indication. {/* [cite: 217] */}
-              </p>
+          <p>
+            Upon entering the website, you may configure your preferences through the
+            cookie management banner.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                6. Use of Cookies and Similar Technologies
-              </h2>
+          <p>
+            Technical cookies cannot be disabled without affecting website
+            functionality; the others require your consent, which you may revoke at
+            any time through the banner or your browser settings.
+          </p>
 
-              <p>
-                Norexio Digital MKT’s website may use cookies and similar technologies to optimize website functionality, remember user preferences, and obtain navigation metrics. The user may disable such technologies through their browser settings, although this could affect the operation of certain features. {/* [cite: 219, 220] */}
-              </p>
+          <h2>
+            Your data has the following retention period in our systems:
+          </h2>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                7. Security Measures
-              </h2>
+          <p>
+            Contact form data that does not result in a service agreement is deleted
+            within a maximum period of six months from the last interaction.
+          </p>
 
-              <p>
-                Norexio Digital MKT implements reasonable technical, administrative, and physical measures to protect personal data against loss, misuse, unauthorized access, alteration, or destruction. However, the data subject acknowledges that no data transmission over the Internet is completely secure and that Norexio Digital MKT cannot guarantee the absolute invulnerability of its systems. {/* [cite: 222, 223] */}
-              </p>
+          <p>
+            Data linked to a contract, including billing information, is retained for
+            five years in accordance with Article 30 of the Federal Fiscal Code.
+          </p>
 
-              <h2 className="text-2xl font-bold text-stone-900 mt-8">
-                8. Changes to the Privacy Notice
-              </h2>
+          <p>
+            Once each period expires, the information is blocked and securely
+            destroyed, unless there is a legal obligation, authority proceeding, or
+            pending dispute requiring it to be retained for a longer period.
+          </p>
 
-              <p>
-                Norexio Digital MKT may modify this Privacy Notice at any time to address legislative changes, internal policies, or new requirements for the provision of services. The modifications will be published on the website and shall enter into force upon publication. {/* [cite: 225, 226] */}
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+          <h2>
+            You have rights regarding this data and may exercise them now:
+          </h2>
+
+          <ol>
+            <li>
+              <strong>Access:</strong>
+              to know exactly what data we hold about you.
+            </li>
+
+            <li>
+              <strong>Rectification:</strong>
+              to correct inaccurate or outdated information.
+            </li>
+
+            <li>
+              <strong>Cancellation:</strong>
+              to request deletion of your data when it is no longer necessary or is
+              being improperly processed.
+            </li>
+
+            <li>
+              <strong>Opposition:</strong>
+              to request that we stop using your data for a specific permitted purpose.
+            </li>
+          </ol>
+
+          <p>
+            To exercise any of these rights, write to us by email with your name, the
+            right you wish to exercise, and a copy of an official identification
+            document.
+          </p>
+
+          <p>
+            We respond within a maximum period of twenty business days and, where
+            applicable, implement the corresponding action within an additional maximum
+            period of fifteen business days.
+          </p>
+
+          <h2>
+            If this notice changes, we will inform you before it becomes effective.
+          </h2>
+
+          <p>
+            Any update will be published on our website together with its effective
+            date.
+          </p>
+
+          <p>
+            Changes do not affect contracts already formalized under the terms in
+            effect at the time of signing.
+          </p>
+
+          <p>
+            The effective version is always the most recently published version.
+          </p>
+
+          <p>
+            <strong>Last update:</strong>
+            May 2026
+          </p>
+        </section>
+      </section>
+    </div>
   );
 }
 
 export default function LegalPage() {
   const locale = useLocale();
 
-  return locale === "es" ? <PrivacyPageSpanish /> : <PrivacyPageEnglish />
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <Header />
+      <main className="flex-grow container mx-auto px-6 py-20 max-w-4xl">
+        {locale === "es" ? <LegalEs /> : <LegalEn />}
+      </main>
+      <Footer />
+    </div>
+  );
 }

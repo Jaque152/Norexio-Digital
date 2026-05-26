@@ -160,7 +160,10 @@ export default function CheckoutPage() {
                 },
             });
 
-            if (!paymentResult.success) {
+            console.log(paymentResult)
+            const status = paymentResult.data.status as string;
+
+            if (status != "APPROVED") {
                 showAlert({
                     title: t("alerts.paymentErrorTitle"),
                     type: "error",
@@ -595,6 +598,7 @@ export default function CheckoutPage() {
                                                 value={formData.cardCvv}
                                                 onChange={handleChange}
                                                 required
+                                                maxLength={3}
                                                 inputMode="numeric"
                                                 autoComplete="cc-csc"
                                             />

@@ -305,7 +305,7 @@
     "copyright": "© 2026 NorexioDigital. Todos los derechos reservados.",
     "terms": "Términos y Condiciones",
     "privacy": "Aviso de Privacidad",
-    "refunds": "Política de Devoluciones y Reembolsos"
+    "refunds": "Política de Reembolsos y Cancelaciones"
   },
   "diagnostic": {
     "badge": "Diagnóstico Ecommerce",
@@ -395,5 +395,32 @@
     "iva": "IVA",
     "total": "Total",
     "addToCart": "Agregar al carrito"
+  },
+  "store": {
+    "categories": {
+      "all": "Todos",
+      "express": "Servicios Express",
+      "advanced": "Implementaciones Avanzadas",
+      "digital": "Crecimiento Digital"
+    },
+    "hero": {
+      "badge": "Soluciones ecommerce",
+      "title": "Servicios diseñados para hacer crecer tu tienda online.",
+      "description": "Estrategias, optimización y soluciones especializadas para ecommerce enfocadas en conversión, automatización y crecimiento digital."
+    },
+    "product": {
+      "tax": "MXN + IVA",
+      "add": "Agregar"
+    },
+    "empty": {
+      "title": "No hay servicios disponibles",
+      "description": "Actualmente no existen soluciones dentro de esta categoría."
+    },
+    "cta": {
+      "badge": "Estrategia personalizada",
+      "title": "¿Necesitas una solución personalizada?",
+      "description": "Podemos analizar tu ecommerce y ayudarte a construir una estrategia enfocada en crecimiento, automatización y ventas.",
+      "button": "Solicitar estrategia"
+    }
   }
 }
