@@ -1,45 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  :root {
-    /* NOREXIO DIGITAL - EMERALD THEME */
-    --ar-bg: #fafaf9; /* Stone 50 - Blanco cálido/hueso */
-    --ar-primary: #059669; /* Emerald 600 - Verde vibrante */
-    --ar-primary-hover: #047857; /* Emerald 700 */
-    --ar-text-main: #1c1917; /* Stone 900 - Carbón */
-    --ar-text-muted: #78716c; /* Stone 500 */
-    --ar-border: #e7e5e4; /* Stone 200 */
-    --ar-card-bg: #ffffff; /* White */
-    
-    /* COMPATIBILIDAD CON COMPONENTES EXISTENTES */
-    --background: 60 9% 98%;
-    --foreground: 24 9.8% 10%;
-    --primary: 152 76% 36%; 
-    --accent-dark: #064e3b; /* Emerald 900 */
-    --accent-cyan: #10b981; /* Emerald 500 */
-    --text-main: var(--ar-text-main);
-    --radius: 1rem;
-  }
-}
-
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-  }
-  body {
-    @apply bg-[var(--ar-bg)] text-[var(--ar-text-main)] antialiased;
-    /* Efecto de fondo con un toque verde muy sutil */
-    background-image: 
-      radial-gradient(circle at 0% 0%, rgba(5, 150, 105, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
-  }
-}
-
-/* Clases exclusivas */
-.quantum-card {
-  @apply bg-white border border-stone-200 hover:border-emerald-400 hover:shadow-xl transition-all duration-500 rounded-3xl;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-}

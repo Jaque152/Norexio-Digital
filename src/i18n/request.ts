@@ -1,23 +1,19 @@
 import { getRequestConfig } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-
-// 1. Definimos los idiomas soportados como tipos literales constantes
-const locales = ['es', 'en'] as const;
-type Locale = (typeof locales)[number];
+import { routing } from './routing';
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  // 2. Esperamos el locale (Next.js 15 lo maneja como promesa)
-  const locale = await requestLocale;
+  // Esperamos el locale (Fix para Next.js 15)
+  let locale = await requestLocale;
 
-  // 3. Validamos que el locale exista y sea uno de nuestros permitidos
-  if (!locale || !locales.includes(locale as Locale)) {
-    notFound();
+  // Validación de seguridad
+  if (!locale || !routing.locales.includes(locale as any)) {
+    locale = routing.defaultLocale;
   }
 
   return {
-    // 4. Forzamos el tipo a Locale para que TS sepa que no es un "string cualquiera"
-    locale: locale as Locale,
-    // Enviamos un objeto vacío tipado para evitar el error de mensajes
-    messages: {} 
+    locale,
+    // Intentamos la ruta relativa directa. 
+    // Si tus mensajes están en src/messages, esta es la ruta correcta desde src/i18n
+    messages: (await import(`../messages/${locale}.json`)).default
   };
 });

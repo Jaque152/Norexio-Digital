@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Perfecto, conoces el carrito, conoces la forma de hacer los pagos, vamos a hacer la página de checkout, para ello debes tener en cuenta algunas cosas.
 
-## Getting Started
+1. Primero se realiza el pago. La función de pago va en el handleCheckout del carrito, no en una ruta rara, la quiero directamente ahí
+2. Luego se envía un email tipo ticket a {locale ?? "es"}/api/checkout se envía lo necesario para hace este email.
+3. Antes de proceder al llenado del formulario, se debe mostrar un resumen de los productos
+4. El IVA se suma
+5. Por fortuna no hay cupones ni nada raro
+6. Se deben mostrar en el formulario, luego de presionar en proceder al pago, todos los campos, separados que requiere octano para funcionar.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3009](http://localhost:3009) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+El incumplimiento de alguno de estos puntos implicaría pérdidas de tiempo y dinero para la empresa así que apegate estrictamente a ello y no piensa paso a paso como hacerlo bien.
