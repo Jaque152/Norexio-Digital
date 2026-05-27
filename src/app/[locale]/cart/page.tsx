@@ -160,10 +160,7 @@ export default function CheckoutPage() {
                 },
             });
 
-            console.log(paymentResult)
-            const status = paymentResult.data.status as string;
-
-            if (status != "APPROVED") {
+            if (!paymentResult.success) {
                 showAlert({
                     title: t("alerts.paymentErrorTitle"),
                     type: "error",
