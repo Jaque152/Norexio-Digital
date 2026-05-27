@@ -372,8 +372,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const fromEmail =
-      process.env.RESEND_FROM_EMAIL || `${SITE_NAME} <onboarding@resend.dev>`;
+    const fromEmail = `${SITE_NAME} <${BUSINESS_EMAIL}>`;
 
     const businessHtml = buildEmailHtml(`Nuevo mensaje - ${SITE_NAME}`, body);
     const clientHtml = buildClientReplyHtml(body);
