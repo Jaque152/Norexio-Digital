@@ -74,7 +74,7 @@ export default function CheckoutPage() {
         direccion2: "",
         ciudad: "",
         estado: "",
-        pais: "MX",
+        pais: "México",
         cp: "",
         empresa: "",
         cardNumber: "",
@@ -154,10 +154,7 @@ export default function CheckoutPage() {
                     pais: formData.pais,
                     cp: formData.cp,
                     empresa: formData.empresa || undefined,
-                },
-                metadata: {
-                    notes: `Checkout desde ${apiLocale}`,
-                },
+                }
             });
 
             if (!paymentResult.success) {
@@ -200,7 +197,6 @@ export default function CheckoutPage() {
                     payment: {
                         amount: total,
                         currency: "484",
-                        gateway: "Octano",
                         result: paymentResult.data,
                     },
                 }),
@@ -603,7 +599,7 @@ export default function CheckoutPage() {
 
                                         <div className="flex flex-row justify-between gap-6 p-6">
                                             <Image
-                                                src="/octano.png"
+                                                src="/etomin.png"
                                                 alt={t("paymentLogos.octanoAlt")}
                                                 width={150}
                                                 height={30}
