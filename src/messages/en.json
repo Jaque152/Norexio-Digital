@@ -47,7 +47,7 @@
     "hero": {
       "badge": "Checkout",
       "title": "Complete your purchase",
-      "description": "Review the summary, confirm the total with VAT included, and fill in the details Etomin needs to process the payment.",
+      "description": "Review the summary, confirm the total with VAT included, and fill in the details Octano needs to process the payment.",
       "backButton": "Back to store"
     },
     "summary": {
@@ -67,11 +67,11 @@
       "payNow": "Pay now"
     },
     "formSection": {
-      "badge": "Required data by Etomin",
+      "badge": "Required data by Octano",
       "lockedTitle": "Review the summary first",
       "formTitle": "Complete your payment details",
       "lockedDescription": "Confirm your purchase to display the full form with the fields required by the gateway.",
-      "formDescription": "All fields are separated so Etomin receives exactly the required information.",
+      "formDescription": "All fields are separated so Octano receives exactly the required information.",
       "lockedCardTitle": "Form locked until summary is confirmed",
       "lockedCardDescription": "Press “Proceed to payment” to continue."
     },
@@ -101,7 +101,7 @@
       "cvv": "CVV"
     },
     "paymentLogos": {
-      "octanoAlt": "Etomin Payments",
+      "octanoAlt": "Octano Payments",
       "secureAlt": "Secure payment"
     },
     "alerts": {
