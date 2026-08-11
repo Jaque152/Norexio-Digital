@@ -599,7 +599,7 @@ export default function CheckoutPage() {
 
                                         <div className="flex flex-row justify-between gap-6 p-6">
                                             <Image
-                                                src="/etomin.png"
+                                                src="/octano.png"
                                                 alt={t("paymentLogos.octanoAlt")}
                                                 width={150}
                                                 height={30}
