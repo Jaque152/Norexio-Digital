@@ -17,11 +17,12 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import { Link } from "@/i18n/routing";
+import { Link, useRouter } from "@/i18n/routing";
 
 import PlanModal from "@/components/PlanModal";
 
 import { useLocale, useTranslations } from "next-intl";
+
 
 const formatPrice = (
   price: number,
@@ -65,6 +66,7 @@ export default function TiendaPage() {
     const cat = categories.find(c => c.id == category);
     return cat?.image as string;
   }
+  const router = useRouter()
 
   const filteredProducts =
     selectedCategory === "all"
@@ -161,13 +163,19 @@ export default function TiendaPage() {
                       <button
                         type="button"
                         onClick={() => {
-                          setSelectedPlan(
-                            product
-                          );
+                          if (product.price > 0) {
+                            setSelectedPlan(
+                              product
+                            );
 
-                          setIsModalOpen(
-                            true
-                          );
+                            setIsModalOpen(
+                              true
+                            );
+                          }
+                          else {
+                            router.push("/estrategia-personalizada")
+                          }
+
                         }}
                         className="h-64 w-full text-left"
                       >
@@ -236,25 +244,36 @@ export default function TiendaPage() {
                         )}
 
                       {/* FOOTER */}
-                      <div className="flex  flex-row gap-4">
-                        
-                          <p className="text-3xl font-black text-green-700">
-                            {formatPrice(
-                              product.price,
-                            )}
-                          </p>
+                      {product.price > 0 && <div className="flex  flex-row gap-4">
 
-                          <p className="text-sm text-zinc-400 mt-1">
-                            {t(
-                              "product.tax"
-                            )}
-                          </p>
-                        
+                        <p className="text-3xl font-black text-green-700">
+                          {formatPrice(
+                            product.price,
+                          )}
+                        </p>
 
-                      </div>
+                        <p className="text-sm text-zinc-400 mt-1">
+                          {t(
+                            "product.tax"
+                          )}
+                        </p>
+
+
+                      </div>}
 
                       <div className="flex items-center py-4 flex-col justify-center">
-                        <button
+                        {product.price == 0 ? <Link href={"/estrategia-personalizada"}>
+                          <button
+                            type="button"
+                            className="inline-flex  w-full items-center gap-2 rounded-2xl bg-green-600 px-5 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-green-700 hover:shadow-lg"
+                          >
+                            <ShoppingCart className="w-5 h-5" />
+
+                            {t(
+                              "cta.badge"
+                            )}
+                          </button>
+                        </Link> : <button
                           type="button"
                           onClick={() =>
                             addToCart(
@@ -268,7 +287,7 @@ export default function TiendaPage() {
                           {t(
                             "product.add"
                           )}
-                        </button>
+                        </button>}
                       </div>
                     </div>
                   </div>
