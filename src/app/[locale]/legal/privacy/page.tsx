@@ -25,7 +25,7 @@ function LegalEs() {
 
       <section>
         <section>
-          <h1>Aviso de Privacidad - SPOTLIGHT SALES, S.A. DE C.V.</h1>
+          <h1>Aviso de Privacidad - CROISER CONSULTANTS S.A.P.I. DE C.V.</h1>
 
           <p>
             Al usar el sitio de la empresa, enviar el formulario de contacto o
@@ -34,7 +34,7 @@ function LegalEs() {
           </p>
 
           <p>
-            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
             (en adelante, la “Empresa”) es la responsable del tratamiento de sus datos
             personales. Somos una agencia especializada exclusivamente en estrategias
             de marketing y optimización para ecommerce: diagnóstico de tiendas online,
@@ -43,13 +43,12 @@ function LegalEs() {
           </p>
 
           <p>
-            Operamos en Av. Chapultepec N° 480, Piso 9, Dep. 901, Col. Roma Norte,
-            C.P. 06700, Alcaldía Cuauhtémoc, Ciudad de México.
+            Operamos en AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO.
           </p>
 
           <p>
             Puede contactarnos en
-            <a href="tel:+5215522301576">+52 1 55 2230 1576</a>
+            <a href="tel:+5215518575924"> + 52 1 55 1857 5924 </a>
             y al correo
             <a href="mailto:webmaster@norexiodigital.com">
               webmaster@norexiodigital.com
@@ -276,7 +275,7 @@ function LegalEs() {
 
           <p>
             <strong>Última actualización:</strong>
-            Mayo de 2026
+            septiembre de 2026
           </p>
         </section>
       </section>
@@ -304,7 +303,7 @@ function LegalEn() {
 
       <section>
         <section>
-          <h1>Privacy Notice - SPOTLIGHT SALES, S.A. DE C.V.</h1>
+          <h1>Privacy Notice - CROISER CONSULTANTS S.A.P.I. DE C.V.</h1>
 
           <p>
             By using the company’s website, submitting the contact form, or purchasing
@@ -313,7 +312,7 @@ function LegalEn() {
           </p>
 
           <p>
-            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
             (hereinafter, the “Company”) is responsible for the processing of your
             personal data. We are an agency specialized exclusively in marketing and
             optimization strategies for ecommerce: online store diagnostics,
@@ -322,13 +321,12 @@ function LegalEn() {
           </p>
 
           <p>
-            We operate at Av. Chapultepec No. 480, Floor 9, Unit 901, Col. Roma Norte,
-            ZIP Code 06700, Cuauhtémoc Borough, Mexico City.
+            We operate at AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO.
           </p>
 
           <p>
             You may contact us at
-            <a href="tel:+5215522301576">+52 1 55 2230 1576</a>
+            <a href="tel:+5215518575924"> + 52 1 55 1857 5924 </a>
             or by email at
             <a href="mailto:webmaster@norexiodigital.com">
               webmaster@norexiodigital.com
@@ -554,7 +552,7 @@ function LegalEn() {
 
           <p>
             <strong>Last update:</strong>
-            May 2026
+            September 2026
           </p>
         </section>
       </section>
