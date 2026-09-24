@@ -129,8 +129,8 @@ function LegalEs() {
             webmaster@expertcommerce.com.mx
           </a>
           o llamar al
-          <a href="tel:+5215522301576">
-            +52 1 55 2230 1576
+          <a href="tel:+5215518575924">
+            + 52 1 55 1857 5924
           </a>
           indicando el nombre del servicio, el folio de la transacción, una
           descripción específica de en qué punto el entregable no corresponde a lo
@@ -168,7 +168,7 @@ function LegalEs() {
         </p>
 
         <p>
-          <strong>Última actualización:</strong> Mayo de 2026
+          <strong>Última actualización:</strong> Septiembre de 2026
         </p>
       </section>
     </div>
@@ -265,7 +265,7 @@ function LegalEn() {
           of the service, we will evaluate and quote the additional work before
           proceeding. No scope modification is executed without the client’s written
           approval and without defining the corresponding additional cost. Scope
-          reductions do not generate proportional refunds if work in that area has
+          reducciones do not generate proportional refunds if work in that area has
           already begun.
         </p>
 
@@ -296,8 +296,8 @@ function LegalEn() {
             webmaster@expertcommerce.com.mx
           </a>
           or call
-          <a href="tel:+5215522301576">
-            +52 1 55 2230 1576
+          <a href="tel:+5215518575924">
+            + 52 1 55 1857 5924
           </a>
           indicating the service name, the transaction reference number, a specific
           description of how the deliverable does not match what was agreed upon, and
@@ -334,7 +334,7 @@ function LegalEn() {
         </p>
 
         <p>
-          <strong>Last update:</strong> May 2026
+          <strong>Last update:</strong> September 2026
         </p>
       </section>
     </div>
