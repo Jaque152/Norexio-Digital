@@ -149,10 +149,10 @@ export default function ContactForm() {
                   </h4>
 
                   <a
-                    href="tel:+525522301576"
+                    href="tel:+5215518575924"
                     className="text-zinc-600 hover:text-green-700 transition-colors"
                   >
-                    +52 55 2230 1576
+                    + 52 1 55 1857 5924
                   </a>
                 </div>
               </div>
