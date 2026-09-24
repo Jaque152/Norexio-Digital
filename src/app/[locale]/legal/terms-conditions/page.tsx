@@ -29,7 +29,7 @@ function LegalEs() {
         <p>
           <em>
             Estos términos regulan toda relación entre
-            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
             (en adelante la “Empresa”) y cualquier persona que use su sitio,
             consulte sus servicios o contrate alguno de sus planes. El acceso al
             sitio, el envío del formulario de contacto y el pago de cualquier
@@ -42,25 +42,24 @@ function LegalEs() {
         <h2>1.- Quiénes somos y qué ofrecemos.</h2>
 
         <p>
-          <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+          <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
           es una agencia de marketing especializada en ecommerce, enfocada en
           diseñar, analizar y optimizar tiendas en línea para mejorar su desempeño
           comercial.
         </p>
 
-        <p><strong>RFC:</strong> SSA190502GK8</p>
+        <p><strong>RFC:</strong> CCO240402JV0</p>
 
         <p>
           <strong>Domicilio:</strong>
-          Av. Chapultepec N° 480, Piso 9, Dep. 901, Col. Roma Norte, C.P. 06700,
-          Alcaldía Cuauhtémoc, Ciudad de México.
+          AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO
         </p>
 
-        <p><strong>Teléfono:</strong> +52 1 55 2230 1576.</p>
+        <p><strong>Teléfono:</strong> <a href="tel:+5215518575924">+ 52 1 55 1857 5924</a>.</p>
 
         <p>
           <strong>Correo:</strong>
-          webmaster@norexiodigital.com
+          <a href="mailto:webmaster@norexiodigital.com">webmaster@norexiodigital.com</a>
         </p>
 
         <p>
@@ -68,7 +67,7 @@ function LegalEs() {
           (por ejemplo, servicios express, estrategias de escalamiento,
           implementaciones avanzadas, ingeniería de crecimiento digital y soluciones
           personalizadas), y se encuentra descrito a detalle en el sitio web oficial
-          de <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong> en el apartado de
+          de <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong> en el apartado de
           servicios. Las características, alcances, entregables y precios de cada
           plan se rigen por lo publicado en dicho apartado al momento de la
           contratación.
@@ -218,7 +217,7 @@ function LegalEs() {
         </p>
 
         <p>
-          <strong>Última actualización:</strong> Mayo de 2026
+          <strong>Última actualización:</strong> Septiembre de 2026
         </p>
       </section>
     </div>
@@ -249,7 +248,7 @@ function LegalEn() {
         <p>
           <em>
             These terms govern every relationship between
-            <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
             (hereinafter the “Company”) and any person who uses its website,
             consults its services, or purchases any of its plans. Access to the
             website, submission of the contact form, and payment for any service
@@ -262,25 +261,24 @@ function LegalEn() {
         <h2>1.- Who We Are and What We Offer.</h2>
 
         <p>
-          <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+          <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
           is a marketing agency specialized in ecommerce, focused on designing,
           analyzing, and optimizing online stores to improve their commercial
           performance.
         </p>
 
-        <p><strong>Tax ID:</strong> SSA190502GK8</p>
+        <p><strong>Tax ID:</strong> CCO240402JV0</p>
 
         <p>
           <strong>Address:</strong>
-          Av. Chapultepec No. 480, Floor 9, Unit 901, Col. Roma Norte, ZIP Code
-          06700, Cuauhtémoc Borough, Mexico City.
+          AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO
         </p>
 
-        <p><strong>Phone:</strong> +52 1 55 2230 1576.</p>
+        <p><strong>Phone:</strong> <a href="tel:+5215518575924">+ 52 1 55 1857 5924</a>.</p>
 
         <p>
           <strong>Email:</strong>
-          webmaster@norexiodigital.com
+          <a href="mailto:webmaster@norexiodigital.com">webmaster@norexiodigital.com</a>
         </p>
 
         <p>
@@ -288,7 +286,7 @@ function LegalEn() {
           (for example, express services, scaling strategies, advanced
           implementations, digital growth engineering, and customized solutions),
           and is described in detail on the official website of
-          <strong>SPOTLIGHT SALES, S.A. DE C.V.</strong>
+          <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
           in the services section. The characteristics, scope, deliverables, and
           prices of each plan are governed by what is published in that section at
           the time of contracting.
@@ -438,7 +436,7 @@ function LegalEn() {
         </p>
 
         <p>
-          <strong>Last update:</strong> May 2026
+          <strong>Last update:</strong> September 2026
         </p>
       </section>
     </div>
