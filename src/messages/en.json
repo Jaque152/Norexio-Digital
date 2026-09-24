@@ -247,8 +247,8 @@
     "info": {
       "address": {
         "title": "Address",
-        "line1": "AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INT. 10 APT. 6B1 FLOOR 6, ",
-        "line2": "COLONIA PASEO DE LAS LOMAS,, ZIP Code 01330,",
+        "line1": "AV. PROLONGACION PASEO DE LA REFORMA 61, INT. 10 APT. 6B1 FLOOR 6, ",
+        "line2": "PASEO DE LAS LOMAS, ZIP Code 01330,",
         "line3": "ÁLVARO OBREGÓN, MEXICO CITY"
       },
       "email": {
@@ -300,8 +300,8 @@
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "addressLabel": "Address",
-    "addressLine1": "Av. Chapultepec No. 480 Floor 9 Suite 901,",
-    "addressLine2": "Roma Norte, ZIP Code 06700, Cuauhtémoc, Mexico City",
+    "addressLine1": "AV. PROLONGACION PASEO DE LA REFORMA 61, INT. 10 APT. 6B1 FLOOR 6, ",
+    "addressLine2": "PASEO DE LAS LOMAS, ZIP Code 0133, ÁLVARO OBREGÓN, MEXICO CITY",
     "cta": "Request Strategy",
     "copyright": "© 2026 NorexioDigital. All rights reserved.",
     "terms": "Terms and Conditions",
