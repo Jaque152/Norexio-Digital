@@ -70,10 +70,10 @@ export default function Footer() {
                     </p>
 
                     <a
-                      href="tel:+525522301576"
+                      href="tel:+5215518575924"
                       className="text-lg font-bold text-white hover:text-emerald-300 transition-colors"
                     >
-                      +52 55 2230 1576
+                      +52 1 55 1857 5924
                     </a>
                   </div>
                 </div>
