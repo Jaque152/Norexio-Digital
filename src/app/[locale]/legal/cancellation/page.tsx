@@ -7,21 +7,58 @@ import Footer from "@/components/Footer";
 function LegalEs() {
   return (
     <div className="legal-container">
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        .legal-container {
-          color: #1a1a1a;
-          line-height: 1.6;
-          font-family: sans-serif;
-        }
-        .legal-container h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem; }
-        .legal-container h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #3048ab; }
-        .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
-        .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
-        .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
-        .legal-container li { margin-bottom: 0.5rem; }
-        .legal-container section { margin-bottom: 3rem; }
-      `}} />
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          .legal-container {
+            color: #1a1a1a;
+            line-height: 1.6;
+            font-family: sans-serif;
+          }
+
+          .legal-container h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 1rem;
+          }
+
+          .legal-container h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3048ab;
+          }
+
+          .legal-container h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+          }
+
+          .legal-container p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+          }
+
+          .legal-container ul {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+          }
+
+          .legal-container li {
+            margin-bottom: 0.5rem;
+          }
+
+          .legal-container section {
+            margin-bottom: 3rem;
+          }
+        `,
+        }}
+      />
 
       <section>
         <h1>Política de Reembolsos y Cancelaciones</h1>
@@ -38,7 +75,9 @@ function LegalEs() {
 
         <h2>ACTO I – Antes de que empiece</h2>
 
-        <h3>El servicio no ha iniciado – El dinero aún no tiene compromisos.</h3>
+        <h3>
+          El servicio no ha iniciado – El dinero aún no tiene compromisos.
+        </h3>
 
         <p>
           Si realizó un pago y no hemos confirmado el inicio del servicio ni hemos
@@ -53,10 +92,10 @@ function LegalEs() {
           contrataciones realizadas a través de medios electrónicos usted tiene
           derecho a revocar su consentimiento dentro de los cinco días hábiles
           siguientes a la fecha de la transacción, siempre que el servicio no haya
-          iniciado. Para ejercer este derecho, escríbanos al correo
+          iniciado. Para ejercer este derecho, escríbanos al correo{" "}
           <a href="mailto:webmaster@norexiodigital.com">
             webmaster@norexiodigital.com
-          </a>
+          </a>{" "}
           con el folio de su transacción dentro del plazo. En este escenario, el
           reembolso es del 100%.
         </p>
@@ -74,7 +113,9 @@ function LegalEs() {
 
         <h2>ACTO II – Mientras transcurre</h2>
 
-        <h3>El servicio está en ejecución – Los entregables parciales ya existen.</h3>
+        <h3>
+          El servicio está en ejecución – Los entregables parciales ya existen.
+        </h3>
 
         <p>
           Una vez que el cliente ha recibido cualquier entregable parcial —un primer
@@ -111,7 +152,9 @@ function LegalEs() {
 
         <h2>ACTO III – Cuando termina</h2>
 
-        <h3>El servicio concluyó – Los entregables finales fueron entregados.</h3>
+        <h3>
+          El servicio concluyó – Los entregables finales fueron entregados.
+        </h3>
 
         <p>
           Cuando todos los entregables comprometidos han sido entregados y el
@@ -124,14 +167,14 @@ function LegalEs() {
           Si el cliente considera que un entregable final no corresponde a las
           especificaciones acordadas en la propuesta o confirmación del servicio,
           puede presentar una reclamación formal. Para hacerlo, debe escribir al
-          correo
-          <a href="mailto:webmaster@expertcommerce.com.mx">
-            webmaster@expertcommerce.com.mx
-          </a>
-          o llamar al
-          <a href="tel:+5215518575924">
-            + 52 1 55 1857 5924
-          </a>
+          correo{" "}
+          <a href="mailto:webmaster@norexiodigital.com">
+            webmaster@norexiodigital.com
+          </a>{" "}
+          o llamar al{" "}
+          <a href="tel:+521552230157">
+            +52 1 55 2230 157
+          </a>{" "}
           indicando el nombre del servicio, el folio de la transacción, una
           descripción específica de en qué punto el entregable no corresponde a lo
           acordado y adjuntando la propuesta o confirmación como referencia.
@@ -157,14 +200,14 @@ function LegalEs() {
 
         <p>
           Todos los reembolsos aprobados se procesan en un plazo máximo de quince
-          días hábiles desde la resolución,
+          días hábiles desde la resolución,{" "}
           <strong>
             al mismo método de pago de la transacción original
-          </strong>,
-          salvo que por imposibilidad técnica sea necesario acordar un medio distinto
-          con el cliente. En caso de desacuerdo con nuestra resolución, el cliente
-          puede acudir a la PROFECO o a los tribunales competentes de la Ciudad de
-          México conforme a la legislación aplicable.
+          </strong>
+          , salvo que por imposibilidad técnica sea necesario acordar un medio
+          distinto con el cliente. En caso de desacuerdo con nuestra resolución, el
+          cliente puede acudir a la PROFECO o a los tribunales competentes de la
+          Ciudad de México conforme a la legislación aplicable.
         </p>
 
         <p>
@@ -178,20 +221,54 @@ function LegalEs() {
 function LegalEn() {
   return (
     <div className="legal-container">
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        .legal-container {
-          color: #1a1a1a;
-          line-height: 1.6;
-          font-family: sans-serif;
-        }
-        .legal-container h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem; }
-        .legal-container h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #3048ab; }
-        .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
-        .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
-        .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
-        .legal-container li { margin-bottom: 0.5rem; }
-      `}} />
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          .legal-container {
+            color: #1a1a1a;
+            line-height: 1.6;
+            font-family: sans-serif;
+          }
+
+          .legal-container h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 1rem;
+          }
+
+          .legal-container h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3048ab;
+          }
+
+          .legal-container h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+          }
+
+          .legal-container p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+          }
+
+          .legal-container ul {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+          }
+
+          .legal-container li {
+            margin-bottom: 0.5rem;
+          }
+        `,
+        }}
+      />
 
       <section>
         <h1>Refund and Cancellation Policy</h1>
@@ -202,13 +279,15 @@ function LegalEn() {
           strategic work, and that directly affects how much we can refund when a
           cancellation occurs. To make this clear, we organize the rules into three
           acts corresponding to the phases of the service: before it begins, while it
-          is in progress, and once it has been completed; in each phase, the client’s
-          rights and the conditions for any refund change.
+          is in progress, and once it has been completed; in each phase, the
+          client&apos;s rights and the conditions for any refund change.
         </p>
 
         <h2>ACT I – Before It Begins</h2>
 
-        <h3>The service has not started – The money still has no commitments.</h3>
+        <h3>
+          The service has not started – The money still has no commitments.
+        </h3>
 
         <p>
           If you made a payment and we have not confirmed the start of the service
@@ -222,64 +301,69 @@ function LegalEn() {
           Pursuant to Article 56 of the Federal Consumer Protection Law, for
           agreements made through electronic means you have the right to revoke your
           consent within five business days following the transaction date, provided
-          that the service has not begun. To exercise this right, write to us at
+          that the service has not begun. To exercise this right, write to us at{" "}
           <a href="mailto:webmaster@norexiodigital.com">
             webmaster@norexiodigital.com
-          </a>
+          </a>{" "}
           with your transaction reference number within the indicated period. In this
           scenario, the refund is 100%.
         </p>
 
         <p>
           If we have already confirmed the service and initiated preparatory
-          activities (initial ecommerce review, setup of the diagnostic process, team
-          assignment, initial workflow design), but the client cancels before
+          activities (initial ecommerce review, setup of the diagnostic process,
+          team assignment, initial workflow design), but the client cancels before
           receiving any deliverable, the refund is 70% of the amount paid. The
-          remaining 30% covers technical work already started that cannot be recovered
-          or reused. This percentage applies to catalog plans and customized
-          strategies, according to the current description published on our website.
+          remaining 30% covers technical work already started that cannot be
+          recovered or reused. This percentage applies to catalog plans and
+          customized strategies, according to the current description published on
+          our website.
         </p>
 
         <h2>ACT II – While It Is in Progress</h2>
 
-        <h3>The service is being executed – Partial deliverables already exist.</h3>
+        <h3>
+          The service is being executed – Partial deliverables already exist.
+        </h3>
 
         <p>
-          Once the client has received any partial deliverable — a first analysis, an
+          Once the client has received any partial deliverable —a first analysis, an
           initial report, preliminary recommendations, a section of the diagnosis, or
-          any intermediate service document — the intellectual work delivered cannot
+          any intermediate service document— the intellectual work delivered cannot
           be reversed or returned. At this stage, no refund applies for early
           cancellation.
         </p>
 
         <p>
           The client retains all deliverables received up to the moment of
-          cancellation. We are not obligated to continue the remaining work if payment
-          is not up to date. If the reason for cancellation is a quality claim
-          regarding a deliverable already received, the claims process described in
-          Act III shall apply.
+          cancellation. We are not obligated to continue the remaining work if
+          payment is not up to date. If the reason for cancellation is a quality
+          claim regarding a deliverable already received, the claims process
+          described in Act III shall apply.
         </p>
 
         <p>
           If during execution the client requests modifications to the original scope
           of the service, we will evaluate and quote the additional work before
-          proceeding. No scope modification is executed without the client’s written
-          approval and without defining the corresponding additional cost. Scope
-          reducciones do not generate proportional refunds if work in that area has
-          already begun.
+          proceeding. No scope modification is executed without the client&apos;s
+          written approval and without defining the corresponding additional cost.
+          Scope reductions do not generate proportional refunds if work in that area
+          has already begun.
         </p>
 
         <p>
           If force majeure circumstances affect the ability to execute or receive the
           service, both parties will first explore rescheduling at no additional cost.
           If that is not viable, the applicable refund percentages according to the
-          project’s stage of progress will apply, together with a written breakdown
-          of costs already incurred.
+          project&apos;s stage of progress will apply, together with a written
+          breakdown of costs already incurred.
         </p>
 
         <h2>ACT III – When It Ends</h2>
 
-        <h3>The service concluded – Final deliverables were delivered.</h3>
+        <h3>
+          The service concluded – Final deliverables were delivered.
+        </h3>
 
         <p>
           Once all committed deliverables have been delivered and the service is
@@ -290,15 +374,15 @@ function LegalEn() {
 
         <p>
           If the client believes that a final deliverable does not correspond to the
-          specifications agreed upon in the proposal or service confirmation, they may
-          submit a formal claim. To do so, they must write to
-          <a href="mailto:webmaster@expertcommerce.com.mx">
-            webmaster@expertcommerce.com.mx
-          </a>
-          or call
-          <a href="tel:+5215518575924">
-            + 52 1 55 1857 5924
-          </a>
+          specifications agreed upon in the proposal or service confirmation, they
+          may submit a formal claim. To do so, they must write to{" "}
+          <a href="mailto:webmaster@norexiodigital.com">
+            webmaster@norexiodigital.com
+          </a>{" "}
+          or call{" "}
+          <a href="tel:+521552230157">
+            +52 1 55 2230 157
+          </a>{" "}
           indicating the service name, the transaction reference number, a specific
           description of how the deliverable does not match what was agreed upon, and
           attaching the proposal or confirmation as reference. We will acknowledge
@@ -315,22 +399,22 @@ function LegalEn() {
 
         <p>
           If we are the ones who cancel due to causes attributable to the agency
-          itself — inability to execute the committed work, substantial error in the
-          proposal, or internal circumstances preventing delivery — the client will
+          itself —inability to execute the committed work, substantial error in the
+          proposal, or internal circumstances preventing delivery— the client will
           receive a 100% refund of the amount paid within a maximum of fifteen
           business days, together with a written notification explaining the reasons.
         </p>
 
         <p>
           All approved refunds are processed within a maximum period of fifteen
-          business days from the resolution,
+          business days from the resolution,{" "}
           <strong>
             to the same payment method used in the original transaction
-          </strong>,
-          unless technical impossibility requires agreeing on a different method with
-          the client. In case of disagreement with our resolution, the client may
-          contact PROFECO or the competent courts of Mexico City in accordance with
-          applicable legislation.
+          </strong>
+          , unless technical impossibility requires agreeing on a different method
+          with the client. In case of disagreement with our resolution, the client
+          may contact PROFECO or the competent courts of Mexico City in accordance
+          with applicable legislation.
         </p>
 
         <p>
@@ -347,9 +431,11 @@ export default function LegalPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
+
       <main className="flex-grow container mx-auto px-6 py-20 max-w-4xl">
         {locale === "es" ? <LegalEs /> : <LegalEn />}
       </main>
+
       <Footer />
     </div>
   );

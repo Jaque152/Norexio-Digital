@@ -152,7 +152,7 @@ export default function ContactForm() {
                     href="tel:+5215518575924"
                     className="text-zinc-600 hover:text-green-700 transition-colors"
                   >
-                    + 52 1 55 1857 5924
+                    + 52 1 + 52 1 55 2230 157
                   </a>
                 </div>
               </div>

@@ -7,8 +7,9 @@ import Footer from "@/components/Footer";
 function LegalEs() {
   return (
     <div className="legal-container">
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .legal-container {
           color: #1a1a1a;
           line-height: 1.6;
@@ -21,45 +22,53 @@ function LegalEs() {
         .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
         .legal-container li { margin-bottom: 0.5rem; }
         .legal-container section { margin-bottom: 3rem; }
-      `}} />
+      `,
+        }}
+      />
 
       <section>
         <h1>Términos y Condiciones</h1>
 
         <p>
           <em>
-            Estos términos regulan toda relación entre
-            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
-            (en adelante la “Empresa”) y cualquier persona que use su sitio,
-            consulte sus servicios o contrate alguno de sus planes. El acceso al
-            sitio, el envío del formulario de contacto y el pago de cualquier
-            servicio implican la aceptación íntegra de lo aquí descrito. Las
-            proposiciones que siguen están ordenadas por su peso en la relación: las
-            primeras son las más fundamentales; las últimas, las más específicas.
+            Estos términos regulan toda relación entre{" "}
+            <strong>SPOTLIGHT SALES S.A DE C.V.</strong> (en adelante la
+            “Empresa”) y cualquier persona que use su sitio, consulte sus servicios o
+            contrate alguno de sus planes. El acceso al sitio, el envío del formulario
+            de contacto y el pago de cualquier servicio implican la aceptación íntegra
+            de lo aquí descrito. Las proposiciones que siguen están ordenadas por su
+            peso en la relación: las primeras son las más fundamentales; las últimas,
+            las más específicas.
           </em>
         </p>
 
         <h2>1.- Quiénes somos y qué ofrecemos.</h2>
 
         <p>
-          <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
-          es una agencia de marketing especializada en ecommerce, enfocada en
-          diseñar, analizar y optimizar tiendas en línea para mejorar su desempeño
-          comercial.
+          <strong>SPOTLIGHT SALES S.A DE C.V.</strong> es una agencia de marketing
+          especializada en ecommerce, enfocada en diseñar, analizar y optimizar
+          tiendas en línea para mejorar su desempeño comercial.
         </p>
 
-        <p><strong>RFC:</strong> CCO240402JV0</p>
-
         <p>
-          <strong>Domicilio:</strong>
-          AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO
+          <strong>RFC:</strong> SSA190502GK8
         </p>
 
-        <p><strong>Teléfono:</strong> <a href="tel:+5215518575924">+ 52 1 55 1857 5924</a>.</p>
+        <p>
+          <strong>Domicilio:</strong> AVENIDA CHAPULTEPEC 480 INTERIOR 901 PISO 9,
+          COLONIA ROMA NORTE, ALCALDÍA CUAUHTÉMOC, C.P. 06700, CIUDAD DE MÉXICO
+        </p>
 
         <p>
-          <strong>Correo:</strong>
-          <a href="mailto:webmaster@norexiodigital.com">webmaster@norexiodigital.com</a>
+          <strong>Teléfono:</strong>{" "}
+          <a href="tel:+521552230157">+52 1 55 2230 157</a>.
+        </p>
+
+        <p>
+          <strong>Correo:</strong>{" "}
+          <a href="mailto:webmaster@norexiodigital.com">
+            webmaster@norexiodigital.com
+          </a>
         </p>
 
         <p>
@@ -67,7 +76,7 @@ function LegalEs() {
           (por ejemplo, servicios express, estrategias de escalamiento,
           implementaciones avanzadas, ingeniería de crecimiento digital y soluciones
           personalizadas), y se encuentra descrito a detalle en el sitio web oficial
-          de <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong> en el apartado de
+          de <strong>SPOTLIGHT SALES S.A DE C.V.</strong> en el apartado de
           servicios. Las características, alcances, entregables y precios de cada
           plan se rigen por lo publicado en dicho apartado al momento de la
           contratación.
@@ -127,8 +136,12 @@ function LegalEs() {
           las contrataciones realizadas en línea el cliente puede revocar su
           consentimiento dentro de los cinco días hábiles siguientes a la transacción,
           siempre que el servicio no haya iniciado. Para ejercer este derecho, el
-          cliente debe enviar un aviso escrito a correo indicando su nombre, el
-          servicio contratado y el folio de la transacción dentro del plazo señalado.
+          cliente debe enviar un aviso escrito al correo{" "}
+          <a href="mailto:webmaster@norexiodigital.com">
+            webmaster@norexiodigital.com
+          </a>{" "}
+          indicando su nombre, el servicio contratado y el folio de la transacción
+          dentro del plazo señalado.
         </p>
 
         <h2>4. Uso del sitio y propiedad intelectual</h2>
@@ -144,17 +157,18 @@ function LegalEs() {
         <p>Queda prohibido:</p>
 
         <ul>
-          <li>
-            Usar el sitio para actividades ilegales o fraudulentas.
-          </li>
+          <li>Usar el sitio para actividades ilegales o fraudulentas.</li>
+
           <li>
             Reproducir, copiar, distribuir o explotar su contenido sin autorización
             escrita de la Empresa.
           </li>
+
           <li>
             Usar de forma no autorizada la marca, nombre comercial o logotipos de la
             Empresa.
           </li>
+
           <li>
             Intentar acceder sin autorización a sistemas, bases de datos o
             infraestructura tecnológica interna.
@@ -227,8 +241,9 @@ function LegalEs() {
 function LegalEn() {
   return (
     <div className="legal-container">
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .legal-container {
           color: #1a1a1a;
           line-height: 1.6;
@@ -240,56 +255,63 @@ function LegalEn() {
         .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
         .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
         .legal-container li { margin-bottom: 0.5rem; }
-      `}} />
+      `,
+        }}
+      />
 
       <section>
         <h1>Terms and Conditions</h1>
 
         <p>
           <em>
-            These terms govern every relationship between
-            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
-            (hereinafter the “Company”) and any person who uses its website,
-            consults its services, or purchases any of its plans. Access to the
-            website, submission of the contact form, and payment for any service
-            imply full acceptance of everything described herein. The provisions
-            below are ordered according to their weight in the relationship: the
-            first are the most fundamental; the last, the most specific.
+            These terms govern every relationship between{" "}
+            <strong>SPOTLIGHT SALES S.A DE C.V.</strong> (hereinafter the
+            “Company”) and any person who uses its website, consults its services,
+            or purchases any of its plans. Access to the website, submission of the
+            contact form, and payment for any service imply full acceptance of
+            everything described herein. The provisions below are ordered according
+            to their weight in the relationship: the first are the most fundamental;
+            the last, the most specific.
           </em>
         </p>
 
         <h2>1.- Who We Are and What We Offer.</h2>
 
         <p>
-          <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
-          is a marketing agency specialized in ecommerce, focused on designing,
-          analyzing, and optimizing online stores to improve their commercial
-          performance.
+          <strong>SPOTLIGHT SALES S.A DE C.V.</strong> is a marketing agency
+          specialized in ecommerce, focused on designing, analyzing, and optimizing
+          online stores to improve their commercial performance.
         </p>
 
-        <p><strong>Tax ID:</strong> CCO240402JV0</p>
-
         <p>
-          <strong>Address:</strong>
-          AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO
+          <strong>Tax ID:</strong> SSA190502GK8
         </p>
 
-        <p><strong>Phone:</strong> <a href="tel:+5215518575924">+ 52 1 55 1857 5924</a>.</p>
+        <p>
+          <strong>Address:</strong> AVENIDA CHAPULTEPEC 480 INTERIOR 901 PISO 9,
+          COLONIA ROMA NORTE, ALCALDÍA CUAUHTÉMOC, C.P. 06700, CIUDAD DE MÉXICO
+        </p>
 
         <p>
-          <strong>Email:</strong>
-          <a href="mailto:webmaster@norexiodigital.com">webmaster@norexiodigital.com</a>
+          <strong>Phone:</strong>{" "}
+          <a href="tel:+521552230157">+52 1 55 2230 157</a>.
+        </p>
+
+        <p>
+          <strong>Email:</strong>{" "}
+          <a href="mailto:webmaster@norexiodigital.com">
+            webmaster@norexiodigital.com
+          </a>
         </p>
 
         <p>
           The catalog of services and plans is organized into different sections
           (for example, express services, scaling strategies, advanced
           implementations, digital growth engineering, and customized solutions),
-          and is described in detail on the official website of
-          <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
-          in the services section. The characteristics, scope, deliverables, and
-          prices of each plan are governed by what is published in that section at
-          the time of contracting.
+          and is described in detail on the official website of{" "}
+          <strong>SPOTLIGHT SALES S.A DE C.V.</strong> in the services section. The
+          characteristics, scope, deliverables, and prices of each plan are governed
+          by what is published in that section at the time of contracting.
         </p>
 
         <h2>2. Scope of Services and Deliverables</h2>
@@ -297,9 +319,9 @@ function LegalEn() {
         <p>
           Each plan includes only the deliverables described in its listing on the
           website and/or in the proposal or confirmation sent to the client:
-          analyses, diagnostics, recommendation reports, product page
-          optimizations, structural adjustments, documented strategies, and action
-          plans, all delivered in digital format.
+          analyses, diagnostics, recommendation reports, product page optimizations,
+          structural adjustments, documented strategies, and action plans, all
+          delivered in digital format.
         </p>
 
         <p>
@@ -312,20 +334,20 @@ function LegalEn() {
         </p>
 
         <p>
-          For the Customized Strategy, the process begins with the contact form;
-          the Company evaluates the client’s ecommerce business and presents a
-          tailored proposal including scope, deliverables, and price, which must
-          be accepted before any payment obligation exists.
+          For the Customized Strategy, the process begins with the contact form; the
+          Company evaluates the client&apos;s ecommerce business and presents a
+          tailored proposal including scope, deliverables, and price, which must be
+          accepted before any payment obligation exists.
         </p>
 
         <h2>3. Prices, Payments, Confirmation, and Right of Revocation</h2>
 
         <p>
           All service prices are expressed in Mexican pesos (MXN). Unless the
-          website expressly states that a price includes VAT, it shall be
-          understood that VAT is added according to the rate in force at the time
-          of contracting. Current information regarding prices and tax treatment
-          is shown in the listing of each service on the website.
+          website expressly states that a price includes VAT, it shall be understood
+          that VAT is added according to the rate in force at the time of
+          contracting. Current information regarding prices and tax treatment is
+          shown in the listing of each service on the website.
         </p>
 
         <p>
@@ -343,28 +365,29 @@ function LegalEn() {
 
         <p>
           Pursuant to Article 56 of the Federal Consumer Protection Law, in online
-          transactions the client may revoke their consent within five business
-          days following the transaction, provided that the service has not yet
-          begun. To exercise this right, the client must send written notice by
-          email indicating their name, the contracted service, and the transaction
+          transactions the client may revoke their consent within five business days
+          following the transaction, provided that the service has not yet begun. To
+          exercise this right, the client must send written notice to{" "}
+          <a href="mailto:webmaster@norexiodigital.com">
+            webmaster@norexiodigital.com
+          </a>{" "}
+          indicating their name, the contracted service, and the transaction
           reference number within the indicated period.
         </p>
 
         <h2>4. Website Use and Intellectual Property</h2>
 
         <p>
-          The Company’s website and all content available on it — texts,
+          The Company&apos;s website and all content available on it —texts,
           methodologies, plan structures, trade name, logo, graphic elements, and
-          software — are the property of the Company or its licensors and are
+          software— are the property of the Company or its licensors and are
           protected by the Federal Copyright Law and other applicable legislation.
         </p>
 
         <p>It is prohibited to:</p>
 
         <ul>
-          <li>
-            Use the website for illegal or fraudulent activities.
-          </li>
+          <li>Use the website for illegal or fraudulent activities.</li>
 
           <li>
             Reproduce, copy, distribute, or exploit its content without written
@@ -372,7 +395,8 @@ function LegalEn() {
           </li>
 
           <li>
-            Use the Company’s trademark, trade name, or logos without authorization.
+            Use the Company&apos;s trademark, trade name, or logos without
+            authorization.
           </li>
 
           <li>
@@ -382,27 +406,27 @@ function LegalEn() {
         </ul>
 
         <p>
-          The deliverables provided to the client are granted for exclusive
-          internal use within their ecommerce business or company. They may not be
-          resold, sublicensed, or redistributed to third parties as proprietary
-          services without express written authorization.
+          The deliverables provided to the client are granted for exclusive internal
+          use within their ecommerce business or company. They may not be resold,
+          sublicensed, or redistributed to third parties as proprietary services
+          without express written authorization.
         </p>
 
         <h2>5. Suspension, Cancellation, and Limitation of Liability</h2>
 
         <p>
-          The Company may suspend or cancel an ongoing service when it detects
-          false information provided by the client, payment defaults, misuse of
-          the website or deliverables, or any conduct incompatible with the nature
-          of the service. In such cases, the refund and cancellation policy
-          published on the Company’s website shall apply according to the progress
-          status of the project.
+          The Company may suspend or cancel an ongoing service when it detects false
+          information provided by the client, payment defaults, misuse of the website
+          or deliverables, or any conduct incompatible with the nature of the
+          service. In such cases, the refund and cancellation policy published on
+          the Company&apos;s website shall apply according to the progress status of
+          the project.
         </p>
 
         <p>
-          The Company’s maximum liability for any claim arising from a specific
-          service shall not exceed, under any circumstances, the amount actually
-          paid for such service, to the extent permitted by applicable Mexican law.
+          The Company&apos;s maximum liability for any claim arising from a specific
+          service shall not exceed, under any circumstances, the amount actually paid
+          for such service, to the extent permitted by applicable Mexican law.
         </p>
 
         <h2>6. Modifications to These Terms</h2>
@@ -414,25 +438,25 @@ function LegalEn() {
         </p>
 
         <p>
-          Modifications shall apply only prospectively and will not affect
-          contracts or services already formalized under previous versions; such
-          contracts and services shall remain governed by the terms in effect at
-          the time of contracting.
+          Modifications shall apply only prospectively and will not affect contracts
+          or services already formalized under previous versions; such contracts and
+          services shall remain governed by the terms in effect at the time of
+          contracting.
         </p>
 
         <h2>7. Applicable Law and Jurisdiction</h2>
 
         <p>
           These Terms and Conditions are governed by current Mexican legislation,
-          including the Federal Consumer Protection Law, the Federal Civil Code,
-          and the Commercial Code.
+          including the Federal Consumer Protection Law, the Federal Civil Code, and
+          the Commercial Code.
         </p>
 
         <p>
-          Any dispute arising from the interpretation or enforcement of these
-          terms shall be submitted to the jurisdiction of the competent courts of
-          Mexico City, with the parties expressly waiving any other jurisdiction
-          that may correspond to them due to their present or future domicile.
+          Any dispute arising from the interpretation or enforcement of these terms
+          shall be submitted to the jurisdiction of the competent courts of Mexico
+          City, with the parties expressly waiving any other jurisdiction that may
+          correspond to them due to their present or future domicile.
         </p>
 
         <p>
@@ -449,9 +473,11 @@ export default function LegalPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
+
       <main className="flex-grow container mx-auto px-6 py-20 max-w-4xl">
         {locale === "es" ? <LegalEs /> : <LegalEn />}
       </main>
+
       <Footer />
     </div>
   );

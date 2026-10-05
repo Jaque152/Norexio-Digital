@@ -246,9 +246,8 @@
     "info": {
       "address": {
         "title": "Dirección",
-        "line1": "AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6",
-        "line2": " COLONIA PASEO DE LAS LOMAS,  CP 01330",
-        "line3": " ALCALDÍA  ÁLVARO OBREGÓN, CDMX"
+        "line1": "AVENIDA CHAPULTEPEC 480 INTERIOR 901 PISO 9",
+        "line2": "COLONIA ROMA NORTE, ALCALDÍA CUAUHTÉMOC, C.P. 06700, CIUDAD DE MÈXICO"
       },
       "email": {
         "title": "Correo"
@@ -299,8 +298,8 @@
     "phoneLabel": "Teléfono",
     "emailLabel": "Email",
     "addressLabel": "Dirección",
-    "addressLine1": "AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6,",
-    "addressLine2": "COLONIA PASEO DE LAS LOMAS, CP 01330, ALCALDÍA  ÁLVARO OBREGÓN, CDMX",
+    "addressLine1": "AVENIDA CHAPULTEPEC 480 INTERIOR 901 PISO 9",
+    "addressLine2": "COLONIA ROMA NORTE, ALCALDÍA CUAUHTÉMOC, C.P. 06700, CIUDAD DE MÈXICO",
     "cta": "Solicitar estrategia",
     "copyright": "© 2026 NorexioDigital. Todos los derechos reservados.",
     "terms": "Términos y Condiciones",

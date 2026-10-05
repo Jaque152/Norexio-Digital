@@ -7,8 +7,9 @@ import Footer from "@/components/Footer";
 function LegalEs() {
   return (
     <div className="legal-container">
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .legal-container {
           color: #1a1a1a;
           line-height: 1.6;
@@ -19,13 +20,16 @@ function LegalEs() {
         .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
         .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
         .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
+        .legal-container ol { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: decimal; }
         .legal-container li { margin-bottom: 0.5rem; }
         .legal-container section { margin-bottom: 3rem; }
-      `}} />
+      `,
+        }}
+      />
 
       <section>
         <section>
-          <h1>Aviso de Privacidad - CROISER CONSULTANTS S.A.P.I. DE C.V.</h1>
+          <h1>Aviso de Privacidad - SPOTLIGHT SALES S.A DE C.V.</h1>
 
           <p>
             Al usar el sitio de la empresa, enviar el formulario de contacto o
@@ -34,22 +38,25 @@ function LegalEs() {
           </p>
 
           <p>
-            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
-            (en adelante, la “Empresa”) es la responsable del tratamiento de sus datos
-            personales. Somos una agencia especializada exclusivamente en estrategias
-            de marketing y optimización para ecommerce: diagnóstico de tiendas online,
-            mejora de conversión, estrategia de ventas digital, posicionamiento SEO
-            para tiendas y escalamiento comercial.
+            <strong>SPOTLIGHT SALES S.A DE C.V.</strong> (en adelante, la “Empresa”)
+            es la responsable del tratamiento de sus datos personales. Somos una
+            agencia especializada exclusivamente en estrategias de marketing y
+            optimización para ecommerce: diagnóstico de tiendas online, mejora de
+            conversión, estrategia de ventas digital, posicionamiento SEO para
+            tiendas y escalamiento comercial.
           </p>
 
           <p>
-            Operamos en AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO.
+            Operamos en AVENIDA CHAPULTEPEC 480 INTERIOR 901 PISO 9, COLONIA ROMA
+            NORTE, ALCALDÍA CUAUHTÉMOC, C.P. 06700, CIUDAD DE MÉXICO.
           </p>
 
           <p>
-            Puede contactarnos en
-            <a href="tel:+5215518575924"> + 52 1 55 1857 5924 </a>
-            y al correo
+            Puede contactarnos en{" "}
+            <a href="tel:+521552230157">
+              +52 1 55 2230 157
+            </a>{" "}
+            y al correo{" "}
             <a href="mailto:webmaster@norexiodigital.com">
               webmaster@norexiodigital.com
             </a>.
@@ -99,27 +106,24 @@ function LegalEs() {
           </h2>
 
           <p>
-            <strong>Primera:</strong>
-            responder su consulta y evaluar si alguno de nuestros servicios, tal como
-            se describen en el apartado de servicios de nuestro sitio, corresponde a
-            las necesidades de su tienda.
+            <strong>Primera:</strong> responder su consulta y evaluar si alguno de
+            nuestros servicios, tal como se describen en el apartado de servicios de
+            nuestro sitio, corresponde a las necesidades de su tienda.
           </p>
 
           <p>
-            <strong>Segunda:</strong>
-            ejecutar el diagnóstico, análisis, optimización o estrategia que contrató
-            y entregar los resultados comprometidos.
+            <strong>Segunda:</strong> ejecutar el diagnóstico, análisis, optimización
+            o estrategia que contrató y entregar los resultados comprometidos.
           </p>
 
           <p>
-            <strong>Tercera:</strong>
-            emitir el comprobante fiscal digital (CFDI) correspondiente a su
-            transacción.
+            <strong>Tercera:</strong> emitir el comprobante fiscal digital (CFDI)
+            correspondiente a su transacción.
           </p>
 
           <p>
-            <strong>Cuarta:</strong>
-            mantener comunicación operativa relacionada con el servicio activo.
+            <strong>Cuarta:</strong> mantener comunicación operativa relacionada con
+            el servicio activo.
           </p>
 
           <p>
@@ -149,9 +153,7 @@ function LegalEs() {
             <li>Nadie más.</li>
           </ol>
 
-          <p>
-            No vendemos ni arrendamos sus datos personales.
-          </p>
+          <p>No vendemos ni arrendamos sus datos personales.</p>
 
           <h2>
             En este momento, la empresa protege su información de esta manera:
@@ -195,9 +197,7 @@ function LegalEs() {
             cualquier momento desde el banner o desde la configuración de su navegador.
           </p>
 
-          <h2>
-            Sus datos tienen este tiempo de vida en nuestros sistemas:
-          </h2>
+          <h2>Sus datos tienen este tiempo de vida en nuestros sistemas:</h2>
 
           <p>
             Los datos del formulario de contacto que no derivaron en una contratación
@@ -222,30 +222,32 @@ function LegalEs() {
 
           <ol>
             <li>
-              <strong>Acceso:</strong>
-              saber exactamente qué datos tenemos sobre usted.
+              <strong>Acceso:</strong> saber exactamente qué datos tenemos sobre
+              usted.
             </li>
 
             <li>
-              <strong>Rectificación:</strong>
-              corregir lo que esté inexacto o desactualizado.
+              <strong>Rectificación:</strong> corregir lo que esté inexacto o
+              desactualizado.
             </li>
 
             <li>
-              <strong>Cancelación:</strong>
-              pedir que eliminemos sus datos cuando ya no sean necesarios o estén
-              siendo tratados de forma indebida.
+              <strong>Cancelación:</strong> pedir que eliminemos sus datos cuando ya
+              no sean necesarios o estén siendo tratados de forma indebida.
             </li>
 
             <li>
-              <strong>Oposición:</strong>
-              indicar que dejemos de usarlos para una finalidad específica permitida.
+              <strong>Oposición:</strong> indicar que dejemos de usarlos para una
+              finalidad específica permitida.
             </li>
           </ol>
 
           <p>
-            Para ejercer cualquiera de estos derechos, escríbanos a correo con su
-            nombre, el derecho que desea ejercer y copia de una identificación
+            Para ejercer cualquiera de estos derechos, escríbanos a{" "}
+            <a href="mailto:webmaster@norexiodigital.com">
+              webmaster@norexiodigital.com
+            </a>{" "}
+            con su nombre, el derecho que desea ejercer y copia de una identificación
             oficial.
           </p>
 
@@ -274,8 +276,7 @@ function LegalEs() {
           </p>
 
           <p>
-            <strong>Última actualización:</strong>
-            septiembre de 2026
+            <strong>Última actualización:</strong> septiembre de 2026
           </p>
         </section>
       </section>
@@ -286,8 +287,9 @@ function LegalEs() {
 function LegalEn() {
   return (
     <div className="legal-container">
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .legal-container {
           color: #1a1a1a;
           line-height: 1.6;
@@ -298,36 +300,42 @@ function LegalEn() {
         .legal-container h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5rem; }
         .legal-container p { margin-bottom: 1.2rem; text-align: justify; }
         .legal-container ul { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: disc; }
+        .legal-container ol { margin-bottom: 1.2rem; padding-left: 1.5rem; list-style-type: decimal; }
         .legal-container li { margin-bottom: 0.5rem; }
-      `}} />
+      `,
+        }}
+      />
 
       <section>
         <section>
-          <h1>Privacy Notice - CROISER CONSULTANTS S.A.P.I. DE C.V.</h1>
+          <h1>Privacy Notice - SPOTLIGHT SALES S.A DE C.V.</h1>
 
           <p>
-            By using the company’s website, submitting the contact form, or purchasing
-            any service, you consent to the processing of your data in accordance with
-            what is described in this notice.
+            By using the company&apos;s website, submitting the contact form, or
+            purchasing any service, you consent to the processing of your data in
+            accordance with what is described in this notice.
           </p>
 
           <p>
-            <strong>CROISER CONSULTANTS S.A.P.I. DE C.V.</strong>
-            (hereinafter, the “Company”) is responsible for the processing of your
-            personal data. We are an agency specialized exclusively in marketing and
-            optimization strategies for ecommerce: online store diagnostics,
-            conversion improvement, digital sales strategy, SEO positioning for
-            online stores, and commercial scaling.
+            <strong>SPOTLIGHT SALES S.A DE C.V.</strong> (hereinafter, the
+            “Company”) is responsible for the processing of your personal data. We
+            are an agency specialized exclusively in marketing and optimization
+            strategies for ecommerce: online store diagnostics, conversion
+            improvement, digital sales strategy, SEO positioning for online stores,
+            and commercial scaling.
           </p>
 
           <p>
-            We operate at AVENIDA PROLONGACION PASEO DE LA REFORMA 61, INTERIOR 10 DEP. 6B1 PISO 6, COLONIA PASEO DE LAS LOMAS, ALCALDÍA  ÁLVARO OBREGÓN, CP 01330, CIUDAD DE MÉXICO.
+            We operate at AVENIDA CHAPULTEPEC 480 INTERIOR 901 PISO 9, COLONIA ROMA
+            NORTE, ALCALDÍA CUAUHTÉMOC, C.P. 06700, CIUDAD DE MÉXICO.
           </p>
 
           <p>
-            You may contact us at
-            <a href="tel:+5215518575924"> + 52 1 55 1857 5924 </a>
-            or by email at
+            You may contact us at{" "}
+            <a href="tel:+521552230157">
+              +52 1 55 2230 157
+            </a>{" "}
+            or by email at{" "}
             <a href="mailto:webmaster@norexiodigital.com">
               webmaster@norexiodigital.com
             </a>.
@@ -375,27 +383,25 @@ function LegalEn() {
           </h2>
 
           <p>
-            <strong>First:</strong>
-            to respond to your inquiry and evaluate whether any of our services, as
-            described in the services section of our website, matches the needs of
-            your store.
+            <strong>First:</strong> to respond to your inquiry and evaluate whether
+            any of our services, as described in the services section of our website,
+            matches the needs of your store.
           </p>
 
           <p>
-            <strong>Second:</strong>
-            to execute the diagnosis, analysis, optimization, or strategy you
-            contracted and deliver the committed results.
+            <strong>Second:</strong> to execute the diagnosis, analysis,
+            optimization, or strategy you contracted and deliver the committed
+            results.
           </p>
 
           <p>
-            <strong>Third:</strong>
-            to issue the corresponding Digital Tax Receipt (CFDI) for your
-            transaction.
+            <strong>Third:</strong> to issue the corresponding Digital Tax Receipt
+            (CFDI) for your transaction.
           </p>
 
           <p>
-            <strong>Fourth:</strong>
-            to maintain operational communication related to the active service.
+            <strong>Fourth:</strong> to maintain operational communication related
+            to the active service.
           </p>
 
           <p>
@@ -426,9 +432,7 @@ function LegalEn() {
             <li>No one else.</li>
           </ol>
 
-          <p>
-            We do not sell or lease your personal data.
-          </p>
+          <p>We do not sell or lease your personal data.</p>
 
           <h2>
             At this moment, the Company protects your information in the following
@@ -436,16 +440,17 @@ function LegalEn() {
           </h2>
 
           <p>
-            We apply administrative security measures (restricted access to authorized
-            personnel, confidentiality agreements), technical measures (encrypted
-            platforms, secure credential-based access), and physical measures (access
-            control to spaces and equipment where information is processed). The level
-            of protection is proportional to the sensitivity of the data we process.
+            We apply administrative security measures (restricted access to
+            authorized personnel, confidentiality agreements), technical measures
+            (encrypted platforms, secure credential-based access), and physical
+            measures (access control to spaces and equipment where information is
+            processed). The level of protection is proportional to the sensitivity of
+            the data we process.
           </p>
 
           <h2>
-            The Company’s website uses the following tracking technologies while you
-            browse:
+            The Company&apos;s website uses the following tracking technologies while
+            you browse:
           </h2>
 
           <p>
@@ -499,37 +504,38 @@ function LegalEn() {
 
           <ol>
             <li>
-              <strong>Access:</strong>
-              to know exactly what data we hold about you.
+              <strong>Access:</strong> to know exactly what data we hold about you.
             </li>
 
             <li>
-              <strong>Rectification:</strong>
-              to correct inaccurate or outdated information.
+              <strong>Rectification:</strong> to correct inaccurate or outdated
+              information.
             </li>
 
             <li>
-              <strong>Cancellation:</strong>
-              to request deletion of your data when it is no longer necessary or is
-              being improperly processed.
+              <strong>Cancellation:</strong> to request deletion of your data when it
+              is no longer necessary or is being improperly processed.
             </li>
 
             <li>
-              <strong>Opposition:</strong>
-              to request that we stop using your data for a specific permitted purpose.
+              <strong>Opposition:</strong> to request that we stop using your data for
+              a specific permitted purpose.
             </li>
           </ol>
 
           <p>
-            To exercise any of these rights, write to us by email with your name, the
-            right you wish to exercise, and a copy of an official identification
-            document.
+            To exercise any of these rights, write to us at{" "}
+            <a href="mailto:webmaster@norexiodigital.com">
+              webmaster@norexiodigital.com
+            </a>{" "}
+            with your name, the right you wish to exercise, and a copy of an official
+            identification document.
           </p>
 
           <p>
             We respond within a maximum period of twenty business days and, where
-            applicable, implement the corresponding action within an additional maximum
-            period of fifteen business days.
+            applicable, implement the corresponding action within an additional
+            maximum period of fifteen business days.
           </p>
 
           <h2>
@@ -551,8 +557,7 @@ function LegalEn() {
           </p>
 
           <p>
-            <strong>Last update:</strong>
-            September 2026
+            <strong>Last update:</strong> September 2026
           </p>
         </section>
       </section>
@@ -566,9 +571,11 @@ export default function LegalPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
+
       <main className="flex-grow container mx-auto px-6 py-20 max-w-4xl">
         {locale === "es" ? <LegalEs /> : <LegalEn />}
       </main>
+
       <Footer />
     </div>
   );
