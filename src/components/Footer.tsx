@@ -73,7 +73,7 @@ export default function Footer() {
                       href="tel:+5215518575924"
                       className="text-lg font-bold text-white hover:text-emerald-300 transition-colors"
                     >
-                      + 52 1 55 2230 157
+                      +52 1 55 2230 1576
                     </a>
                   </div>
                 </div>
