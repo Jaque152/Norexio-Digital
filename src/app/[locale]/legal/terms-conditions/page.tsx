@@ -61,7 +61,7 @@ function LegalEs() {
 
         <p>
           <strong>Teléfono:</strong>{" "}
-          <a href="tel:+521552230157">+52 1 55 2230 157</a>.
+          <a href="tel:+521552230157">+52 1 55 2230 1576</a>.
         </p>
 
         <p>
@@ -294,7 +294,7 @@ function LegalEn() {
 
         <p>
           <strong>Phone:</strong>{" "}
-          <a href="tel:+521552230157">+52 1 55 2230 157</a>.
+          <a href="tel:+521552230157">+52 1 55 2230 1576</a>.
         </p>
 
         <p>

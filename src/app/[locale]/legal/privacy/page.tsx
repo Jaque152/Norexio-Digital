@@ -54,7 +54,7 @@ function LegalEs() {
           <p>
             Puede contactarnos en{" "}
             <a href="tel:+521552230157">
-              +52 1 55 2230 157
+              +52 1 55 2230 1576
             </a>{" "}
             y al correo{" "}
             <a href="mailto:webmaster@norexiodigital.com">
@@ -333,7 +333,7 @@ function LegalEn() {
           <p>
             You may contact us at{" "}
             <a href="tel:+521552230157">
-              +52 1 55 2230 157
+              +52 1 55 2230 1576
             </a>{" "}
             or by email at{" "}
             <a href="mailto:webmaster@norexiodigital.com">

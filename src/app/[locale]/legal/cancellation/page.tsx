@@ -173,7 +173,7 @@ function LegalEs() {
           </a>{" "}
           o llamar al{" "}
           <a href="tel:+521552230157">
-            +52 1 55 2230 157
+            +52 1 55 2230 1576
           </a>{" "}
           indicando el nombre del servicio, el folio de la transacción, una
           descripción específica de en qué punto el entregable no corresponde a lo
@@ -381,7 +381,7 @@ function LegalEn() {
           </a>{" "}
           or call{" "}
           <a href="tel:+521552230157">
-            +52 1 55 2230 157
+            +52 1 55 2230 1576
           </a>{" "}
           indicating the service name, the transaction reference number, a specific
           description of how the deliverable does not match what was agreed upon, and
